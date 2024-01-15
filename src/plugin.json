@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "datasource",
+  "name": "Akamai Analytics datasource",
+  "id": "akamai-analytics-datasource",
+  "metrics": true,
+  "backend": true,
+  "executable": "gpx_akamai-analytics-datasource-plugin",
+  "info": {
+    "description": "Akamai analytics",
+    "author": {
+      "name": "Akamai Technologies"
+    },
+    "keywords": ["akamai"],
+    "logos": {
+      "small": "img/akamai-logo.png",
+      "large": "img/akamai-logo.png"
+    },
+    "links": [
+      {
+        "name": "Website",
+        "url": "https://www.akamai.com"
+      }
+    ],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+  "dependencies": {
+    "grafanaDependency": ">=10.0.3",
+    "plugins": []
+  }
+}
