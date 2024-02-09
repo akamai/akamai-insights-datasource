@@ -6,5 +6,5 @@ e2e.scenario({
   scenario: () => {
     e2e.pages.Home.visit();
     e2e().contains('Welcome to Grafana').should('be.visible');
-  },
+  }
 });
