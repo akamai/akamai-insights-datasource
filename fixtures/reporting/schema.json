@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "filters": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "expression": {
+                "type": "string"
+              },
+              "metricName": {
+                "type": "string"
+              },
+              "operator": {
+                "type": "string",
+                "enum": [
+                  "EQUAL",
+                  "NOT_EQUAL",
+                  "LESS_THAN",
+                  "GREATER_THAN"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "dimensionName": {
+                "type": "string"
+              },
+              "expressions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "operator": {
+                "type": "string",
+                "enum": [
+                  "IN_LIST",
+                  "REGEXP",
+                  "BEGINS_WITH",
+                  "ENDS_WITH",
+                  "PARTIAL",
+                  "EXACT"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "limit": {
+      "type": "integer"
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sortBys": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "sortOrder": {
+            "type": "string",
+            "enum": [
+              "ASCENDING",
+              "DESCENDING"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
