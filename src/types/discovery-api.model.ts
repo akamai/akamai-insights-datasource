@@ -1,4 +1,6 @@
-export interface DiscoveryApiModel {
+import { DataQuery } from '@grafana/schema';
+
+export interface DiscoveryApiModel extends DataQuery {
   metrics: Metric[];
   dimensions: Dimension[];
   defaults: Defaults[];
@@ -34,3 +36,10 @@ export interface DefaultSortBy {
   name: string;
   sortOrder: 'ASCENDING' | 'DESCENDING';
 }
+
+export const initialModel: DiscoveryApiModel = {
+  metrics: [],
+  dimensions: [],
+  defaults: [],
+  refId: ''
+};

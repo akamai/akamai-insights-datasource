@@ -13,8 +13,8 @@
     },
     "keywords": ["akamai"],
     "logos": {
-      "small": "img/akamai-logo.png",
-      "large": "img/akamai-logo.png"
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
     },
     "links": [
       {

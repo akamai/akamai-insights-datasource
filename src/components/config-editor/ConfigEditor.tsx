@@ -4,7 +4,7 @@ import React, { ChangeEvent } from 'react';
 
 import { DataSourceProps } from '../../types/types';
 import { dataSources } from './data-sources';
-import { Secret } from "./types";
+import { Secret } from './types';
 
 export function ConfigEditor({ options, onOptionsChange }: DataSourceProps) {
 
@@ -20,7 +20,6 @@ export function ConfigEditor({ options, onOptionsChange }: DataSourceProps) {
   const onHostChange = (event: ChangeEvent<HTMLInputElement>) => onInputChange(event, Secret.Host);
   const onAccessTokenChange = (event: ChangeEvent<HTMLInputElement>) => onInputChange(event, Secret.AccessToken);
   const onClientTokenChange = (event: ChangeEvent<HTMLInputElement>) => onInputChange(event, Secret.ClientToken);
-
   const onDataSourceOptionChange = ({ value }: SelectableValue<string>) => {
     const jsonData = {
       ...options.jsonData,
@@ -28,7 +27,7 @@ export function ConfigEditor({ options, onOptionsChange }: DataSourceProps) {
     };
 
     onOptionsChange({ ...options, jsonData });
-  }
+  };
 
   const { jsonData: { clientSecret, host, clientToken, accessToken, dataSource } } = options;
 
@@ -75,7 +74,7 @@ export function ConfigEditor({ options, onOptionsChange }: DataSourceProps) {
         />
       </InlineField>
       <InlineField
-        label="Data source"
+        label="Data Source"
         labelWidth={20}>
         <Select
           value={dataSource}

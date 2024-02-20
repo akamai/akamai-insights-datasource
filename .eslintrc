@@ -91,6 +91,8 @@
           "error",
           200
         ],
+        "semi": "warn",
+        "quotes": [ "warn", "single" ],
         "sort-imports": [
           "error",
           {
