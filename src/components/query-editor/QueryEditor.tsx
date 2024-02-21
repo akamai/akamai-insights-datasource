@@ -1,39 +1,31 @@
 import { QueryEditorProps } from '@grafana/data';
-import { InlineField, Input } from '@grafana/ui';
-import React, { ChangeEvent } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 
-import { DataSource } from '../../datasource';
+import { DatasourceService } from '../../services/datasource.service';
+import { initialModel } from '../../types/discovery-api.model';
 import { MyDataSourceOptions, MyQuery } from '../../types/types';
+import { DataSourceForm } from './DataSourceForm/DataSourceForm';
 
-type Props = QueryEditorProps<DataSource, MyQuery, MyDataSourceOptions>;
+type Props = QueryEditorProps<DatasourceService, MyQuery, MyDataSourceOptions>;
 
-export function QueryEditor({ query, onChange, onRunQuery }: Props) {
+export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) {
+  const [ model, setState ] = useState(initialModel);
 
-  const onDimensionChange = (event: ChangeEvent<HTMLInputElement>) => {
-    onChange({ ...query, dimensionsName: event.target.value });
-    // executes the query
-    onRunQuery();
-  };
+  useLayoutEffect(() => {
+    const subscription = DatasourceService.discoveryApi(datasource.id).subscribe({
+      next: data => setState(data)
+    });
 
-  const onMetricChange = (event: ChangeEvent<HTMLInputElement>) => {
-    onChange({ ...query, metricsName: event.target.value });
-    // executes the query
-    onRunQuery();
-  };
-
-  const {
-    dimensionsName,
-    metricsName
-  } = query;
+    return () => subscription.unsubscribe();
+  }, [ datasource.id ]);
 
   return (
-    <div className="gf-form">
-      <InlineField label="Dimensions" tooltip="Dimensions" labelWidth={16}>
-        <Input onChange={onDimensionChange} value={dimensionsName} width={28} type="string"/>
-      </InlineField>
-      {<InlineField label="Metrics" labelWidth={16} tooltip="Metric">
-        <Input onChange={onMetricChange} value={metricsName}/>
-      </InlineField>}
-    </div>
+    <DataSourceForm
+      model={model}
+      query={query}
+      onChange={onChange}
+      onRunQuery={onRunQuery}
+      datasource={datasource}
+    />
   );
 }
