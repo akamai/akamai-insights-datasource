@@ -7,8 +7,25 @@ export interface MyQuery extends DataQuery {
   reportName?: string;
   dimensions?: string[];
   metrics?: string[];
+  filters?: FilterQuery[];
+  sortBys?: SortByQuery[];
+  limit?: number;
   constant: number;
 }
+
+export interface FilterQuery {
+  name?: string;
+  operator?: string;
+  expressions?: ExpressionType[];
+  expression?: ExpressionType;
+}
+
+export interface SortByQuery {
+  name?: string;
+  sortOrder?: string;
+}
+
+export type ExpressionType = string | number;
 
 export interface MyDataSourceOptions extends DataSourceJsonData {
   clientSecret?: string;
@@ -24,3 +41,13 @@ export enum TestDataSourceResponseStatus {
   Success = 'success',
   Error = 'error'
 }
+
+export interface NameAware {
+  name: string
+}
+
+export interface Enum {
+  [id: string]: string;
+}
+
+export const DATA_REQUEST_LIMIT = 50000;

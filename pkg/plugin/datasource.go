@@ -17,8 +17,11 @@ type DataRequest struct {
 }
 
 type RequestBody struct {
-	Dimensions []string `json:"dimensions"`
-	Metrics    []string `json:"metrics"`
+	Dimensions []string                 `json:"dimensions"`
+	Metrics    []string                 `json:"metrics"`
+	Filters    []map[string]interface{} `json:"filters"`
+	SortBys    []map[string]interface{} `json:"sortBys"`
+	Limit      any                      `json:"limit"`
 }
 
 type DataSourceSettings struct {

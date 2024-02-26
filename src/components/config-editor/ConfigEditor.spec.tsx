@@ -26,4 +26,3 @@ describe('ConfigEditor component', () => {
     });
   });
 });
-
