@@ -40,11 +40,14 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
   }
 
   query(request: DataQueryRequest<MyQuery>): Observable<DataQueryResponse> {
-    const { dimensions, metrics } = request.targets[ 0 ];
+    const { dimensions, metrics, filters, sortBys, limit } = request.targets[ 0 ];
     const { from, to } = request.range;
     const body = {
       dimensions,
-      metrics
+      metrics,
+      filters,
+      sortBys,
+      limit
     };
 
     return getBackendSrv()

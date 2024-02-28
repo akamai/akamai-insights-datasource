@@ -35,3 +35,4 @@ e2e-results/
 .eslintcache
 /.vscode/
 *.iml
+.DS_Store

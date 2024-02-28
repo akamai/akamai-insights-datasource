@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListField component should render list with custom row Editor 1`] = `
+[
+  <div
+    className="css-9doeo5-InlineFieldRow"
+  >
+    <div
+      className="css-1f5gueu"
+    >
+      <label
+        className="css-1e5y6i9"
+      >
+        List label
+        <div
+          className="css-wf08df-Icon"
+          tabIndex={0}
+        >
+          <svg
+            data-testid="info-circle"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </div>
+      </label>
+      <div
+        className="css-1rfunm5"
+      >
+        <div
+          className="css-1uedr6a"
+        >
+          <button
+            aria-label="Remove all"
+            className="css-x1vujn"
+            onClick={[Function]}
+            tabIndex={0}
+          >
+            <div
+              className="css-wf08df-Icon"
+            >
+              <svg
+                data-testid="trash-alt"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </div>
+          </button>
+          <button
+            aria-label="Add new resource"
+            className="css-x1vujn"
+            onClick={[Function]}
+            tabIndex={0}
+          >
+            <div
+              className="css-wf08df-Icon"
+            >
+              <svg
+                data-testid="plus-circle"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="css-9doeo5-InlineFieldRow"
+  >
+    <div
+      className="css-xcstkt-input-wrapper"
+      data-testid="input-wrapper"
+    >
+      <div
+        className="css-1w5c5dq-input-inputWrapper"
+      >
+        <input
+          className="css-1n6y0bv-input-input"
+          style={
+            {
+              "paddingLeft": undefined,
+              "paddingRight": undefined,
+            }
+          }
+          value="value 1"
+        />
+      </div>
+    </div>
+    <div
+      className="css-1f5gueu"
+    >
+      <div
+        className="css-1rfunm5"
+      >
+        <div
+          className="css-1uedr6a"
+        >
+          <button
+            aria-label="Remove resource"
+            className="css-x1vujn"
+            onClick={[Function]}
+            tabIndex={0}
+          >
+            <div
+              className="css-wf08df-Icon"
+            >
+              <svg
+                data-testid="minus-circle"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="css-9doeo5-InlineFieldRow"
+  >
+    <div
+      className="css-xcstkt-input-wrapper"
+      data-testid="input-wrapper"
+    >
+      <div
+        className="css-1w5c5dq-input-inputWrapper"
+      >
+        <input
+          className="css-1n6y0bv-input-input"
+          style={
+            {
+              "paddingLeft": undefined,
+              "paddingRight": undefined,
+            }
+          }
+          value="value 2"
+        />
+      </div>
+    </div>
+    <div
+      className="css-1f5gueu"
+    >
+      <div
+        className="css-1rfunm5"
+      >
+        <div
+          className="css-1uedr6a"
+        >
+          <button
+            aria-label="Remove resource"
+            className="css-x1vujn"
+            onClick={[Function]}
+            tabIndex={0}
+          >
+            <div
+              className="css-wf08df-Icon"
+            >
+              <svg
+                data-testid="minus-circle"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

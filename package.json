@@ -13,6 +13,7 @@
     "e2e": "npm exec cypress install && npm exec grafana-e2e run",
     "e2e:update": "npm exec cypress install && npm exec grafana-e2e run --update-screenshots",
     "server": "docker-compose up --build",
+    "server:dev": "mage -v && npm run server",
     "sign": "npx --yes @grafana/sign-plugin@latest",
     "start": "concurrently --success first npm:server \"wait-on http://localhost:3000 && open http://localhost:3000\""
   },
@@ -71,6 +72,7 @@
   },
   "dependencies": {
     "@emotion/css": "11.10.6",
+    "@emotion/styled": "^11.11.0",
     "@grafana/data": "10.0.3",
     "@grafana/runtime": "10.0.3",
     "@grafana/schema": "10.0.3",

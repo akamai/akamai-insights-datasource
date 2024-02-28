@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumberField component should render field 1`] = `
+<div
+  className="css-1f5gueu"
+>
+  <label
+    className="css-1e5y6i9"
+  >
+    Limit
+  </label>
+  <div
+    className="css-1rfunm5"
+  >
+    <div
+      className="css-xcstkt-input-wrapper"
+      data-testid="input-wrapper"
+    >
+      <div
+        className="css-1w5c5dq-input-inputWrapper"
+      >
+        <input
+          className="css-1n6y0bv-input-input"
+          min={0}
+          onChange={[Function]}
+          style={
+            {
+              "paddingLeft": undefined,
+              "paddingRight": undefined,
+            }
+          }
+          type="number"
+          value={100}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

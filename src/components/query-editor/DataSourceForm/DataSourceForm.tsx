@@ -1,10 +1,17 @@
-import { InlineField, MultiSelect } from '@grafana/ui';
-import React, { useState } from 'react';
+import { SelectableValue } from '@grafana/data';
+import { Button, InlineField, InlineFieldRow, MultiSelect } from '@grafana/ui';
+import React, { JSX, useState } from 'react';
 
 import { DatasourceService } from '../../../services/datasource.service';
+import { FormService } from '../../../services/form.service';
 import { DiscoveryApiModel } from '../../../types/discovery-api.model';
-import { MyQuery } from '../../../types/types';
-import { toSelectableValues } from '../../../utils/utils';
+import { DATA_REQUEST_LIMIT, MyQuery } from '../../../types/types';
+import { stringsToSelectableValues, toSelectableValues } from '../../../utils/utils';
+import { FilterEditorRow } from './FilterEditor/FilterEditorRow';
+import { FilterFormModel, mediumLabelWidth, shortLabelWidth, SortByFormModel } from './FormTypes';
+import { ListField } from './ListField/ListField';
+import { NumberField } from './NumberField/NumberField';
+import { SortByEditorRow } from './SortEditor/SortByEditorRow';
 
 interface DataSourceFormProps {
   model: DiscoveryApiModel,
@@ -14,53 +21,132 @@ interface DataSourceFormProps {
   onChange: (value: MyQuery) => void
 }
 
-export function DataSourceForm({ query, onChange, onRunQuery, model }: DataSourceFormProps) {
-  const [ dimensions, setDimensions ] = useState<any[]>([]);
-  const [ metrics, setMetrics ] = useState<any[]>([]);
-
-  const onDimensionChange = () => {
-    onChange({ ...query, dimensions: dimensions.map(({ value }) => value) });
-    onRunQuery();
-  };
-
-  const onMetricsChange = () => {
-    onChange({ ...query, metrics: metrics.map(({ value }) => value) });
-    onRunQuery();
-  };
-
+export function DataSourceForm({ query, onChange, onRunQuery, model }: DataSourceFormProps): JSX.Element {
   const dimensionsOptions = toSelectableValues(model.dimensions);
   const metricsOptions = toSelectableValues(model.metrics);
+  const dimensionsValues = FormService.toValues(dimensionsOptions);
+  const metricsValues = FormService.toValues(metricsOptions);
+
+  const [ dimensions, setDimensions ] = useState<SelectableValue[]>(model.dimensions ? stringsToSelectableValues(query.dimensions) : []);
+  const [ metrics, setMetrics ] = useState<SelectableValue[]>(model.metrics ? stringsToSelectableValues(query.metrics) : []);
+  const [ filters, setFilters ] = useState<FilterFormModel[]>(model.metrics && model.dimensions ? FormService.toFilterFormModels(query.filters, dimensionsValues, metricsValues) : []);
+  const [ sortBys, setSortBys ] = useState<SortByFormModel[]>(model.metrics && model.dimensions ? FormService.toSortBysFormModel(query.sortBys, dimensionsValues, metricsValues) : []);
+  const [ limit, setLimit ] = useState<number | undefined>(query.limit);
+
+  const onClear = () => {
+    setDimensions([]);
+    setMetrics([]);
+    setFilters([]);
+    setSortBys([]);
+    setLimit(DATA_REQUEST_LIMIT);
+  };
+
+  const onApply = () => {
+    const updatedQuery = {
+      ...query
+    };
+
+    updatedQuery.dimensions = FormService.toValues(dimensions);
+    updatedQuery.metrics = FormService.toValues(metrics);
+    updatedQuery.filters = FormService.toFilterQueries(filters);
+    updatedQuery.sortBys = FormService.toSortByQueries(sortBys);
+    updatedQuery.limit = limit && limit > 0 ? limit : undefined;
+
+    onChange(updatedQuery);
+    onRunQuery();
+  };
 
   return (
     <div>
-      <div>
-        <InlineField
-          label="Dimensions"
-          labelWidth={50}>
-          <MultiSelect
-            options={dimensionsOptions}
-            value={dimensions}
-            onChange={values => {
-              setDimensions(values);
-              onDimensionChange();
-            }}
-          />
+      <InlineField
+        label="Dimensions"
+        labelWidth={shortLabelWidth}
+        tooltip="Array of dimensions for grouping results (i.e.['time5minutes', 'cpcode']). Maximum number of dimensions: 4.">
+        <MultiSelect
+          isClearable={true}
+          width={mediumLabelWidth}
+          options={dimensionsOptions}
+          value={dimensions}
+          onChange={setDimensions}
+        />
+      </InlineField>
+
+      <InlineField
+        label="Metrics"
+        labelWidth={shortLabelWidth}
+        tooltip="Array of metrics requested (i.e.: ['edgeBytesSum', 'originHitsSum']).">
+        <MultiSelect
+          isClearable={true}
+          width={mediumLabelWidth}
+          options={metricsOptions}
+          value={metrics}
+          onChange={setMetrics}
+        />
+      </InlineField>
+
+      <ListField
+        fieldLabel="Filters"
+        fieldTooltip="Filters used to narrow down the results of the data. Filters are specified in terms of dimensions or metrics."
+        resource="Filter"
+        rows={filters}
+        onChange={setFilters}
+        modelProvider={() => FormService.creteEmptyFilter(dimensionsOptions[ 0 ])}
+        Editor={(filterModel, index, onSingleFilterChange) =>
+          <FilterEditorRow
+            key={index}
+            model={filterModel}
+            dimensions={dimensionsOptions}
+            metrics={metricsOptions}
+            onChange={updatedFilterModel => onSingleFilterChange(updatedFilterModel, index)}
+          />}
+      />
+
+      <ListField
+        fieldLabel="Sort Bys"
+        fieldTooltip="Set sortBy settings for multiple columns. If not specified, the default values are used."
+        resource="Sort By"
+        rows={sortBys}
+        onChange={setSortBys}
+        modelProvider={() => FormService.creteEmptySortBy(dimensionsOptions[ 0 ])}
+        Editor={(sortByModel, index, onSingleSortByChange) =>
+          <SortByEditorRow
+            key={index}
+            model={sortByModel}
+            dimensions={dimensionsOptions}
+            metrics={metricsOptions}
+            onChange={updatedSortByModel => onSingleSortByChange(updatedSortByModel, index)}
+          />}
+      />
+      
+      <NumberField
+        fieldLabel="Limit"
+        fieldTooltip={`Limits the number of rows returned in the API response. Maximum number of data points returned ${DATA_REQUEST_LIMIT}.`}
+        inputWidth={shortLabelWidth}
+        model={limit}
+        min={0}
+        max={DATA_REQUEST_LIMIT}
+        onChange={setLimit}
+      />
+
+      <InlineFieldRow>
+        <InlineField>
+          <Button
+            fill="outline"
+            type="reset"
+            variant="destructive"
+            onClick={onClear}>
+            Clear
+          </Button>
         </InlineField>
-      </div>
-      <div>
-        <InlineField
-          label="Metrics"
-          labelWidth={50}>
-          <MultiSelect
-            options={metricsOptions}
-            value={metrics}
-            onChange={values => {
-              setMetrics(values);
-              onMetricsChange();
-            }}
-          />
+        <InlineField>
+          <Button
+            type="submit"
+            variant="primary"
+            onClick={onApply}>
+            Apply
+          </Button>
         </InlineField>
-      </div>
+      </InlineFieldRow>
     </div>
   );
 }

@@ -1,4 +1,6 @@
 import { QueryEditorProps } from '@grafana/data';
+import { Icon } from '@grafana/ui';
+import { isEmpty } from 'lodash';
 import React, { useLayoutEffect, useState } from 'react';
 
 import { DatasourceService } from '../../services/datasource.service';
@@ -19,7 +21,7 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
     return () => subscription.unsubscribe();
   }, [ datasource.id ]);
 
-  return (
+  return !isEmpty(model.metrics) && !isEmpty(model.dimensions) ? (
     <DataSourceForm
       model={model}
       query={query}
@@ -27,5 +29,5 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
       onRunQuery={onRunQuery}
       datasource={datasource}
     />
-  );
+  ) : <><Icon name="fa fa-spinner"/> Fetching...</>;
 }
