@@ -61,7 +61,7 @@ export function SortByEditorRow({ model, dimensions, metrics, onChange }: SortBy
   };
 
   return (
-    <InlineFieldRow>
+    <InlineFieldRow style={{ paddingLeft: '20px' }}>
       <InlineField>
         <Select
           isClearable={false}

@@ -1,0 +1,52 @@
+{
+  "reports": [
+    {
+      "reportName": "Akamai CDN image manager report data",
+      "reportLink": "/reporting-reports-executor-api/v2/reports/delivery/image-manager-test-only"
+    },
+    {
+      "reportName": "Akamai CDN traffic report data",
+      "reportLink": "/reporting-reports-executor-api/v2/reports/delivery/traffic"
+    },
+    {
+      "reportName": "Akamai CDN traffic report data",
+      "reportLink": "/reporting-reports-executor-api/v2/reports/delivery/traffic-ui"
+    },
+    {
+      "reportName": "Akamai CDN domain management report data",
+      "reportLink": "/reporting-reports-executor-api/v2/reports/delivery/domain-management-test-only"
+    },
+    {
+      "reportName": "Akamai CDN traffic report data",
+      "reportLink": "/reporting-reports-executor-api/v2/reports/delivery/traffic-draft"
+    },
+    {
+      "reportName": "Akamai IVM video stats report data",
+      "reportLink": "/reporting-reports-executor-api/v2/reports/ivm/video-policy-stats"
+    },
+    {
+      "reportName": "Akamai IVM video url report data",
+      "reportLink": "/reporting-reports-executor-api/v2/reports/ivm/video-urls"
+    },
+    {
+      "reportName": "Akamai IVM image stats report data",
+      "reportLink": "/reporting-reports-executor-api/v2/reports/ivm/image-policy-stats"
+    },
+    {
+      "reportName": "Akamai IVM image url report data",
+      "reportLink": "/reporting-reports-executor-api/v2/reports/ivm/image-urls"
+    },
+    {
+      "reportName": "Akamai IVM image traffic data within interval of 1 day",
+      "reportLink": "/reporting-reports-executor-api/v2/reports/ivm/image-traffic"
+    },
+    {
+      "reportName": "Akamai analytics - CDN observability POC",
+      "reportLink": "/reporting-reports-executor-api/v2/reports/analytics/cdn-observability-poc"
+    },
+    {
+      "reportName": "Akamai Test Traffic",
+      "reportLink": "/reporting-reports-executor-api/v2/reports/test/traffic_test"
+    }
+  ]
+}

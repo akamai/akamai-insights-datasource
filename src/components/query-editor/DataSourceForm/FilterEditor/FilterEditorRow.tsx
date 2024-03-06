@@ -17,7 +17,8 @@ interface FilterEditorProps {
   model: FilterFormModel;
   dimensions: SelectableValue<string>[];
   metrics: SelectableValue<string>[];
-  onChange: (value: FilterFormModel) => void
+  onChange: (value: FilterFormModel) => void;
+  style?: Partial<CSSStyleDeclaration>
 }
 
 function getFilterEditor(type: string | undefined,
@@ -67,7 +68,7 @@ export function FilterEditorRow({ model, dimensions, metrics, onChange }: Filter
   };
 
   return (
-    <InlineFieldRow>
+    <InlineFieldRow style={{ paddingLeft: '20px' }}>
       <InlineField>
         <Select
           isClearable={false}
