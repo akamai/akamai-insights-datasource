@@ -72,7 +72,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
   }
 
   query(request: DataQueryRequest<MyQuery>): Observable<DataQueryResponse> {
-    const dataObservables =  request.targets.map(target => {
+    const dataObservables = request.targets.map(target => {
       const { dimensions, metrics, filters, sortBys, limit, reportLink, refId } = target;
       const { from, to } = request.range;
       const body = {
@@ -86,7 +86,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
       };
 
       return getBackendSrv()
-        .fetch<any>({
+        .fetch<Record<string, any>>({
           method: 'POST',
           url: `${DatasourceService.getBackendDataSourceUrl(this.id)}/${DatasourceService.DATA}`,
           data: {
@@ -101,7 +101,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
         .pipe(
           withLatestFrom(DatasourceService.discoveryApi(this.id, reportLink || '')),
           map(([ { data: { data } }, discoveryApiModel ]) => ({
-              data: [ this.convertToDataFrame(data as Record<string, any>[], discoveryApiModel, refId) ]
+              data: [ this.convertToDataFrame(data, discoveryApiModel, refId) ]
           }))
         );
     });

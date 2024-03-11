@@ -2,12 +2,7 @@
 
 exports[`SortByEditorRow component should render dimension row 1`] = `
 <div
-  className="css-9doeo5-InlineFieldRow"
-  style={
-    {
-      "paddingLeft": "20px",
-    }
-  }
+  className="css-9doeo5-InlineFieldRow padding-left-20"
 >
   <div
     className="css-1f5gueu"
@@ -287,12 +282,7 @@ exports[`SortByEditorRow component should render dimension row 1`] = `
 
 exports[`SortByEditorRow component should render metric row 1`] = `
 <div
-  className="css-9doeo5-InlineFieldRow"
-  style={
-    {
-      "paddingLeft": "20px",
-    }
-  }
+  className="css-9doeo5-InlineFieldRow padding-left-20"
 >
   <div
     className="css-1f5gueu"

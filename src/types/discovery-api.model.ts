@@ -7,10 +7,10 @@ export interface DiscoveryApiModel extends DataQuery {
 }
 
 export interface ReportsApiModel {
-  reports: Reports[]
+  reports: Report[]
 }
 
-export interface Reports {
+export interface Report {
   reportName: string;
   reportLink: string;
 }
