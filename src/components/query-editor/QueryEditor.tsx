@@ -8,6 +8,7 @@ import { initialModel } from '../../types/discovery-api.model';
 import { MyDataSourceOptions, MyQuery } from '../../types/types';
 import { stringToSelectableValue } from '../../utils/utils';
 import { DataSourceForm } from './DataSourceForm/DataSourceForm';
+import { shortLabelWidth } from './DataSourceForm/FormTypes';
 
 type Props = QueryEditorProps<DatasourceService, MyQuery, MyDataSourceOptions>;
 
@@ -43,7 +44,7 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
     <>
       <InlineField
         label="Data Source"
-        labelWidth={20}>
+        labelWidth={shortLabelWidth}>
         <Select
           value={dataSource}
           options={dataSources}
