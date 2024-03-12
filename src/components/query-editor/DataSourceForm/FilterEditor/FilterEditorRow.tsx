@@ -2,6 +2,7 @@ import { SelectableValue } from '@grafana/data';
 import { InlineField, InlineFieldRow, Select } from '@grafana/ui';
 import React, { JSX } from 'react';
 
+import '../../../../styles/styles.css';
 import { FormService } from '../../../../services/form.service';
 import {
   dimensionOperatorOptions,
@@ -17,7 +18,8 @@ interface FilterEditorProps {
   model: FilterFormModel;
   dimensions: SelectableValue<string>[];
   metrics: SelectableValue<string>[];
-  onChange: (value: FilterFormModel) => void
+  onChange: (value: FilterFormModel) => void;
+  style?: Partial<CSSStyleDeclaration>
 }
 
 function getFilterEditor(type: string | undefined,
@@ -67,7 +69,7 @@ export function FilterEditorRow({ model, dimensions, metrics, onChange }: Filter
   };
 
   return (
-    <InlineFieldRow>
+    <InlineFieldRow className="padding-left-20">
       <InlineField>
         <Select
           isClearable={false}

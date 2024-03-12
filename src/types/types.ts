@@ -2,15 +2,12 @@ import { DataSourceJsonData, DataSourcePluginOptionsEditorProps } from '@grafana
 import { DataQuery } from '@grafana/schema';
 
 export interface MyQuery extends DataQuery {
-  reportFamily?: string;
-  queryText?: string;
-  reportName?: string;
+  reportLink?: string;
   dimensions?: string[];
   metrics?: string[];
   filters?: FilterQuery[];
   sortBys?: SortByQuery[];
   limit?: number;
-  constant: number;
 }
 
 export interface FilterQuery {
@@ -32,7 +29,6 @@ export interface MyDataSourceOptions extends DataSourceJsonData {
   host?: string;
   accessToken?: string;
   clientToken?: string;
-  dataSource?: string;
 }
 
 export interface DataSourceProps extends DataSourcePluginOptionsEditorProps<MyDataSourceOptions> {}

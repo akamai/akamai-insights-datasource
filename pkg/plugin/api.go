@@ -9,7 +9,8 @@ import (
 )
 
 const DiscoveryApiUrl = "reporting-api/v2/%v"
-const OpenApiDataUrl = DiscoveryApiUrl + "/data?start=%v&end=%v"
+const ReportsApiUrl = "reporting-api/v2/reports"
+const OpenApiDataUrl = "%v/data?start=%v&end=%v"
 
 func createOpenApiDataUrl(datasource, from, to string) string {
 	return fmt.Sprintf(OpenApiDataUrl, datasource, from, to)
@@ -28,6 +29,15 @@ func EdgeGridConfig(dataSourceSettings DataSourceSettings) *edgegrid.Config {
 		MaxBody:      131072,
 		Debug:        false,
 	}
+}
+
+type ReportsApi struct {
+	Reports []Reports `json:"reports"`
+}
+
+type Reports struct {
+	ReportName string `json:"reportName"`
+	ReportLink string `json:"reportLink"`
 }
 
 type DiscoveryApi struct {
@@ -66,9 +76,33 @@ type OpenApiErrorRspDto struct {
 	Type     string  `json:"type"`
 }
 
-func discoveryApiQuery(dataSourceSettings DataSourceSettings) (*DiscoveryApi, error) {
+func reportApiQuery(dataSourceSettings DataSourceSettings) (*ReportsApi, error) {
 	config := EdgeGridConfig(dataSourceSettings)
-	apireq, err := client.NewRequest(*config, "GET", createDiscoveryApiUrl(dataSourceSettings.DataSource), nil)
+	apireq, err := client.NewRequest(*config, "GET", ReportsApiUrl, nil)
+
+	if err != nil {
+		return nil, err
+	}
+
+	apiresp, err := client.Do(*config, apireq)
+
+	if err != nil {
+		return nil, err
+	}
+
+	var rspDto ReportsApi
+	err = json.NewDecoder(apiresp.Body).Decode(&rspDto)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return &rspDto, nil
+}
+
+func discoveryApiQuery(dataSourceSettings DataSourceSettings, targetUrl string) (*DiscoveryApi, error) {
+	config := EdgeGridConfig(dataSourceSettings)
+	apireq, err := client.NewRequest(*config, "GET", targetUrl, nil)
 
 	if err != nil {
 		return nil, err
@@ -90,9 +124,9 @@ func discoveryApiQuery(dataSourceSettings DataSourceSettings) (*DiscoveryApi, er
 	return &rspDto, nil
 }
 
-func dataQuery(dataSourceSettings DataSourceSettings, body io.Reader, from, to string) (*OpenApi, error) {
+func dataQuery(dataSourceSettings DataSourceSettings, url string, body io.Reader, from, to string) (*OpenApi, error) {
 	config := EdgeGridConfig(dataSourceSettings)
-	apireq, err := client.NewRequest(*config, "POST", createOpenApiDataUrl(dataSourceSettings.DataSource, from, to), body)
+	apireq, err := client.NewRequest(*config, "POST", createOpenApiDataUrl(url, from, to), body)
 
 	if err != nil {
 		return nil, err

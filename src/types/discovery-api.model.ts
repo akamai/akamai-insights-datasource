@@ -6,6 +6,15 @@ export interface DiscoveryApiModel extends DataQuery {
   defaults: Defaults[];
 }
 
+export interface ReportsApiModel {
+  reports: Report[]
+}
+
+export interface Report {
+  reportName: string;
+  reportLink: string;
+}
+
 export interface Metric {
   name: string;
   type: string;

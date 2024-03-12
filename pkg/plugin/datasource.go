@@ -8,6 +8,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/datasource"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/instancemgmt"
 	"net/http"
+	"net/url"
 )
 
 type DataRequest struct {
@@ -21,7 +22,7 @@ type RequestBody struct {
 	Metrics    []string                 `json:"metrics"`
 	Filters    []map[string]interface{} `json:"filters"`
 	SortBys    []map[string]interface{} `json:"sortBys"`
-	Limit      any                      `json:"limit"`
+	Limit      int                      `json:"limit"`
 }
 
 type DataSourceSettings struct {
@@ -29,7 +30,6 @@ type DataSourceSettings struct {
 	Host         string `json:"host"`
 	AccessToken  string `json:"accessToken"`
 	ClientToken  string `json:"clientToken"`
-	DataSource   string `json:"dataSource"`
 }
 
 func newDataSourceInstance(ctx context.Context, setting backend.DataSourceInstanceSettings) (instancemgmt.Instance, error) {
@@ -76,8 +76,31 @@ func (td *AkamaiEdgeDnsDatasource) CallResource(ctx context.Context, req *backen
 	}
 
 	switch req.Path {
+	case "reports":
+		query, err := reportApiQuery(dataSourceSettings)
+
+		if err != nil {
+			return err
+		}
+
+		body, err := json.Marshal(query)
+
+		if err != nil {
+			return err
+		}
+
+		return sender.Send(&backend.CallResourceResponse{
+			Status: http.StatusOK,
+			Body:   body,
+		})
 	case "discovery":
-		query, err := discoveryApiQuery(dataSourceSettings)
+		parse, err := url.Parse(req.URL)
+		if err != nil {
+			return err
+		}
+		var targetUrl = parse.Query().Get("targetUrl")
+
+		query, err := discoveryApiQuery(dataSourceSettings, targetUrl)
 
 		if err != nil {
 			return err
@@ -94,8 +117,14 @@ func (td *AkamaiEdgeDnsDatasource) CallResource(ctx context.Context, req *backen
 			Body:   body,
 		})
 	case "data":
+		parse, err := url.Parse(req.URL)
+		if err != nil {
+			return err
+		}
+		var targetUrl = parse.Query().Get("targetUrl")
+
 		var requestData DataRequest
-		err := json.Unmarshal(req.Body, &requestData)
+		err = json.Unmarshal(req.Body, &requestData)
 
 		if err != nil {
 			return err
@@ -108,10 +137,13 @@ func (td *AkamaiEdgeDnsDatasource) CallResource(ctx context.Context, req *backen
 		}
 
 		b := bytes.NewBuffer(marshal)
-		query, err := dataQuery(dataSourceSettings, b, requestData.From, requestData.To)
+		query, err := dataQuery(dataSourceSettings, targetUrl, b, requestData.From, requestData.To)
 
 		if err != nil {
-			return err
+			return sender.Send(&backend.CallResourceResponse{
+				Status: http.StatusBadRequest,
+				Body:   []byte(err.Error()),
+			})
 		}
 
 		body, err := json.Marshal(query)

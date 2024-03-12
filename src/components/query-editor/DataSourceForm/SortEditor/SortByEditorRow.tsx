@@ -1,6 +1,7 @@
 import { SelectableValue } from '@grafana/data';
 import { InlineField, InlineFieldRow, Select } from '@grafana/ui';
 import React, { JSX } from 'react';
+import '../../../../styles/styles.css';
 
 import { FormService } from '../../../../services/form.service';
 import {
@@ -61,7 +62,7 @@ export function SortByEditorRow({ model, dimensions, metrics, onChange }: SortBy
   };
 
   return (
-    <InlineFieldRow>
+    <InlineFieldRow className="padding-left-20">
       <InlineField>
         <Select
           isClearable={false}
