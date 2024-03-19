@@ -95,7 +95,6 @@ export class FormService {
   static toFilterQueries(rows: FilterFormModel[]): FilterQuery[] {
     return rows.map(({ type, query: { name, operator, expressions } }) => {
       const result: Partial<FilterQuery> = {
-        name: name?.value,
         operator: operator?.value
       };
 
