@@ -185,13 +185,11 @@ describe('given FormService', () => {
         }
       ])).toEqual([
         {
-          name: 'cpcode',
           dimensionName: 'cpcode',
           operator: DimensionOperator.InList,
           expressions: [ 'cpcode1', 'cpcode2' ]
         },
         {
-          name: 'edgeHitsSum',
           metricName: 'edgeHitsSum',
           operator: MetricOperator.GreaterThan,
           expression: 1234
