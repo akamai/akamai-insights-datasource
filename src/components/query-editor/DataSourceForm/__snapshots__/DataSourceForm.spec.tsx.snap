@@ -379,51 +379,6 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
     </div>
   </div>
   <div
-    className="css-1f5gueu"
-  >
-    <label
-      className="css-1e5y6i9"
-    >
-      Limit
-      <div
-        className="css-wf08df-Icon"
-        tabIndex={0}
-      >
-        <svg
-          data-testid="info-circle"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </div>
-    </label>
-    <div
-      className="css-1rfunm5"
-    >
-      <div
-        className="css-ax7m4m-input-wrapper"
-        data-testid="input-wrapper"
-      >
-        <div
-          className="css-1w5c5dq-input-inputWrapper"
-        >
-          <input
-            className="css-1n6y0bv-input-input"
-            max={50000}
-            min={0}
-            onChange={[Function]}
-            style={
-              {
-                "paddingLeft": undefined,
-                "paddingRight": undefined,
-              }
-            }
-            type="number"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
     className="css-9doeo5-InlineFieldRow"
   >
     <div
@@ -776,51 +731,6 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
               />
             </div>
           </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-1f5gueu"
-  >
-    <label
-      className="css-1e5y6i9"
-    >
-      Limit
-      <div
-        className="css-wf08df-Icon"
-        tabIndex={0}
-      >
-        <svg
-          data-testid="info-circle"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </div>
-    </label>
-    <div
-      className="css-1rfunm5"
-    >
-      <div
-        className="css-ax7m4m-input-wrapper"
-        data-testid="input-wrapper"
-      >
-        <div
-          className="css-1w5c5dq-input-inputWrapper"
-        >
-          <input
-            className="css-1n6y0bv-input-input"
-            max={50000}
-            min={0}
-            onChange={[Function]}
-            style={
-              {
-                "paddingLeft": undefined,
-                "paddingRight": undefined,
-              }
-            }
-            type="number"
-          />
         </div>
       </div>
     </div>

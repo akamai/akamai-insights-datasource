@@ -7,7 +7,7 @@ import {
   TestDataSourceResponse
 } from '@grafana/data';
 import { BackendSrvRequest, DataSourceWithBackend, getBackendSrv } from '@grafana/runtime';
-import { isEmpty, isNil, omitBy, uniq } from 'lodash';
+import { isEmpty, omitBy, uniq } from 'lodash';
 import {
   catchError,
   forkJoin,
@@ -73,7 +73,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
 
   query(request: DataQueryRequest<MyQuery>): Observable<DataQueryResponse> {
     const dataObservables = request.targets.map(target => {
-      const { dimensions, metrics, filters, sortBys, limit, reportLink, refId } = target;
+      const { dimensions, metrics, filters, sortBys, reportLink, refId } = target;
       const { from, to } = request.range;
       const body = {
         ...omitBy({
@@ -81,8 +81,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
           metrics,
           filters,
           sortBys
-        }, isEmpty),
-        ...omitBy({ limit }, isNil)
+        }, isEmpty)
       };
 
       return getBackendSrv()

@@ -22,7 +22,6 @@ type RequestBody struct {
 	Metrics    []string                 `json:"metrics"`
 	Filters    []map[string]interface{} `json:"filters"`
 	SortBys    []map[string]interface{} `json:"sortBys"`
-	Limit      int                      `json:"limit"`
 }
 
 type DataSourceSettings struct {

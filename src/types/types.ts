@@ -7,7 +7,6 @@ export interface MyQuery extends DataQuery {
   metrics?: string[];
   filters?: FilterQuery[];
   sortBys?: SortByQuery[];
-  limit?: number;
 }
 
 export interface FilterQuery {
