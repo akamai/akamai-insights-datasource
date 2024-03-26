@@ -5,12 +5,11 @@ import React, { JSX, useState } from 'react';
 import { DatasourceService } from '../../../services/datasource.service';
 import { FormService } from '../../../services/form.service';
 import { DiscoveryApiModel } from '../../../types/discovery-api.model';
-import { DATA_REQUEST_LIMIT, MyQuery } from '../../../types/types';
+import { MyQuery } from '../../../types/types';
 import { stringsToSelectableValues, toSelectableValues } from '../../../utils/utils';
 import { FilterEditorRow } from './FilterEditor/FilterEditorRow';
 import { FilterFormModel, mediumLabelWidth, shortLabelWidth, SortByFormModel } from './FormTypes';
 import { ListField } from './ListField/ListField';
-import { NumberField } from './NumberField/NumberField';
 import { SortByEditorRow } from './SortEditor/SortByEditorRow';
 
 interface DataSourceFormProps {
@@ -31,14 +30,12 @@ export function DataSourceForm({ query, onChange, onRunQuery, model }: DataSourc
   const [ metrics, setMetrics ] = useState<SelectableValue[]>(model.metrics ? stringsToSelectableValues(query.metrics) : []);
   const [ filters, setFilters ] = useState<FilterFormModel[]>(model.metrics && model.dimensions ? FormService.toFilterFormModels(query.filters, dimensionsValues, metricsValues) : []);
   const [ sortBys, setSortBys ] = useState<SortByFormModel[]>(model.metrics && model.dimensions ? FormService.toSortBysFormModel(query.sortBys, dimensionsValues, metricsValues) : []);
-  const [ limit, setLimit ] = useState<number | undefined>(query.limit);
 
   const onClear = () => {
     setDimensions([]);
     setMetrics([]);
     setFilters([]);
     setSortBys([]);
-    setLimit(DATA_REQUEST_LIMIT);
   };
 
   const onApply = () => {
@@ -50,7 +47,6 @@ export function DataSourceForm({ query, onChange, onRunQuery, model }: DataSourc
     updatedQuery.metrics = FormService.toValues(metrics);
     updatedQuery.filters = FormService.toFilterQueries(filters);
     updatedQuery.sortBys = FormService.toSortByQueries(sortBys);
-    updatedQuery.limit = limit && limit > 0 ? limit : undefined;
 
     onChange(updatedQuery);
     onRunQuery();
@@ -116,16 +112,6 @@ export function DataSourceForm({ query, onChange, onRunQuery, model }: DataSourc
             metrics={metricsOptions}
             onChange={updatedSortByModel => onSingleSortByChange(updatedSortByModel, index)}
           />}
-      />
-      
-      <NumberField
-        fieldLabel="Limit"
-        fieldTooltip={`Limits the number of rows returned in the API response. Maximum number of data points returned ${DATA_REQUEST_LIMIT}.`}
-        inputWidth={shortLabelWidth}
-        model={limit}
-        min={0}
-        max={DATA_REQUEST_LIMIT}
-        onChange={setLimit}
       />
 
       <InlineFieldRow>

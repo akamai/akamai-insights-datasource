@@ -52,16 +52,13 @@ type OpenApi struct {
 }
 
 type Metadata struct {
-	AvailableDataEnds string   `json:"availableDataEnds"`
-	End               string   `json:"end"`
-	Interval          string   `json:"interval"`
-	Name              string   `json:"name"`
-	ObjectIds         []string `json:"objectIds"`
-	ObjectType        string   `json:"objectType"`
-	OutputType        string   `json:"outputType"`
-	RowCount          int      `json:"rowCount"`
-	Start             string   `json:"start"`
-	Version           string   `json:"version"`
+	Name       string                   `json:"name"`
+	Start      string                   `json:"start"`
+	End        string                   `json:"end"`
+	Metrics    []map[string]interface{} `json:"metrics"`
+	Dimensions []map[string]interface{} `json:"dimensions"`
+	Filters    []map[string]interface{} `json:"filters"`
+	Limit      int                      `json:"limit"`
 }
 
 type Error struct {
