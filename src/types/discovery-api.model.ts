@@ -17,12 +17,12 @@ export interface Report {
 
 export interface Metric {
   name: string;
-  type: string;
+  type: DataType;
 }
 
 export interface Dimension {
   name: string;
-  type: string;
+  type: DataType;
   filterable: boolean;
   filterType: string;
   authorizable: boolean;
@@ -52,3 +52,14 @@ export const initialModel: DiscoveryApiModel = {
   defaults: [],
   refId: ''
 };
+
+export enum DataType {
+  STRING = 'STRING',
+  LONG = 'LONG',
+  DOUBLE = 'DOUBLE',
+  TIMESTAMP_SEC = 'TIMESTAMP_SEC',
+  DATE_ISO8601 = 'DATE_ISO8601',
+  TIMESTAMP_MS = 'TIMESTAMP_MS'
+};
+
+export const TimeDimensionsTypes = [ DataType.TIMESTAMP_SEC, DataType.DATE_ISO8601, DataType.TIMESTAMP_MS ];
