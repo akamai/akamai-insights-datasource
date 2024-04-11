@@ -1,8 +1,9 @@
-import { DataSourcePluginMeta } from '@grafana/data';
+import { DataSourcePluginMeta, FieldType } from '@grafana/data';
 import { BackendSrvRequest, getBackendSrv } from '@grafana/runtime';
 import { of, throwError } from 'rxjs';
 
 import { discoveryTraffic } from '../test/mocks/mock-discovery-api';
+import { DataType } from '../types/discovery-api.model';
 import { DatasourceService } from './datasource.service';
 
 jest.mock('@grafana/runtime');
@@ -56,7 +57,7 @@ describe('DatasourceService', () => {
   describe('given query method', () => {
     test('when only 1 query is executed', done => {
       const target = {
-        dimensions: [ 'time5minutes' ],
+        dimensions: [ 'time5minutes', 'hostname' ],
         metrics: [ 'edgeHitsSum' ],
         limit: 1000,
         reportLink: '/reporting-reports-executor-api/v2/reports/delivery/traffic',
@@ -69,7 +70,7 @@ describe('DatasourceService', () => {
             return of({ data: discoveryTraffic });
           }
 
-          return of({ data: { data: [ { edgeHitsSum: 1000, time5minutes: 1710155443 } ] } });
+          return of({ data: { data: [ { edgeHitsSum: 1000, time5minutes: 1710155443, hostname: 'akamai.com' } ] } });
         }
       }));
 
@@ -97,6 +98,15 @@ describe('DatasourceService', () => {
                 type: 'time',
                 values: [
                   1710155443000
+                ]
+              },
+              {
+                config: {},
+                name: 'hostname',
+                refId: 'A',
+                type: 'string',
+                values: [
+                  'akamai.com'
                 ]
               }
             ]);
@@ -209,6 +219,42 @@ describe('DatasourceService', () => {
           status: 'error'
         });
         done();
+      });
+    });
+  });
+
+  describe('given getFieldDataType', () => {
+    const scenarios = [
+      {
+        type: DataType.LONG,
+        expected: FieldType.number
+      },
+      {
+        type: DataType.DOUBLE,
+        expected: FieldType.number
+      },
+      {
+        type: DataType.STRING,
+        expected: FieldType.string
+      },
+      {
+        type: DataType.TIMESTAMP_MS,
+        expected: FieldType.time
+      },
+      {
+        type: DataType.TIMESTAMP_SEC,
+        expected: FieldType.time
+      },
+      {
+        type: DataType.DATE_ISO8601,
+        expected: FieldType.time
+      }
+    ];
+
+    scenarios.forEach(({ type, expected }) => {
+      it(`should return ${expected} when data of type ${type}`, () => {
+        // @ts-ignore
+        expect(service.getFieldDataType({ type })).toEqual(expected);
       });
     });
   });

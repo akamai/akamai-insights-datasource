@@ -6,23 +6,7 @@ export const discoveryTraffic = {
       'type': 'LONG'
     },
     {
-      'name': 'edgeBitsPerSecond',
-      'type': 'DOUBLE'
-    },
-    {
-      'name': 'edgeBytesMax',
-      'type': 'LONG'
-    },
-    {
       'name': 'edgeHitsSum',
-      'type': 'LONG'
-    },
-    {
-      'name': 'edgeHitsPerSecond',
-      'type': 'DOUBLE'
-    },
-    {
-      'name': 'edgeHitsMax',
       'type': 'LONG'
     },
     {
@@ -30,29 +14,11 @@ export const discoveryTraffic = {
       'type': 'LONG'
     },
     {
-      'name': 'edgeResponseBitsPerSecond',
-      'type': 'DOUBLE'
-    },
-    {
       'name': 'edgeRequestBytesSum',
       'type': 'LONG'
     },
     {
-      'name': 'edgeRequestBitsPerSecond',
-      'type': 'DOUBLE'
-    },
-    {
       'name': 'originBytesSum',
-      'type': 'LONG',
-      'status': 'ALPHA'
-    },
-    {
-      'name': 'originBitsPerSecond',
-      'type': 'DOUBLE',
-      'status': 'ALPHA'
-    },
-    {
-      'name': 'originBytesMax',
       'type': 'LONG',
       'status': 'ALPHA'
     },
@@ -62,23 +28,8 @@ export const discoveryTraffic = {
       'status': 'ALPHA'
     },
     {
-      'name': 'originHitsPerSecond',
-      'type': 'DOUBLE',
-      'status': 'ALPHA'
-    },
-    {
-      'name': 'originHitsMax',
-      'type': 'LONG',
-      'status': 'ALPHA'
-    },
-    {
       'name': 'originResponseBytesSum',
       'type': 'LONG',
-      'status': 'ALPHA'
-    },
-    {
-      'name': 'originResponseBitsPerSecond',
-      'type': 'DOUBLE',
       'status': 'ALPHA'
     },
     {
@@ -87,22 +38,7 @@ export const discoveryTraffic = {
       'status': 'ALPHA'
     },
     {
-      'name': 'originRequestBitsPerSecond',
-      'type': 'DOUBLE',
-      'status': 'ALPHA'
-    },
-    {
       'name': 'midgressBytesSum',
-      'type': 'LONG',
-      'status': 'ALPHA'
-    },
-    {
-      'name': 'midgressBitsPerSecond',
-      'type': 'DOUBLE',
-      'status': 'ALPHA'
-    },
-    {
-      'name': 'midgressBytesMax',
       'type': 'LONG',
       'status': 'ALPHA'
     },
@@ -112,23 +48,8 @@ export const discoveryTraffic = {
       'status': 'ALPHA'
     },
     {
-      'name': 'midgressHitsPerSecond',
-      'type': 'DOUBLE',
-      'status': 'ALPHA'
-    },
-    {
-      'name': 'midgressHitsMax',
-      'type': 'LONG',
-      'status': 'ALPHA'
-    },
-    {
       'name': 'midgressResponseBytesSum',
       'type': 'LONG',
-      'status': 'ALPHA'
-    },
-    {
-      'name': 'midgressResponseBitsPerSecond',
-      'type': 'DOUBLE',
       'status': 'ALPHA'
     },
     {
@@ -137,39 +58,42 @@ export const discoveryTraffic = {
       'status': 'ALPHA'
     },
     {
-      'name': 'midgressRequestBitsPerSecond',
+      'name': 'offloadedHitsPercentage',
       'type': 'DOUBLE',
       'status': 'ALPHA'
     },
     {
-      'name': 'hitsOffloadedPercentage',
+      'name': 'offloadedBytesPercentage',
       'type': 'DOUBLE',
       'status': 'ALPHA'
     },
     {
-      'name': 'bytesOffloadedPercentage',
-      'type': 'DOUBLE',
-      'status': 'ALPHA'
+      'name': 'offloadedRequestBytesPercentage',
+      'type': 'DOUBLE'
+    },
+    {
+      'name': 'offloadedResponseBytesPercentage',
+      'type': 'DOUBLE'
     }
   ],
   'dimensions': [
     {
       'name': 'time5minutes',
-      'type': 'LONG',
+      'type': 'TIMESTAMP_SEC',
       'filterable': true,
       'filterType': 'TEXT',
       'authorizable': false
     },
     {
       'name': 'time1hour',
-      'type': 'LONG',
+      'type': 'TIMESTAMP_SEC',
       'filterable': true,
       'filterType': 'TEXT',
       'authorizable': false
     },
     {
       'name': 'time1day',
-      'type': 'LONG',
+      'type': 'TIMESTAMP_SEC',
       'filterable': true,
       'filterType': 'TEXT',
       'authorizable': false
@@ -278,6 +202,54 @@ export const discoveryTraffic = {
         'http3'
       ],
       'authorizable': false
+    }
+  ],
+  'defaults': {
+    'defaultTimeRange': {
+      'start': 'now - 19min',
+      'end': 'now - 9min 1sec'
+    },
+    'defaultMetrics': [
+      'edgeHitsSum',
+      'edgeBytesSum'
+    ],
+    'defaultDimensions': [
+      'hostname',
+      'responseCode'
+    ],
+    'defaultSortBys': [
+      {
+        'name': 'hostname',
+        'sortOrder': 'ASCENDING'
+      },
+      {
+        'name': 'edgeHitsSum',
+        'sortOrder': 'DESCENDING'
+      }
+    ]
+  },
+  'limits': {
+    'maxDimensions': 4,
+    'maxDateRangeInDays': 90,
+    'maxRetentionInDays': 90,
+    'textFilterMaxLength': 100,
+    'dataPointsLimit': 50000
+  },
+  'links': [
+    {
+      'rel': 'self',
+      'href': '/reporting-reports-executor-api/v2/reports/delivery/traffic/current',
+      'describedBy': '/reporting-reports-executor-api/v2/reports/schema',
+      'allow': [
+        'GET'
+      ]
+    },
+    {
+      'rel': 'data',
+      'href': '/reporting-reports-executor-api/v2/reports/delivery/traffic/current/data',
+      'allow': [
+        'POST'
+      ]
     }
   ]
 };

@@ -19,7 +19,7 @@ import {
   withLatestFrom
 } from 'rxjs';
 
-import { DiscoveryApiModel, ReportsApiModel } from '../types/discovery-api.model';
+import { Dimension, DiscoveryApiModel, Metric, ReportsApiModel, TimeDimensionsTypes } from '../types/discovery-api.model';
 import { MyDataSourceOptions, MyQuery, TestDataSourceResponseStatus } from '../types/types';
 
 export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSourceOptions> {
@@ -116,14 +116,15 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
     const frame = new MutableDataFrame({
       fields: uniq(data?.map(row => Object.keys(row)).flat()).map(dataKey => {
         const fieldData = fieldsData.find(({ name }) => name === dataKey);
-        const type = fieldData?.type.toLowerCase() === FieldType.string ? FieldType.string : FieldType.number;
-
-        return {
+        const dataFrame = {
           name: dataKey,
-          // Change to type matching after https://track.akamai.com/jira/browse/DPS-28473 is done
-          type: dataKey.includes('time') ? FieldType.time : type,
           refId
         };
+
+        return fieldData ? {
+          ...dataFrame,
+          type: this.getFieldDataType(fieldData)
+        } : dataFrame;
       })
     });
 
@@ -152,5 +153,13 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
     };
     
   }
+
+  private getFieldDataType({ type }: Dimension | Metric): FieldType {
+    if (TimeDimensionsTypes.includes(type)) {
+      return FieldType.time;
+    }
+
+    return type.toLowerCase() === FieldType.string ? FieldType.string : FieldType.number;
+  };
 }
 
