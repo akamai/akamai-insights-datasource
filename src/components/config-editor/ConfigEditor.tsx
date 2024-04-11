@@ -1,4 +1,5 @@
-import { InlineField, Input } from '@grafana/ui';
+import { Field, InlineField, Input, TextArea } from '@grafana/ui';
+import { camelCase } from 'lodash';
 import React, { ChangeEvent } from 'react';
 
 import { DataSourceProps } from '../../types/types';
@@ -18,11 +19,33 @@ export function ConfigEditor({ options, onOptionsChange }: DataSourceProps) {
   const onHostChange = (event: ChangeEvent<HTMLInputElement>) => onInputChange(event, Secret.Host);
   const onAccessTokenChange = (event: ChangeEvent<HTMLInputElement>) => onInputChange(event, Secret.AccessToken);
   const onClientTokenChange = (event: ChangeEvent<HTMLInputElement>) => onInputChange(event, Secret.ClientToken);
+  const onCredentialsTextAreaChange = ({ target: { value } }: ChangeEvent<HTMLTextAreaElement>) => {
+    const secrets = value
+      .split('\n')
+      .map(set => set.trim().split(/\s=\s(.*)/s))
+      .map(([ name, secret ]) => ({ [ camelCase(name) ]: secret }))
+      .reduce((prev, next) => ({ ...prev, ...next }), {});
+
+    const jsonData = {
+      ...options.jsonData,
+      ...secrets
+    };
+
+    onOptionsChange({ ...options, jsonData });
+  };
 
   const { jsonData: { clientSecret, host, clientToken, accessToken } } = options;
 
   return (
     <div className="gf-form-group">
+      <div style={{ width: 640 }}>
+        <Field label="Information" description="Paste credentials here to auto fill form below">
+          <TextArea
+            name="credentialsTextArea"
+            onChange={onCredentialsTextAreaChange}/>
+        </Field>
+      </div>
+      <hr/>
       <InlineField
         label="Akamai Client Secret"
         labelWidth={20}>
@@ -30,7 +53,7 @@ export function ConfigEditor({ options, onOptionsChange }: DataSourceProps) {
           onChange={onClientSecretChange}
           value={clientSecret || ''}
           placeholder="Enter client secret"
-          width={40}
+          width={60}
         />
       </InlineField>
       <InlineField
@@ -39,7 +62,7 @@ export function ConfigEditor({ options, onOptionsChange }: DataSourceProps) {
         <Input
           value={host || ''}
           placeholder="Enter host"
-          width={40}
+          width={60}
           onChange={onHostChange}
         />
       </InlineField>
@@ -49,7 +72,7 @@ export function ConfigEditor({ options, onOptionsChange }: DataSourceProps) {
         <Input
           value={accessToken || ''}
           placeholder="Enter access token"
-          width={40}
+          width={60}
           onChange={onAccessTokenChange}
         />
       </InlineField>
@@ -59,7 +82,7 @@ export function ConfigEditor({ options, onOptionsChange }: DataSourceProps) {
         <Input
           value={clientToken || ''}
           placeholder="Enter client token"
-          width={40}
+          width={60}
           onChange={onClientTokenChange}
         />
       </InlineField>
