@@ -1,12 +1,13 @@
 import { Field, InlineField, Input, TextArea } from '@grafana/ui';
-import { camelCase } from 'lodash';
-import React, { ChangeEvent } from 'react';
+import { camelCase, isEmpty } from 'lodash';
+import React, { ChangeEvent, useState } from 'react';
 
 import { DataSourceProps } from '../../types/types';
-import { Secret } from './types';
+import { inputWidth, labelWidth, Secret, secretsNames, textAreaWidth } from './types';
 
 export function ConfigEditor({ options, onOptionsChange }: DataSourceProps) {
 
+  const [ credentialsTextAreaInvalid, setCredentialsTextAreaInvalid ] = useState<boolean>(false);
   const onInputChange = ({ target: { value } }: ChangeEvent<HTMLInputElement>, fieldName: string) => {
     const jsonData = {
       ...options.jsonData,
@@ -22,67 +23,75 @@ export function ConfigEditor({ options, onOptionsChange }: DataSourceProps) {
   const onCredentialsTextAreaChange = ({ target: { value } }: ChangeEvent<HTMLTextAreaElement>) => {
     const secrets = value
       .split('\n')
-      .map(set => set.trim().split(/\s=\s(.*)/s))
+      .map(line => line.trim().split(/\s=\s(.*)/s))
       .map(([ name, secret ]) => ({ [ camelCase(name) ]: secret }))
       .reduce((prev, next) => ({ ...prev, ...next }), {});
 
-    const jsonData = {
-      ...options.jsonData,
-      ...secrets
-    };
+    const entries = Object.entries(secrets);
+    const isCredentialsTextAreaInvalid = entries.length !== secretsNames.length || entries
+      .some(([ name, secret ]) => !secretsNames.includes(name as Secret) || isEmpty(secret));
+    setCredentialsTextAreaInvalid(isCredentialsTextAreaInvalid);
 
-    onOptionsChange({ ...options, jsonData });
+    if (!isCredentialsTextAreaInvalid) {
+      const jsonData = {
+        ...options.jsonData,
+        ...secrets
+      };
+
+      onOptionsChange({ ...options, jsonData });
+    }
   };
 
   const { jsonData: { clientSecret, host, clientToken, accessToken } } = options;
 
   return (
     <div className="gf-form-group">
-      <div style={{ width: 640 }}>
+      <div style={{ width: textAreaWidth }}>
         <Field label="Information" description="Paste credentials here to auto fill form below">
           <TextArea
             name="credentialsTextArea"
+            invalid={credentialsTextAreaInvalid}
             onChange={onCredentialsTextAreaChange}/>
         </Field>
       </div>
       <hr/>
       <InlineField
         label="Akamai Client Secret"
-        labelWidth={20}>
+        labelWidth={labelWidth}>
         <Input
           onChange={onClientSecretChange}
           value={clientSecret || ''}
           placeholder="Enter client secret"
-          width={60}
+          width={inputWidth}
         />
       </InlineField>
       <InlineField
         label="Host"
-        labelWidth={20}>
+        labelWidth={labelWidth}>
         <Input
           value={host || ''}
           placeholder="Enter host"
-          width={60}
+          width={inputWidth}
           onChange={onHostChange}
         />
       </InlineField>
       <InlineField
         label="Access Token"
-        labelWidth={20}>
+        labelWidth={labelWidth}>
         <Input
           value={accessToken || ''}
           placeholder="Enter access token"
-          width={60}
+          width={inputWidth}
           onChange={onAccessTokenChange}
         />
       </InlineField>
       <InlineField
         label="Client Token"
-        labelWidth={20}>
+        labelWidth={labelWidth}>
         <Input
           value={clientToken || ''}
           placeholder="Enter client token"
-          width={60}
+          width={inputWidth}
           onChange={onClientTokenChange}
         />
       </InlineField>

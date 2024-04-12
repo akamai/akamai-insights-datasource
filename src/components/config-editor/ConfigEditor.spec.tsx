@@ -54,4 +54,28 @@ describe('ConfigEditor component', () => {
       }
     });
   });
+
+  it('should mark textarea as invalid and not update form when credentials are in wrong format', () => {
+    const options: any = {
+      jsonData: {}
+    };
+    const onOptionsChange = jest.fn();
+
+    const tree = render(
+      <ConfigEditor options={options} onOptionsChange={onOptionsChange}/>
+    );
+    const textArea = tree.container.querySelector('[name="credentialsTextArea"]') as Element;
+
+    fireEvent.change(textArea, {
+      target: {
+        value: `clientsecret = test=
+                host = test.net
+                accesstoken = test-123
+                client_token = test-test`
+      }
+    });
+
+    expect(onOptionsChange).not.toHaveBeenCalled();
+    expect(tree).toMatchSnapshot();
+  });
 });
