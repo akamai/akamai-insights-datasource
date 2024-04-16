@@ -9,5 +9,3 @@ export const secretsNames = [ Secret.ClientSecret, Secret.Host, Secret.AccessTok
 
 export const labelWidth = 20;
 export const inputWidth = 60;
-
-export const textAreaWidth = 640;

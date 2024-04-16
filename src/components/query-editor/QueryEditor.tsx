@@ -53,7 +53,8 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
           onChange={onDataSourceOptionChange}>
         </Select>
       </InlineField>
-      { (() => !isEmpty(model.metrics) && !isEmpty(model.dimensions) ?
+      <hr/>
+      {(() => !isEmpty(model.metrics) && !isEmpty(model.dimensions) ?
         <DataSourceForm
           model={model}
           query={query}
