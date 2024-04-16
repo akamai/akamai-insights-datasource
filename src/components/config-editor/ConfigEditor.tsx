@@ -3,7 +3,8 @@ import { camelCase, isEmpty } from 'lodash';
 import React, { ChangeEvent, useState } from 'react';
 
 import { DataSourceProps } from '../../types/types';
-import { inputWidth, labelWidth, Secret, secretsNames, textAreaWidth } from './types';
+import { inputWidth, labelWidth, Secret, secretsNames } from './types';
+import './ConfigEditor.css';
 
 export function ConfigEditor({ options, onOptionsChange }: DataSourceProps) {
 
@@ -46,9 +47,10 @@ export function ConfigEditor({ options, onOptionsChange }: DataSourceProps) {
 
   return (
     <div className="gf-form-group">
-      <div style={{ width: textAreaWidth }}>
+      <div className="credentials__container">
         <Field label="Information" description="Paste credentials here to auto fill form below">
           <TextArea
+            className="credentials__textarea"
             name="credentialsTextArea"
             invalid={credentialsTextAreaInvalid}
             onChange={onCredentialsTextAreaChange}/>
