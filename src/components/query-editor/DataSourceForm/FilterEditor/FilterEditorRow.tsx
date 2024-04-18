@@ -3,6 +3,7 @@ import { InlineField, InlineFieldRow, Select } from '@grafana/ui';
 import React, { JSX } from 'react';
 
 import '../../../../styles/styles.css';
+import { FilterEditor } from './FilterEditor';
 import { FormService } from '../../../../services/form.service';
 import {
   dimensionOperatorOptions,
@@ -12,7 +13,6 @@ import {
   metricOperatorOptions,
   shortLabelWidth
 } from '../FormTypes';
-import { FilterEditor } from './FilterEditor';
 
 interface FilterEditorProps {
   model: FilterFormModel;

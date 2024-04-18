@@ -2,9 +2,9 @@ import { DataSourcePluginMeta, FieldType } from '@grafana/data';
 import { BackendSrvRequest, getBackendSrv } from '@grafana/runtime';
 import { of, throwError } from 'rxjs';
 
+import { DatasourceService } from './datasource.service';
 import { discoveryTraffic } from '../test/mocks/mock-discovery-api';
 import { DataType } from '../types/discovery-api.model';
-import { DatasourceService } from './datasource.service';
 
 jest.mock('@grafana/runtime');
 
