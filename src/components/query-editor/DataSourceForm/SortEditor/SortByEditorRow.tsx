@@ -3,6 +3,7 @@ import { InlineField, InlineFieldRow, Select } from '@grafana/ui';
 import React, { JSX } from 'react';
 import '../../../../styles/styles.css';
 
+import { SortByEditor } from './SortByEditor';
 import { FormService } from '../../../../services/form.service';
 import {
   FilterType,
@@ -10,7 +11,6 @@ import {
   shortLabelWidth,
   SortByFormModel
 } from '../FormTypes';
-import { SortByEditor } from './SortByEditor';
 
 interface SortByEditorProps {
   model: SortByFormModel;

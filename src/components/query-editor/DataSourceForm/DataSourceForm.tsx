@@ -2,15 +2,15 @@ import { SelectableValue } from '@grafana/data';
 import { Button, InlineField, InlineFieldRow, MultiSelect } from '@grafana/ui';
 import React, { JSX, useState } from 'react';
 
+import { FilterEditorRow } from './FilterEditor/FilterEditorRow';
+import { FilterFormModel, mediumLabelWidth, shortLabelWidth, SortByFormModel } from './FormTypes';
+import { ListField } from './ListField/ListField';
+import { SortByEditorRow } from './SortEditor/SortByEditorRow';
 import { DatasourceService } from '../../../services/datasource.service';
 import { FormService } from '../../../services/form.service';
 import { DiscoveryApiModel } from '../../../types/discovery-api.model';
 import { MyQuery } from '../../../types/types';
 import { stringsToSelectableValues, toSelectableValues } from '../../../utils/utils';
-import { FilterEditorRow } from './FilterEditor/FilterEditorRow';
-import { FilterFormModel, mediumLabelWidth, shortLabelWidth, SortByFormModel } from './FormTypes';
-import { ListField } from './ListField/ListField';
-import { SortByEditorRow } from './SortEditor/SortByEditorRow';
 
 interface DataSourceFormProps {
   model: DiscoveryApiModel,

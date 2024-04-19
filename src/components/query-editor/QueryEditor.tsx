@@ -3,12 +3,12 @@ import { Icon, InlineField, Select } from '@grafana/ui';
 import { isEmpty } from 'lodash';
 import React, { useLayoutEffect, useState } from 'react';
 
+import { DataSourceForm } from './DataSourceForm/DataSourceForm';
+import { shortLabelWidth } from './DataSourceForm/FormTypes';
 import { DatasourceService } from '../../services/datasource.service';
 import { initialModel } from '../../types/discovery-api.model';
 import { MyDataSourceOptions, MyQuery } from '../../types/types';
 import { stringToSelectableValue } from '../../utils/utils';
-import { DataSourceForm } from './DataSourceForm/DataSourceForm';
-import { shortLabelWidth } from './DataSourceForm/FormTypes';
 
 type Props = QueryEditorProps<DatasourceService, MyQuery, MyDataSourceOptions>;
 

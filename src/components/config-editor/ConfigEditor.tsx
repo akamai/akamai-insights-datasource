@@ -2,8 +2,8 @@ import { Field, InlineField, Input, TextArea } from '@grafana/ui';
 import { camelCase, isEmpty } from 'lodash';
 import React, { ChangeEvent, useState } from 'react';
 
-import { DataSourceProps } from '../../types/types';
 import { inputWidth, labelWidth, Secret, secretsNames } from './types';
+import { DataSourceProps } from '../../types/types';
 import './ConfigEditor.css';
 
 export function ConfigEditor({ options, onOptionsChange }: DataSourceProps) {

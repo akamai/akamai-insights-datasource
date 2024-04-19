@@ -36,3 +36,4 @@ e2e-results/
 /.vscode/
 *.iml
 .DS_Store
+/mage/

@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
+import { DataSourceForm } from './DataSourceForm';
 import { Dimension, DiscoveryApiModel, Metric } from '../../../types/discovery-api.model';
 import { MyQuery } from '../../../types/types';
-import { DataSourceForm } from './DataSourceForm';
 
 const datasource: any = {};
 const model: DiscoveryApiModel = {

@@ -1,3 +1,4 @@
+import { FormService } from './form.service';
 import {
   DimensionOperator,
   dimensionOperatorOptions,
@@ -11,7 +12,6 @@ import {
 import { mockDimensionsOptions } from '../test/mocks/mock-selectable-values';
 import { FilterQuery, SortByQuery } from '../types/types';
 import { stringToSelectableValue } from '../utils/utils';
-import { FormService } from './form.service';
 
 const dimensionOption = stringToSelectableValue(FilterType.Dimension);
 const metricOption = stringToSelectableValue(FilterType.Metric);

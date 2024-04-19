@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
+import { SortByEditor } from './SortByEditor';
 import { mockDimensionsOptions, mockMetricsOptions } from '../../../../test/mocks/mock-selectable-values';
 import { sortByOrderOptions, SortByQueryFormModel } from '../FormTypes';
-import { SortByEditor } from './SortByEditor';
 
 describe('SortEditor component', () => {
   it('should render dimension editor', () => {

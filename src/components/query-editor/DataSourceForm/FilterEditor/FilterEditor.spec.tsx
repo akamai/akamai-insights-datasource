@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
+import { FilterEditor } from './FilterEditor';
 import { mockDimensionsOptions, mockMetricsOptions } from '../../../../test/mocks/mock-selectable-values';
 import { dimensionOperatorOptions, FilterQueryFormModel, metricOperatorOptions } from '../FormTypes';
-import { FilterEditor } from './FilterEditor';
 
 describe('FilterEditor component', () => {
   it('should render dimension editor', () => {

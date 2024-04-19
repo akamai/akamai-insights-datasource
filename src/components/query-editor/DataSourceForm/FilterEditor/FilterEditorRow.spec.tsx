@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
+import { FilterEditorRow } from './FilterEditorRow';
 import { mockDimensionsOptions, mockMetricsOptions } from '../../../../test/mocks/mock-selectable-values';
 import { dimensionOperatorOptions, FilterFormModel, filterTypeOptions, metricOperatorOptions } from '../FormTypes';
-import { FilterEditorRow } from './FilterEditorRow';
 
 describe('FilterEditorRow component', () => {
   it('should render dimension row', () => {

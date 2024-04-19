@@ -9,7 +9,7 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
         class="gf-form-group"
       >
         <div
-          style="width: 640px;"
+          class="credentials__container"
         >
           <div
             class="css-8e5b3"
@@ -33,7 +33,7 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
             <div>
               <div>
                 <textarea
-                  class="css-b6cogb"
+                  class="css-b6cogb credentials__textarea"
                   name="credentialsTextArea"
                 />
               </div>
@@ -157,7 +157,7 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
       class="gf-form-group"
     >
       <div
-        style="width: 640px;"
+        class="credentials__container"
       >
         <div
           class="css-8e5b3"
@@ -181,7 +181,7 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
           <div>
             <div>
               <textarea
-                class="css-b6cogb"
+                class="css-b6cogb credentials__textarea"
                 name="credentialsTextArea"
               />
             </div>
