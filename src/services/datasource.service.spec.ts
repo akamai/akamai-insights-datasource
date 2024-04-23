@@ -4,7 +4,7 @@ import { of, throwError } from 'rxjs';
 
 import { DatasourceService } from './datasource.service';
 import { discoveryTraffic } from '../test/mocks/mock-discovery-api';
-import { DataType } from '../types/discovery-api.model';
+import { DataType, DiscoveryApiModel } from '../types/discovery-api.model';
 
 jest.mock('@grafana/runtime');
 
@@ -55,139 +55,212 @@ describe('DatasourceService', () => {
   });
 
   describe('given query method', () => {
-    test('when only 1 query is executed', done => {
-      const target = {
-        dimensions: [ 'time5minutes', 'hostname' ],
-        metrics: [ 'edgeHitsSum' ],
-        limit: 1000,
-        reportLink: '/reporting-reports-executor-api/v2/reports/delivery/traffic',
-        refId: 'A'
-      };
-      // @ts-ignore
-      getBackendSrv.mockImplementation(() => ({
-        fetch: (options: BackendSrvRequest) => {
-          if (options.url.includes('discovery')) {
-            return of({ data: discoveryTraffic });
-          }
+    describe('and no discovery api response is saved', () => {
+      beforeEach(() => {
+        // @ts-ignore
+        DatasourceService.cachedDiscoveryAPIMap.clear();
+      });
 
-          return of({ data: { data: [ { edgeHitsSum: 1000, time5minutes: 1710155443, hostname: 'akamai.com' } ] } });
-        }
-      }));
+      test('when only 1 query is executed', done => {
+        const target = {
+          dimensions: [ 'time5minutes', 'hostname' ],
+          metrics: [ 'edgeHitsSum' ],
+          limit: 1000,
+          reportLink: '/reporting-reports-executor-api/v2/reports/delivery/traffic',
+          refId: 'A'
+        };
+        // @ts-ignore
+        getBackendSrv.mockImplementation(() => ({
+          fetch: (options: BackendSrvRequest) => {
+            if (options.url.includes('discovery')) {
+              return of({ data: discoveryTraffic });
+            }
 
-      service.query({ targets: [ target ], range: {
-          from: new Date('03-10-2024'),
-          to: new Date('03-12-2024')
-      } } as any)
-        .subscribe({
-          next: response => {
-            // @ts-ignore
-            expect(response.data[ 0 ].fields).toEqual([
-              {
-                config: {},
-                name: 'edgeHitsSum',
-                refId: 'A',
-                type: 'number',
-                values: [
-                  1000
-                ]
-              },
-              {
-                config: {},
-                name: 'time5minutes',
-                refId: 'A',
-                type: 'time',
-                values: [
-                  1710155443000
-                ]
-              },
-              {
-                config: {},
-                name: 'hostname',
-                refId: 'A',
-                type: 'string',
-                values: [
-                  'akamai.com'
-                ]
-              }
-            ]);
-            done();
+            return of({ data: { data: [ { edgeHitsSum: 1000, time5minutes: 1710155443, hostname: 'akamai.com' } ] } });
           }
-        });
+        }));
+
+        service.query({ targets: [ target ], range: {
+            from: new Date('03-10-2024'),
+            to: new Date('03-12-2024')
+        } } as any)
+          .subscribe({
+            next: response => {
+              // @ts-ignore
+              expect(response.data[ 0 ].fields).toEqual([
+                {
+                  config: {},
+                  name: 'edgeHitsSum',
+                  refId: 'A',
+                  type: 'number',
+                  values: [
+                    1000
+                  ]
+                },
+                {
+                  config: {},
+                  name: 'time5minutes',
+                  refId: 'A',
+                  type: 'time',
+                  values: [
+                    1710155443000
+                  ]
+                },
+                {
+                  config: {},
+                  name: 'hostname',
+                  refId: 'A',
+                  type: 'string',
+                  values: [
+                    'akamai.com'
+                  ]
+                }
+              ]);
+              done();
+            }
+          });
+      });
+
+      test('when multiple queries are executed', done => {
+        const target = {
+          dimensions: [ 'time5minutes' ],
+          metrics: [ 'edgeHitsSum' ],
+          limit: 1000,
+          reportLink: '/reporting-reports-executor-api/v2/reports/delivery/traffic',
+          refId: 'A'
+        };
+        // @ts-ignore
+        getBackendSrv.mockImplementation(() => ({
+          fetch: (options: BackendSrvRequest) => {
+            if (options.url.includes('discovery')) {
+              return of({ data: discoveryTraffic });
+            }
+
+            if (options.data.body.metrics.includes('edgeBytesSum')) {
+              return of({ data: { data: [ { edgeBytesSum: 20000, time5minutes: 1710155443 } ] } });
+            }
+
+            return of({ data: { data: [ { edgeHitsSum: 1000, time5minutes: 1710155443 } ] } });
+          }
+        }));
+
+        service.query({ targets: [ target, { ...target, refId: 'B', metrics: [ 'edgeBytesSum' ] } ], range: {
+            from: new Date('03-10-2024'),
+            to: new Date('03-12-2024')
+        } } as any)
+          .subscribe({
+            next: response => {
+              // @ts-ignore
+              expect(response.data[ 0 ].fields).toEqual([
+                {
+                  config: {},
+                  name: 'edgeHitsSum',
+                  refId: 'A',
+                  type: 'number',
+                  values: [
+                    1000
+                  ]
+                },
+                {
+                  config: {},
+                  name: 'time5minutes',
+                  refId: 'A',
+                  type: 'time',
+                  values: [
+                    1710155443000
+                  ]
+                }
+              ]);
+              expect(response.data[ 1 ].fields).toEqual([
+                {
+                  config: {},
+                  name: 'edgeBytesSum',
+                  refId: 'B',
+                  type: 'number',
+                  values: [
+                    20000
+                  ]
+                },
+                {
+                  config: {},
+                  name: 'time5minutes',
+                  refId: 'B',
+                  type: 'time',
+                  values: [
+                    1710155443000
+                  ]
+                }
+              ]);
+              done();
+            }
+          });
+      });
     });
 
-    test('when multiple queries are executed', done => {
-      const target = {
-        dimensions: [ 'time5minutes' ],
-        metrics: [ 'edgeHitsSum' ],
-        limit: 1000,
-        reportLink: '/reporting-reports-executor-api/v2/reports/delivery/traffic',
-        refId: 'A'
-      };
-      // @ts-ignore
-      getBackendSrv.mockImplementation(() => ({
-        fetch: (options: BackendSrvRequest) => {
-          if (options.url.includes('discovery')) {
-            return of({ data: discoveryTraffic });
-          }
+    describe('and discovery api response is saved', () => {
+      beforeEach(() => {
+        // @ts-ignore
+        DatasourceService.cachedDiscoveryAPIMap.set(
+          '/reporting-reports-executor-api/v2/reports/delivery/traffic',
+          discoveryTraffic as unknown as DiscoveryApiModel
+        );
+      });
 
-          if (options.data.body.metrics.includes('edgeBytesSum')) {
-            return of({ data: { data: [ { edgeBytesSum: 20000, time5minutes: 1710155443 } ] } });
+      test('when query is executed', done => {
+        const target = {
+          dimensions: [ 'time5minutes', 'hostname' ],
+          metrics: [ 'edgeHitsSum' ],
+          limit: 1000,
+          reportLink: '/reporting-reports-executor-api/v2/reports/delivery/traffic',
+          refId: 'A'
+        };
+        // @ts-ignore
+        getBackendSrv.mockImplementation(() => ({
+          fetch: () => {
+            return of({ data: { data: [ { edgeHitsSum: 1000, time5minutes: 1710155443, hostname: 'akamai.com' } ] } });
           }
+        }));
 
-          return of({ data: { data: [ { edgeHitsSum: 1000, time5minutes: 1710155443 } ] } });
-        }
-      }));
-
-      service.query({ targets: [ target, { ...target, refId: 'B', metrics: [ 'edgeBytesSum' ] } ], range: {
-          from: new Date('03-10-2024'),
-          to: new Date('03-12-2024')
-      } } as any)
-        .subscribe({
-          next: response => {
-            // @ts-ignore
-            expect(response.data[ 0 ].fields).toEqual([
-              {
-                config: {},
-                name: 'edgeHitsSum',
-                refId: 'A',
-                type: 'number',
-                values: [
-                  1000
-                ]
-              },
-              {
-                config: {},
-                name: 'time5minutes',
-                refId: 'A',
-                type: 'time',
-                values: [
-                  1710155443000
-                ]
-              }
-            ]);
-            expect(response.data[ 1 ].fields).toEqual([
-              {
-                config: {},
-                name: 'edgeBytesSum',
-                refId: 'B',
-                type: 'number',
-                values: [
-                  20000
-                ]
-              },
-              {
-                config: {},
-                name: 'time5minutes',
-                refId: 'B',
-                type: 'time',
-                values: [
-                  1710155443000
-                ]
-              }
-            ]);
-            done();
-          }
-        });
+        service.query({ targets: [ target ], range: {
+            from: new Date('03-10-2024'),
+            to: new Date('03-12-2024')
+        } } as any)
+          .subscribe({
+            next: response => {
+              // @ts-ignore
+              expect(response.data[ 0 ].fields).toEqual([
+                {
+                  config: {},
+                  name: 'edgeHitsSum',
+                  refId: 'A',
+                  type: 'number',
+                  values: [
+                    1000
+                  ]
+                },
+                {
+                  config: {},
+                  name: 'time5minutes',
+                  refId: 'A',
+                  type: 'time',
+                  values: [
+                    1710155443000
+                  ]
+                },
+                {
+                  config: {},
+                  name: 'hostname',
+                  refId: 'A',
+                  type: 'string',
+                  values: [
+                    'akamai.com'
+                  ]
+                }
+              ]);
+              done();
+            }
+          });
+      });
     });
   });
 

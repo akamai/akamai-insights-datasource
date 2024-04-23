@@ -49,7 +49,6 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
           value={dataSource}
           options={dataSources}
           placeholder="Select data source"
-          width={40}
           onChange={onDataSourceOptionChange}>
         </Select>
       </InlineField>

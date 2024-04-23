@@ -15,8 +15,7 @@ import {
   map,
   Observable,
   of,
-  shareReplay,
-  withLatestFrom
+  tap
 } from 'rxjs';
 
 import { Dimension, DiscoveryApiModel, Metric, ReportsApiModel, TimeDimensionsTypes } from '../types/discovery-api.model';
@@ -28,18 +27,25 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
   private static readonly REPORTS = 'reports';
   private static readonly DATA = 'data';
   private static readonly MILLISECONDS_IN_SECOND = 1000;
+  private static readonly cachedDiscoveryAPIMap = new Map<string, DiscoveryApiModel>();
 
   constructor(protected readonly instanceSettings: DataSourceInstanceSettings<MyDataSourceOptions>) {
     super(instanceSettings);
   }
 
   static discoveryApi(id: number, targetUrl: string): Observable<DiscoveryApiModel> {
-    return DatasourceService.makeBackendSrvCall({
+    if (DatasourceService.cachedDiscoveryAPIMap.has(targetUrl)) {
+      return of(DatasourceService.cachedDiscoveryAPIMap.get(targetUrl)) as Observable<DiscoveryApiModel>;
+    }
+
+    return DatasourceService.makeBackendSrvCall<DiscoveryApiModel>({
       url: `${DatasourceService.getBackendDataSourceUrl(id)}/${DatasourceService.DISCOVERY}`,
       params: {
         targetUrl
       }
-    });
+    }).pipe(
+      tap(data => DatasourceService.cachedDiscoveryAPIMap.set(targetUrl, data))
+    );
   }
 
   static reportsApi(id: number): Observable<ReportsApiModel> {
@@ -52,8 +58,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
     return getBackendSrv()
       .fetch<T>(options)
       .pipe(
-        map(({ data }) => data),
-        shareReplay()
+        map(({ data }) => data)
       );
   }
 
@@ -84,25 +89,26 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
         }, isEmpty)
       };
 
-      return getBackendSrv()
-        .fetch<Record<string, any>>({
-          method: 'POST',
-          url: `${DatasourceService.getBackendDataSourceUrl(this.id)}/${DatasourceService.DATA}`,
-          data: {
-            body,
-            from: from.toISOString(),
-            to: to.toISOString()
-          },
-          params: {
-            targetUrl: reportLink
-          }
-        })
-        .pipe(
-          withLatestFrom(DatasourceService.discoveryApi(this.id, reportLink || '')),
-          map(([ { data: { data } }, discoveryApiModel ]) => ({
-              data: [ this.convertToDataFrame(data, discoveryApiModel, refId) ]
-          }))
-        );
+      return forkJoin([
+        getBackendSrv()
+          .fetch<Record<string, any>>({
+            method: 'POST',
+            url: `${DatasourceService.getBackendDataSourceUrl(this.id)}/${DatasourceService.DATA}`,
+            data: {
+              body,
+              from: from.toISOString(),
+              to: to.toISOString()
+            },
+            params: {
+              targetUrl: reportLink
+            }
+          }),
+        DatasourceService.discoveryApi(this.id, reportLink || '')
+      ]).pipe(
+        map(([ { data: { data } }, discoveryApiModel ]) => ({
+          data: [ this.convertToDataFrame(data, discoveryApiModel, refId) ]
+        }))
+      );
     });
 
     return forkJoin([ ...dataObservables ])
@@ -111,8 +117,8 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
       );
   }
 
-  private convertToDataFrame(data: Record<string, any>[], discoveryApiModel: DiscoveryApiModel, refId: string) {
-    const fieldsData = [ ...discoveryApiModel.dimensions, ...discoveryApiModel.metrics ];
+  private convertToDataFrame(data: Record<string, any>[], { dimensions, metrics }: DiscoveryApiModel, refId: string) {
+    const fieldsData = [ ...dimensions, ...metrics ];
     const frame = new MutableDataFrame({
       fields: uniq(data?.map(row => Object.keys(row)).flat()).map(dataKey => {
         const fieldData = fieldsData.find(({ name }) => name === dataKey);
