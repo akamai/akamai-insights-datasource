@@ -44,11 +44,18 @@ type DiscoveryApi struct {
 	Name       string                   `json:"name"`
 	Dimensions []map[string]interface{} `json:"dimensions"`
 	Metrics    []map[string]interface{} `json:"metrics"`
+	Defaults   Defaults                 `json:"defaults"`
 }
 
 type OpenApi struct {
 	Data     []map[string]interface{} `json:"data"`
 	Metadata Metadata                 `json:"metadata"`
+}
+
+type Defaults struct {
+	DefaultMetrics    []string                 `json:"defaultMetrics"`
+	DefaultDimensions []string                 `json:"defaultDimensions"`
+	DefaultSortBy     []map[string]interface{} `json:"defaultSortBy"`
 }
 
 type Metadata struct {
