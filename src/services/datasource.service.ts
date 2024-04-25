@@ -10,6 +10,7 @@ import { BackendSrvRequest, DataSourceWithBackend, getBackendSrv } from '@grafan
 import { isEmpty, omitBy, uniq } from 'lodash';
 import {
   catchError,
+  delay,
   forkJoin,
   lastValueFrom,
   map,
@@ -27,6 +28,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
   private static readonly REPORTS = 'reports';
   private static readonly DATA = 'data';
   private static readonly MILLISECONDS_IN_SECOND = 1000;
+  private static readonly DISCOVERY_CACHE_RETURN_DELAY = 100;
   private static readonly cachedDiscoveryAPIMap = new Map<string, DiscoveryApiModel>();
 
   constructor(protected readonly instanceSettings: DataSourceInstanceSettings<MyDataSourceOptions>) {
@@ -35,7 +37,10 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
 
   static discoveryApi(id: number, targetUrl: string): Observable<DiscoveryApiModel> {
     if (DatasourceService.cachedDiscoveryAPIMap.has(targetUrl)) {
-      return of(DatasourceService.cachedDiscoveryAPIMap.get(targetUrl)) as Observable<DiscoveryApiModel>;
+      return of(DatasourceService.cachedDiscoveryAPIMap.get(targetUrl) as DiscoveryApiModel)
+        .pipe(
+          delay(DatasourceService.DISCOVERY_CACHE_RETURN_DELAY)
+        );
     }
 
     return DatasourceService.makeBackendSrvCall<DiscoveryApiModel>({
