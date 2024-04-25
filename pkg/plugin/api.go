@@ -55,7 +55,7 @@ type OpenApi struct {
 type Defaults struct {
 	DefaultMetrics    []string                 `json:"defaultMetrics"`
 	DefaultDimensions []string                 `json:"defaultDimensions"`
-	DefaultSortBy     []map[string]interface{} `json:"defaultSortBy"`
+	DefaultSortBys    []map[string]interface{} `json:"defaultSortBys"`
 }
 
 type Metadata struct {

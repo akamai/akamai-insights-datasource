@@ -42,7 +42,7 @@ export function DataSourceForm({ query, onChange, onRunQuery, model }: DataSourc
   const [ metrics, setMetrics ] = useState<SelectableValue[]>(model.metrics ? !isNil(query.metrics) ? stringsToSelectableValues(query.metrics) : defaultMetricsOptions : []);
   const [ filters, setFilters ] = useState<FilterFormModel[]>(model.metrics && model.dimensions ? FormService.toFilterFormModels(query.filters, dimensionsValues, metricsValues) : []);
   const [ sortBys, setSortBys ] = useState<SortByFormModel[]>(
-    model.metrics && model.dimensions ? isNil(query.sortBys) ? FormService.toSortBysFormModel(query.sortBys, dimensionsValues, metricsValues) : defaultSortBysOptions : []
+    model.metrics && model.dimensions ? !isNil(query.sortBys) ? FormService.toSortBysFormModel(query.sortBys, dimensionsValues, metricsValues) : defaultSortBysOptions : []
   );
   const [ applyDisabled, setApplyDisabled ] = useState<boolean>(isEmpty(dimensions) && isEmpty(metrics));
   const [ defaultValuesInfoVisible, setDefaultValuesInfoVisible ] = useState(!query.dimensions && !query.metrics);
@@ -124,7 +124,10 @@ export function DataSourceForm({ query, onChange, onRunQuery, model }: DataSourc
         fieldTooltip="Filters used to narrow down the results of the data. Filters are specified in terms of dimensions or metrics."
         resource="Filter"
         rows={filters}
-        onChange={setFilters}
+        onChange={values => {
+          setFilters(values);
+          onFormChange(dimensions, metrics);
+        }}
         modelProvider={() => FormService.creteEmptyFilter(dimensionsOptions[ 0 ])}
         Editor={(filterModel, index, onSingleFilterChange) =>
           <FilterEditorRow
@@ -141,7 +144,10 @@ export function DataSourceForm({ query, onChange, onRunQuery, model }: DataSourc
         fieldTooltip="Set sortBy settings for multiple columns. If not specified, the default values are used."
         resource="Sort By"
         rows={sortBys}
-        onChange={setSortBys}
+        onChange={values => {
+          setSortBys(values);
+          onFormChange(dimensions, metrics);
+        }}
         modelProvider={() => FormService.creteEmptySortBy(dimensions[ 0 ])}
         Editor={(sortByModel, index, onSingleSortByChange) =>
           <SortByEditorRow

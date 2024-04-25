@@ -32,7 +32,7 @@ exports[`DataSourceForm component should hide info about default values on form 
             >
               <span
                 class="css-1f43avz-a11yText-A11yText"
-                id="react-select-8-live-region"
+                id="react-select-17-live-region"
               />
               <span
                 aria-atomic="false"
@@ -83,7 +83,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                       autocomplete="off"
                       autocorrect="off"
                       class=""
-                      id="react-select-8-input"
+                      id="react-select-17-input"
                       role="combobox"
                       spellcheck="false"
                       style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -147,7 +147,7 @@ exports[`DataSourceForm component should hide info about default values on form 
             >
               <span
                 class="css-1f43avz-a11yText-A11yText"
-                id="react-select-9-live-region"
+                id="react-select-18-live-region"
               />
               <span
                 aria-atomic="false"
@@ -198,7 +198,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                       autocomplete="off"
                       autocorrect="off"
                       class=""
-                      id="react-select-9-input"
+                      id="react-select-18-input"
                       role="combobox"
                       spellcheck="false"
                       style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -360,7 +360,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                 >
                   <span
                     class="css-1f43avz-a11yText-A11yText"
-                    id="react-select-10-live-region"
+                    id="react-select-19-live-region"
                   />
                   <span
                     aria-atomic="false"
@@ -391,7 +391,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                           autocomplete="off"
                           autocorrect="off"
                           class=""
-                          id="react-select-10-input"
+                          id="react-select-19-input"
                           role="combobox"
                           spellcheck="false"
                           style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -429,7 +429,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                 >
                   <span
                     class="css-1f43avz-a11yText-A11yText"
-                    id="react-select-11-live-region"
+                    id="react-select-20-live-region"
                   />
                   <span
                     aria-atomic="false"
@@ -460,7 +460,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                           autocomplete="off"
                           autocorrect="off"
                           class=""
-                          id="react-select-11-input"
+                          id="react-select-20-input"
                           role="combobox"
                           spellcheck="false"
                           style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -498,7 +498,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                 >
                   <span
                     class="css-1f43avz-a11yText-A11yText"
-                    id="react-select-12-live-region"
+                    id="react-select-21-live-region"
                   />
                   <span
                     aria-atomic="false"
@@ -529,7 +529,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                           autocomplete="off"
                           autocorrect="off"
                           class=""
-                          id="react-select-12-input"
+                          id="react-select-21-input"
                           role="combobox"
                           spellcheck="false"
                           style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -674,7 +674,7 @@ exports[`DataSourceForm component should hide info about default values on form 
           >
             <span
               class="css-1f43avz-a11yText-A11yText"
-              id="react-select-8-live-region"
+              id="react-select-17-live-region"
             />
             <span
               aria-atomic="false"
@@ -725,7 +725,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                     autocomplete="off"
                     autocorrect="off"
                     class=""
-                    id="react-select-8-input"
+                    id="react-select-17-input"
                     role="combobox"
                     spellcheck="false"
                     style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -789,7 +789,7 @@ exports[`DataSourceForm component should hide info about default values on form 
           >
             <span
               class="css-1f43avz-a11yText-A11yText"
-              id="react-select-9-live-region"
+              id="react-select-18-live-region"
             />
             <span
               aria-atomic="false"
@@ -840,7 +840,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                     autocomplete="off"
                     autocorrect="off"
                     class=""
-                    id="react-select-9-input"
+                    id="react-select-18-input"
                     role="combobox"
                     spellcheck="false"
                     style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -1002,7 +1002,7 @@ exports[`DataSourceForm component should hide info about default values on form 
               >
                 <span
                   class="css-1f43avz-a11yText-A11yText"
-                  id="react-select-10-live-region"
+                  id="react-select-19-live-region"
                 />
                 <span
                   aria-atomic="false"
@@ -1033,7 +1033,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                         autocomplete="off"
                         autocorrect="off"
                         class=""
-                        id="react-select-10-input"
+                        id="react-select-19-input"
                         role="combobox"
                         spellcheck="false"
                         style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -1071,7 +1071,7 @@ exports[`DataSourceForm component should hide info about default values on form 
               >
                 <span
                   class="css-1f43avz-a11yText-A11yText"
-                  id="react-select-11-live-region"
+                  id="react-select-20-live-region"
                 />
                 <span
                   aria-atomic="false"
@@ -1102,7 +1102,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                         autocomplete="off"
                         autocorrect="off"
                         class=""
-                        id="react-select-11-input"
+                        id="react-select-20-input"
                         role="combobox"
                         spellcheck="false"
                         style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -1140,7 +1140,7 @@ exports[`DataSourceForm component should hide info about default values on form 
               >
                 <span
                   class="css-1f43avz-a11yText-A11yText"
-                  id="react-select-12-live-region"
+                  id="react-select-21-live-region"
                 />
                 <span
                   aria-atomic="false"
@@ -1171,7 +1171,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                         autocomplete="off"
                         autocorrect="off"
                         class=""
-                        id="react-select-12-input"
+                        id="react-select-21-input"
                         role="combobox"
                         spellcheck="false"
                         style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -1748,6 +1748,22 @@ exports[`DataSourceForm component should render editor with default values and i
           className="css-1uedr6a"
         >
           <button
+            aria-label="Remove all"
+            className="css-x1vujn"
+            onClick={[Function]}
+            tabIndex={0}
+          >
+            <div
+              className="css-wf08df-Icon"
+            >
+              <svg
+                data-testid="trash-alt"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </div>
+          </button>
+          <button
             aria-label="Add new Sort By"
             className="css-x1vujn"
             onClick={[Function]}
@@ -1758,6 +1774,315 @@ exports[`DataSourceForm component should render editor with default values and i
             >
               <svg
                 data-testid="plus-circle"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-9doeo5-InlineFieldRow"
+  >
+    <div
+      className="css-9doeo5-InlineFieldRow padding-left-20"
+    >
+      <div
+        className="css-1f5gueu"
+      >
+        <div
+          className="css-1rfunm5"
+        >
+          <div
+            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            onKeyDown={[Function]}
+          >
+            <span
+              className="css-1f43avz-a11yText-A11yText"
+              id="react-select-4-live-region"
+            />
+            <span
+              aria-atomic="false"
+              aria-live="polite"
+              aria-relevant="additions text"
+              className="css-1f43avz-a11yText-A11yText"
+            />
+            <div
+              className="css-1scgfe8"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+            >
+              <div
+                className="css-1kl463j-grafana-select-value-container"
+              >
+                <div
+                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                >
+                  Metric
+                </div>
+                <div
+                  className=" css-lq7btu-Input"
+                  data-value=""
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    className=""
+                    disabled={false}
+                    id="react-select-4-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    role="combobox"
+                    spellCheck="false"
+                    style={
+                      {
+                        "background": 0,
+                        "border": 0,
+                        "color": "inherit",
+                        "font": "inherit",
+                        "gridArea": "1 / 2",
+                        "label": "input",
+                        "margin": 0,
+                        "minWidth": "2px",
+                        "opacity": 1,
+                        "outline": 0,
+                        "padding": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={0}
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                className="css-uvldi-input-suffix"
+              >
+                <div
+                  className="css-wf08df-Icon"
+                >
+                  <svg
+                    data-testid="angle-down"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1f5gueu"
+      >
+        <div
+          className="css-1rfunm5"
+        >
+          <div
+            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            onKeyDown={[Function]}
+          >
+            <span
+              className="css-1f43avz-a11yText-A11yText"
+              id="react-select-5-live-region"
+            />
+            <span
+              aria-atomic="false"
+              aria-live="polite"
+              aria-relevant="additions text"
+              className="css-1f43avz-a11yText-A11yText"
+            />
+            <div
+              className="css-1scgfe8"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+            >
+              <div
+                className="css-1kl463j-grafana-select-value-container"
+              >
+                <div
+                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                >
+                  edgeHitsSum
+                </div>
+                <div
+                  className=" css-lq7btu-Input"
+                  data-value=""
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    className=""
+                    disabled={false}
+                    id="react-select-5-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    role="combobox"
+                    spellCheck="false"
+                    style={
+                      {
+                        "background": 0,
+                        "border": 0,
+                        "color": "inherit",
+                        "font": "inherit",
+                        "gridArea": "1 / 2",
+                        "label": "input",
+                        "margin": 0,
+                        "minWidth": "2px",
+                        "opacity": 1,
+                        "outline": 0,
+                        "padding": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={0}
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                className="css-uvldi-input-suffix"
+              >
+                <div
+                  className="css-wf08df-Icon"
+                >
+                  <svg
+                    data-testid="angle-down"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1f5gueu"
+      >
+        <div
+          className="css-1rfunm5"
+        >
+          <div
+            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            onKeyDown={[Function]}
+          >
+            <span
+              className="css-1f43avz-a11yText-A11yText"
+              id="react-select-6-live-region"
+            />
+            <span
+              aria-atomic="false"
+              aria-live="polite"
+              aria-relevant="additions text"
+              className="css-1f43avz-a11yText-A11yText"
+            />
+            <div
+              className="css-1scgfe8"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+            >
+              <div
+                className="css-1kl463j-grafana-select-value-container"
+              >
+                <div
+                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                >
+                  Descending
+                </div>
+                <div
+                  className=" css-lq7btu-Input"
+                  data-value=""
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    className=""
+                    disabled={false}
+                    id="react-select-6-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    role="combobox"
+                    spellCheck="false"
+                    style={
+                      {
+                        "background": 0,
+                        "border": 0,
+                        "color": "inherit",
+                        "font": "inherit",
+                        "gridArea": "1 / 2",
+                        "label": "input",
+                        "margin": 0,
+                        "minWidth": "2px",
+                        "opacity": 1,
+                        "outline": 0,
+                        "padding": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={0}
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                className="css-uvldi-input-suffix"
+              >
+                <div
+                  className="css-wf08df-Icon"
+                >
+                  <svg
+                    data-testid="angle-down"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="css-1f5gueu"
+    >
+      <div
+        className="css-1rfunm5"
+      >
+        <div
+          className="css-1uedr6a"
+        >
+          <button
+            aria-label="Remove Sort By"
+            className="css-x1vujn"
+            onClick={[Function]}
+            tabIndex={0}
+          >
+            <div
+              className="css-wf08df-Icon"
+            >
+              <svg
+                data-testid="minus-circle"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               />
@@ -1861,7 +2186,7 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
       >
         <span
           className="css-1f43avz-a11yText-A11yText"
-          id="react-select-6-live-region"
+          id="react-select-12-live-region"
         />
         <span
           aria-atomic="false"
@@ -1918,7 +2243,7 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
                 autoCorrect="off"
                 className=""
                 disabled={false}
-                id="react-select-6-input"
+                id="react-select-12-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -2002,7 +2327,7 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
       >
         <span
           className="css-1f43avz-a11yText-A11yText"
-          id="react-select-7-live-region"
+          id="react-select-13-live-region"
         />
         <span
           aria-atomic="false"
@@ -2059,7 +2384,7 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
                 autoCorrect="off"
                 className=""
                 disabled={false}
-                id="react-select-7-input"
+                id="react-select-13-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -2191,6 +2516,22 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
           className="css-1uedr6a"
         >
           <button
+            aria-label="Remove all"
+            className="css-x1vujn"
+            onClick={[Function]}
+            tabIndex={0}
+          >
+            <div
+              className="css-wf08df-Icon"
+            >
+              <svg
+                data-testid="trash-alt"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </div>
+          </button>
+          <button
             aria-label="Add new Sort By"
             className="css-x1vujn"
             onClick={[Function]}
@@ -2201,6 +2542,315 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
             >
               <svg
                 data-testid="plus-circle"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-9doeo5-InlineFieldRow"
+  >
+    <div
+      className="css-9doeo5-InlineFieldRow padding-left-20"
+    >
+      <div
+        className="css-1f5gueu"
+      >
+        <div
+          className="css-1rfunm5"
+        >
+          <div
+            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            onKeyDown={[Function]}
+          >
+            <span
+              className="css-1f43avz-a11yText-A11yText"
+              id="react-select-14-live-region"
+            />
+            <span
+              aria-atomic="false"
+              aria-live="polite"
+              aria-relevant="additions text"
+              className="css-1f43avz-a11yText-A11yText"
+            />
+            <div
+              className="css-1scgfe8"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+            >
+              <div
+                className="css-1kl463j-grafana-select-value-container"
+              >
+                <div
+                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                >
+                  Metric
+                </div>
+                <div
+                  className=" css-lq7btu-Input"
+                  data-value=""
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    className=""
+                    disabled={false}
+                    id="react-select-14-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    role="combobox"
+                    spellCheck="false"
+                    style={
+                      {
+                        "background": 0,
+                        "border": 0,
+                        "color": "inherit",
+                        "font": "inherit",
+                        "gridArea": "1 / 2",
+                        "label": "input",
+                        "margin": 0,
+                        "minWidth": "2px",
+                        "opacity": 1,
+                        "outline": 0,
+                        "padding": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={0}
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                className="css-uvldi-input-suffix"
+              >
+                <div
+                  className="css-wf08df-Icon"
+                >
+                  <svg
+                    data-testid="angle-down"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1f5gueu"
+      >
+        <div
+          className="css-1rfunm5"
+        >
+          <div
+            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            onKeyDown={[Function]}
+          >
+            <span
+              className="css-1f43avz-a11yText-A11yText"
+              id="react-select-15-live-region"
+            />
+            <span
+              aria-atomic="false"
+              aria-live="polite"
+              aria-relevant="additions text"
+              className="css-1f43avz-a11yText-A11yText"
+            />
+            <div
+              className="css-1scgfe8"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+            >
+              <div
+                className="css-1kl463j-grafana-select-value-container"
+              >
+                <div
+                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                >
+                  edgeHitsSum
+                </div>
+                <div
+                  className=" css-lq7btu-Input"
+                  data-value=""
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    className=""
+                    disabled={false}
+                    id="react-select-15-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    role="combobox"
+                    spellCheck="false"
+                    style={
+                      {
+                        "background": 0,
+                        "border": 0,
+                        "color": "inherit",
+                        "font": "inherit",
+                        "gridArea": "1 / 2",
+                        "label": "input",
+                        "margin": 0,
+                        "minWidth": "2px",
+                        "opacity": 1,
+                        "outline": 0,
+                        "padding": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={0}
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                className="css-uvldi-input-suffix"
+              >
+                <div
+                  className="css-wf08df-Icon"
+                >
+                  <svg
+                    data-testid="angle-down"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1f5gueu"
+      >
+        <div
+          className="css-1rfunm5"
+        >
+          <div
+            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            onKeyDown={[Function]}
+          >
+            <span
+              className="css-1f43avz-a11yText-A11yText"
+              id="react-select-16-live-region"
+            />
+            <span
+              aria-atomic="false"
+              aria-live="polite"
+              aria-relevant="additions text"
+              className="css-1f43avz-a11yText-A11yText"
+            />
+            <div
+              className="css-1scgfe8"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+            >
+              <div
+                className="css-1kl463j-grafana-select-value-container"
+              >
+                <div
+                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                >
+                  Descending
+                </div>
+                <div
+                  className=" css-lq7btu-Input"
+                  data-value=""
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    className=""
+                    disabled={false}
+                    id="react-select-16-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    role="combobox"
+                    spellCheck="false"
+                    style={
+                      {
+                        "background": 0,
+                        "border": 0,
+                        "color": "inherit",
+                        "font": "inherit",
+                        "gridArea": "1 / 2",
+                        "label": "input",
+                        "margin": 0,
+                        "minWidth": "2px",
+                        "opacity": 1,
+                        "outline": 0,
+                        "padding": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={0}
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                className="css-uvldi-input-suffix"
+              >
+                <div
+                  className="css-wf08df-Icon"
+                >
+                  <svg
+                    data-testid="angle-down"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="css-1f5gueu"
+    >
+      <div
+        className="css-1rfunm5"
+      >
+        <div
+          className="css-1uedr6a"
+        >
+          <button
+            aria-label="Remove Sort By"
+            className="css-x1vujn"
+            onClick={[Function]}
+            tabIndex={0}
+          >
+            <div
+              className="css-wf08df-Icon"
+            >
+              <svg
+                data-testid="minus-circle"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               />
@@ -2304,7 +2954,7 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
       >
         <span
           className="css-1f43avz-a11yText-A11yText"
-          id="react-select-4-live-region"
+          id="react-select-7-live-region"
         />
         <span
           aria-atomic="false"
@@ -2322,7 +2972,7 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
           >
             <div
               className=" css-1n8tjau-placeholder"
-              id="react-select-4-placeholder"
+              id="react-select-7-placeholder"
             >
               Choose
             </div>
@@ -2332,7 +2982,7 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
             >
               <input
                 aria-autocomplete="list"
-                aria-describedby="react-select-4-placeholder"
+                aria-describedby="react-select-7-placeholder"
                 aria-expanded={false}
                 aria-haspopup={true}
                 autoCapitalize="none"
@@ -2340,7 +2990,7 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
                 autoCorrect="off"
                 className=""
                 disabled={false}
-                id="react-select-4-input"
+                id="react-select-7-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -2412,7 +3062,7 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
       >
         <span
           className="css-1f43avz-a11yText-A11yText"
-          id="react-select-5-live-region"
+          id="react-select-8-live-region"
         />
         <span
           aria-atomic="false"
@@ -2430,7 +3080,7 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
           >
             <div
               className=" css-1n8tjau-placeholder"
-              id="react-select-5-placeholder"
+              id="react-select-8-placeholder"
             >
               Choose
             </div>
@@ -2440,7 +3090,7 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
             >
               <input
                 aria-autocomplete="list"
-                aria-describedby="react-select-5-placeholder"
+                aria-describedby="react-select-8-placeholder"
                 aria-expanded={false}
                 aria-haspopup={true}
                 autoCapitalize="none"
@@ -2448,7 +3098,7 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
                 autoCorrect="off"
                 className=""
                 disabled={false}
-                id="react-select-5-input"
+                id="react-select-8-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -2568,6 +3218,22 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
           className="css-1uedr6a"
         >
           <button
+            aria-label="Remove all"
+            className="css-x1vujn"
+            onClick={[Function]}
+            tabIndex={0}
+          >
+            <div
+              className="css-wf08df-Icon"
+            >
+              <svg
+                data-testid="trash-alt"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </div>
+          </button>
+          <button
             aria-label="Add new Sort By"
             className="css-x1vujn"
             onClick={[Function]}
@@ -2578,6 +3244,315 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
             >
               <svg
                 data-testid="plus-circle"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-9doeo5-InlineFieldRow"
+  >
+    <div
+      className="css-9doeo5-InlineFieldRow padding-left-20"
+    >
+      <div
+        className="css-1f5gueu"
+      >
+        <div
+          className="css-1rfunm5"
+        >
+          <div
+            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            onKeyDown={[Function]}
+          >
+            <span
+              className="css-1f43avz-a11yText-A11yText"
+              id="react-select-9-live-region"
+            />
+            <span
+              aria-atomic="false"
+              aria-live="polite"
+              aria-relevant="additions text"
+              className="css-1f43avz-a11yText-A11yText"
+            />
+            <div
+              className="css-1scgfe8"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+            >
+              <div
+                className="css-1kl463j-grafana-select-value-container"
+              >
+                <div
+                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                >
+                  Metric
+                </div>
+                <div
+                  className=" css-lq7btu-Input"
+                  data-value=""
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    className=""
+                    disabled={false}
+                    id="react-select-9-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    role="combobox"
+                    spellCheck="false"
+                    style={
+                      {
+                        "background": 0,
+                        "border": 0,
+                        "color": "inherit",
+                        "font": "inherit",
+                        "gridArea": "1 / 2",
+                        "label": "input",
+                        "margin": 0,
+                        "minWidth": "2px",
+                        "opacity": 1,
+                        "outline": 0,
+                        "padding": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={0}
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                className="css-uvldi-input-suffix"
+              >
+                <div
+                  className="css-wf08df-Icon"
+                >
+                  <svg
+                    data-testid="angle-down"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1f5gueu"
+      >
+        <div
+          className="css-1rfunm5"
+        >
+          <div
+            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            onKeyDown={[Function]}
+          >
+            <span
+              className="css-1f43avz-a11yText-A11yText"
+              id="react-select-10-live-region"
+            />
+            <span
+              aria-atomic="false"
+              aria-live="polite"
+              aria-relevant="additions text"
+              className="css-1f43avz-a11yText-A11yText"
+            />
+            <div
+              className="css-1scgfe8"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+            >
+              <div
+                className="css-1kl463j-grafana-select-value-container"
+              >
+                <div
+                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                >
+                  edgeHitsSum
+                </div>
+                <div
+                  className=" css-lq7btu-Input"
+                  data-value=""
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    className=""
+                    disabled={false}
+                    id="react-select-10-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    role="combobox"
+                    spellCheck="false"
+                    style={
+                      {
+                        "background": 0,
+                        "border": 0,
+                        "color": "inherit",
+                        "font": "inherit",
+                        "gridArea": "1 / 2",
+                        "label": "input",
+                        "margin": 0,
+                        "minWidth": "2px",
+                        "opacity": 1,
+                        "outline": 0,
+                        "padding": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={0}
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                className="css-uvldi-input-suffix"
+              >
+                <div
+                  className="css-wf08df-Icon"
+                >
+                  <svg
+                    data-testid="angle-down"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1f5gueu"
+      >
+        <div
+          className="css-1rfunm5"
+        >
+          <div
+            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            onKeyDown={[Function]}
+          >
+            <span
+              className="css-1f43avz-a11yText-A11yText"
+              id="react-select-11-live-region"
+            />
+            <span
+              aria-atomic="false"
+              aria-live="polite"
+              aria-relevant="additions text"
+              className="css-1f43avz-a11yText-A11yText"
+            />
+            <div
+              className="css-1scgfe8"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+            >
+              <div
+                className="css-1kl463j-grafana-select-value-container"
+              >
+                <div
+                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                >
+                  Descending
+                </div>
+                <div
+                  className=" css-lq7btu-Input"
+                  data-value=""
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    className=""
+                    disabled={false}
+                    id="react-select-11-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    role="combobox"
+                    spellCheck="false"
+                    style={
+                      {
+                        "background": 0,
+                        "border": 0,
+                        "color": "inherit",
+                        "font": "inherit",
+                        "gridArea": "1 / 2",
+                        "label": "input",
+                        "margin": 0,
+                        "minWidth": "2px",
+                        "opacity": 1,
+                        "outline": 0,
+                        "padding": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={0}
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                className="css-uvldi-input-suffix"
+              >
+                <div
+                  className="css-wf08df-Icon"
+                >
+                  <svg
+                    data-testid="angle-down"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="css-1f5gueu"
+    >
+      <div
+        className="css-1rfunm5"
+      >
+        <div
+          className="css-1uedr6a"
+        >
+          <button
+            aria-label="Remove Sort By"
+            className="css-x1vujn"
+            onClick={[Function]}
+            tabIndex={0}
+          >
+            <div
+              className="css-wf08df-Icon"
+            >
+              <svg
+                data-testid="minus-circle"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               />
