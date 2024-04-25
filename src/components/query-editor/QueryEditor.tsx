@@ -16,14 +16,17 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
   const [ model, setState ] = useState(initialModel);
   const [ dataSources, setDataSources ] = useState<SelectableValue[]>([]);
   const [ dataSource, setDataSource ] = useState<string>('');
+  const [ isLoading, setIsLoading ] = useState(false);
 
   const onDataSourceOptionChange = ({ value }: SelectableValue<string>) => {
+    setIsLoading(true);
     query.reportLink = value;
     setDataSource(value || '');
 
     if (value) {
       DatasourceService.discoveryApi(datasource.id, value).subscribe({
-        next: data => setState(data)
+        next: data => setState(data),
+        complete: () => setIsLoading(false)
       });
     }
   };
@@ -33,6 +36,7 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
       next: data => {
         setDataSources(data.reports.map(({ reportLink }) => stringToSelectableValue(reportLink)));
         onDataSourceOptionChange({ value: query.reportLink });
+        setIsLoading(false);
       }
     });
 
@@ -42,18 +46,20 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
 
   return (
     <>
-      <InlineField
-        label="Data Source"
-        labelWidth={shortLabelWidth}>
-        <Select
-          value={dataSource}
-          options={dataSources}
-          placeholder="Select data source"
-          onChange={onDataSourceOptionChange}>
-        </Select>
-      </InlineField>
+      {(() => !isEmpty(dataSources) ?
+        <InlineField
+          label="Report Data Source"
+          labelWidth={shortLabelWidth}>
+          <Select
+            value={dataSource}
+            options={dataSources}
+            placeholder="Select report data source"
+            onChange={onDataSourceOptionChange}>
+          </Select>
+        </InlineField> : <><Icon name="fa fa-spinner"/> Fetching...</>
+      )()}
       <hr/>
-      {(() => !isEmpty(model.metrics) && !isEmpty(model.dimensions) ?
+      {(() => !isLoading && !isEmpty(model.metrics) && !isEmpty(model.dimensions) ?
         <DataSourceForm
           model={model}
           query={query}
@@ -61,7 +67,7 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
           onRunQuery={onRunQuery}
           datasource={datasource}
         /> :
-        !isEmpty(dataSource) ? <><Icon name="fa fa-spinner"/> Fetching...</> : ''
+        isLoading ? <><Icon name="fa fa-spinner"/> Fetching...</> : ''
       )()}
     </>
   );
