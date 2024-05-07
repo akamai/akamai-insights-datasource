@@ -136,12 +136,13 @@ func (td *AkamaiEdgeDnsDatasource) CallResource(ctx context.Context, req *backen
 		}
 
 		b := bytes.NewBuffer(marshal)
-		query, err := dataQuery(dataSourceSettings, targetUrl, b, requestData.From, requestData.To)
+		query, errorResponse := dataQuery(dataSourceSettings, targetUrl, b, requestData.From, requestData.To)
 
-		if err != nil {
+		if errorResponse != nil {
+			var readableError, _ = json.Marshal(errorResponse)
 			return sender.Send(&backend.CallResourceResponse{
-				Status: http.StatusBadRequest,
-				Body:   []byte(err.Error()),
+				Status: errorResponse.Status,
+				Body:   readableError,
 			})
 		}
 
