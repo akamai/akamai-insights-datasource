@@ -1,8 +1,11 @@
+import { CascaderOption } from '@grafana/ui';
+
 import {
   enumToSelectableValues,
   prettyEnum,
   splitByComma,
   stringsToSelectableValues,
+  toCascaderOption,
   toSelectableValues
 } from './utils';
 
@@ -90,6 +93,31 @@ describe('given utils', () => {
         '3',
         '5'
       ]);
+    });
+  });
+
+  describe('and toCascaderOption', () => {
+    it('should create CascaderOption', () => {
+      const options = {
+        value: 'www.test.com',
+        label: 'Test',
+        items: [
+          {
+            value: 'www.innerTest.com'
+          } as CascaderOption
+        ]
+      };
+      expect(toCascaderOption(options)).toEqual({
+        value: 'www.test.com',
+        label: 'Test',
+        items: [
+          {
+            value: 'www.innerTest.com',
+            label: 'www.innerTest.com',
+            items: []
+          }
+        ]
+      });
     });
   });
 });
