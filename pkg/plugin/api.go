@@ -6,6 +6,7 @@ import (
 	"github.com/akamai/AkamaiOPEN-edgegrid-golang/client-v1"
 	"github.com/akamai/AkamaiOPEN-edgegrid-golang/edgegrid"
 	"io"
+	"net/http"
 )
 
 const DiscoveryApiUrl = "reporting-api/v2/%v"
@@ -68,16 +69,12 @@ type Metadata struct {
 	Limit      int                      `json:"limit"`
 }
 
-type Error struct {
-	Title string `json:"title"`
-	Type  string `json:"type"`
-}
-
 type OpenApiErrorRspDto struct {
-	Errors   []Error `json:"errors"`
-	Instance string  `json:"instance"`
-	Title    string  `json:"title"`
-	Type     string  `json:"type"`
+	Title     string `json:"title"`
+	Type      string `json:"type"`
+	Status    int    `json:"status"`
+	Detail    string `json:"detail"`
+	ProblemId string `json:"problemId"`
 }
 
 func reportApiQuery(dataSourceSettings DataSourceSettings) (*ReportsApi, error) {
@@ -128,25 +125,37 @@ func discoveryApiQuery(dataSourceSettings DataSourceSettings, targetUrl string) 
 	return &rspDto, nil
 }
 
-func dataQuery(dataSourceSettings DataSourceSettings, url string, body io.Reader, from, to string) (*OpenApi, error) {
+func dataQuery(dataSourceSettings DataSourceSettings, url string, body io.Reader, from, to string) (*OpenApi, *OpenApiErrorRspDto) {
+	var errorDto = OpenApiErrorRspDto{Status: http.StatusBadRequest, Title: "Unknown error"}
 	config := EdgeGridConfig(dataSourceSettings)
 	apireq, err := client.NewRequest(*config, "POST", createOpenApiDataUrl(url, from, to), body)
 
 	if err != nil {
-		return nil, err
+		return nil, &errorDto
 	}
 
 	apiresp, err := client.Do(*config, apireq)
 
+	if apiresp.StatusCode != 200 {
+		var apiErrorDto OpenApiErrorRspDto
+		err := json.NewDecoder(apiresp.Body).Decode(&apiErrorDto)
+
+		if err != nil {
+			return nil, &errorDto
+		}
+
+		return nil, &apiErrorDto
+	}
+
 	if err != nil {
-		return nil, err
+		return nil, &errorDto
 	}
 
 	var rspDto OpenApi
 	err = json.NewDecoder(apiresp.Body).Decode(&rspDto)
 
 	if err != nil {
-		return nil, err
+		return nil, &errorDto
 	}
 
 	return &rspDto, nil
