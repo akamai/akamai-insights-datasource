@@ -1,32 +1,33 @@
-import { QueryEditorProps, SelectableValue } from '@grafana/data';
-import { Icon, InlineField, Select } from '@grafana/ui';
+import { QueryEditorProps } from '@grafana/data';
+import { Cascader, CascaderOption, Icon } from '@grafana/ui';
 import { isEmpty } from 'lodash';
 import React, { useLayoutEffect, useState } from 'react';
 
 import { DataSourceForm } from './DataSourceForm/DataSourceForm';
-import { shortLabelWidth } from './DataSourceForm/FormTypes';
 import { DatasourceService } from '../../services/datasource.service';
+import { DatasourcesCascaderService } from '../../services/datasources-cascader.service';
 import { initialModel } from '../../types/discovery-api.model';
 import { MyDataSourceOptions, MyQuery } from '../../types/types';
-import { stringToSelectableValue } from '../../utils/utils';
 
 type Props = QueryEditorProps<DatasourceService, MyQuery, MyDataSourceOptions>;
 
 export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) {
+  const cascaderSeparator = ' > ';
   const [ model, setState ] = useState(initialModel);
-  const [ dataSources, setDataSources ] = useState<SelectableValue[]>([]);
   const [ dataSource, setDataSource ] = useState<string>('');
-  const [ isLoading, setIsLoading ] = useState(false);
+  const [ isDataSourceLoading, setIsDataSourceLoading ] = useState(false);
+  const [ isReportListLoading, setIsReportListLoading ] = useState(true);
+  const [ cascaderOptions, setCascaderOptions ] = useState([] as CascaderOption[]);
 
-  const onDataSourceOptionChange = ({ value }: SelectableValue<string>) => {
-    setIsLoading(true);
+  const onDataSourceOptionChange = (value: string) => {
     query.reportLink = value;
     setDataSource(value || '');
 
     if (value) {
+      setIsDataSourceLoading(true);
       DatasourceService.discoveryApi(datasource.id, value).subscribe({
         next: data => setState(data),
-        complete: () => setIsLoading(false)
+        complete: () => setIsDataSourceLoading(false)
       });
     }
   };
@@ -34,9 +35,13 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
   useLayoutEffect(() => {
     const subscription = DatasourceService.reportsApi(datasource.id).subscribe({
       next: data => {
-        setDataSources(data.reports.map(({ reportLink }) => stringToSelectableValue(reportLink)));
-        onDataSourceOptionChange({ value: query.reportLink });
-        setIsLoading(false);
+        setCascaderOptions(DatasourcesCascaderService.getCascaderOptions(data));
+        onDataSourceOptionChange(query.reportLink || '');
+        setIsReportListLoading(false);
+      },
+      error: () => {
+        setCascaderOptions([]);
+        setIsReportListLoading(false);
       }
     });
 
@@ -46,20 +51,21 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
 
   return (
     <>
-      {(() => !isEmpty(dataSources) ?
-        <InlineField
-          label="Report Data Source"
-          labelWidth={shortLabelWidth}>
-          <Select
-            value={dataSource}
-            options={dataSources}
-            placeholder="Select report data source"
-            onChange={onDataSourceOptionChange}>
-          </Select>
-        </InlineField> : <><Icon name="fa fa-spinner"/> Fetching...</>
+      {(() => !isReportListLoading ?
+        <Cascader
+          initialValue={dataSource ? DatasourcesCascaderService.getDataSourceParts(dataSource).join(cascaderSeparator) : ''}
+          placeholder="Select report data source"
+          allowCustomValue={true}
+          options={cascaderOptions}
+          changeOnSelect={false}
+          onSelect={onDataSourceOptionChange}
+          displayAllSelectedLevels={true}
+          separator={cascaderSeparator}
+        />
+        : <><Icon name="fa fa-spinner"/> Fetching...</>
       )()}
       <hr/>
-      {(() => !isLoading && !isEmpty(model.metrics) && !isEmpty(model.dimensions) ?
+      {(() => !isDataSourceLoading && !isEmpty(model.metrics) && !isEmpty(model.dimensions) ?
         <DataSourceForm
           model={model}
           query={query}
@@ -67,7 +73,7 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
           onRunQuery={onRunQuery}
           datasource={datasource}
         /> :
-        isLoading ? <><Icon name="fa fa-spinner"/> Fetching...</> : ''
+        isDataSourceLoading ? <><Icon name="fa fa-spinner"/> Fetching...</> : ''
       )()}
     </>
   );

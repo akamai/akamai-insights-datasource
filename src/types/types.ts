@@ -45,4 +45,4 @@ export interface Enum {
   [id: string]: string;
 }
 
-export const DATA_REQUEST_LIMIT = 50000;
+export const API_URL = '/reporting-api/v2/reports/';

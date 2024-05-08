@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`given QueryEditor should render editor with initial value 1`] = `
+[
+  <i
+    className="fa fa-spinner fa-spin"
+  />,
+  " Fetching...",
+  <hr />,
+  <i
+    className="fa fa-spinner fa-spin"
+  />,
+  " Fetching...",
+]
+`;
+
+exports[`given QueryEditor should render new empty editor 1`] = `
+[
+  <div>
+    <div
+      className="css-4339yg"
+      onClick={[Function]}
+    >
+      <div
+        className="css-xcstkt-input-wrapper"
+        data-testid="input-wrapper"
+      >
+        <div
+          className="css-1w5c5dq-input-inputWrapper"
+        >
+          <input
+            className="css-1n6y0bv-input-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Select report data source"
+            style={
+              {
+                "paddingLeft": undefined,
+                "paddingRight": 12,
+              }
+            }
+            value=""
+          />
+          <div
+            className="css-7y3u6k-input-suffix"
+          >
+            <div
+              className="css-wf08df-Icon"
+            >
+              <svg
+                data-testid="angle-down"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <hr />,
+]
+`;

@@ -1,4 +1,5 @@
 import { SelectableValue } from '@grafana/data';
+import { CascaderOption } from '@grafana/ui';
 import { isEmpty, uniq } from 'lodash';
 
 import { Enum, NameAware } from '../types/types';
@@ -34,4 +35,12 @@ export const splitByComma = (list: string[]): string [] => {
       .flat()
       .filter(val => !isEmpty(val))
   );
+};
+
+export const toCascaderOption = ({ value, label, items = [] }: Partial<CascaderOption>): CascaderOption => {
+  return {
+    value,
+    label: label ?? value,
+    items: items?.map(toCascaderOption)
+  };
 };
