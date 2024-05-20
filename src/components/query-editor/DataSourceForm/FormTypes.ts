@@ -1,7 +1,7 @@
 import { SelectableValue } from '@grafana/data';
 import { groupBy } from 'lodash';
 
-import { enumToSelectableValues } from '../../../utils/utils';
+import { enumToSelectableValues, prettyEnum, stringsToSelectableValues } from '../../../utils/utils';
 
 export const shortLabelWidth = 25;
 export const mediumLabelWidth = 50;
@@ -35,7 +35,14 @@ export enum DimensionOperator {
   Exact = 'EXACT'
 }
 
+export enum FilterValueType {
+  Text = 'TEXT',
+  Enum = 'ENUM'
+}
+
 export const dimensionOperatorOptions = enumToSelectableValues(DimensionOperator);
+
+export const authorizableOrEnumFiltersOperatorOptions = stringsToSelectableValues([ DimensionOperator.InList ], prettyEnum);
 
 export enum MetricOperator {
   Equal = 'EQUAL',

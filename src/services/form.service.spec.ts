@@ -1,5 +1,6 @@
 import { FormService } from './form.service';
 import {
+  authorizableOrEnumFiltersOperatorOptions,
   DimensionOperator,
   dimensionOperatorOptions,
   FilterType,
@@ -9,6 +10,7 @@ import {
   SortByOrder,
   sortByOrderOptions
 } from '../components/query-editor/DataSourceForm/FormTypes';
+import { discoveryTrafficModel } from '../test/mocks/mock-discovery-api-model';
 import { mockDimensionsOptions } from '../test/mocks/mock-selectable-values';
 import { FilterQuery, SortByQuery } from '../types/types';
 import { stringToSelectableValue } from '../utils/utils';
@@ -225,6 +227,39 @@ describe('given FormService', () => {
           sortOrder: SortByOrder.Descending
         }
       ]);
+    });
+  });
+
+  describe('and getDimensionsOperatorsOptions', () => {
+    const scenarios = [
+      {
+        description: 'when filter type is ENUM',
+        name: 'responseStatus',
+        expected: authorizableOrEnumFiltersOperatorOptions
+      },
+      {
+        description: 'when filter is authorizable',
+        name: 'cpcode',
+        expected: authorizableOrEnumFiltersOperatorOptions
+      },
+      {
+        description: 'when filter type is TEXT and is not authorizable',
+        name: 'responseCode',
+        expected: dimensionOperatorOptions
+      }
+    ];
+
+    scenarios.forEach(({ description, name, expected }) => {
+      describe(description, () => {
+        it('should return proper operators list', () => {
+          expect(FormService.getDimensionsOperatorsOptions({
+            type: stringToSelectableValue(FilterType.Dimension),
+            query: {
+              name: stringToSelectableValue(name)
+            }
+          }, discoveryTrafficModel )).toEqual(expected);
+        });
+      });
     });
   });
 });
