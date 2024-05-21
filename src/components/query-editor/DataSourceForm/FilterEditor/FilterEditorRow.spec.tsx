@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import { FilterEditorRow } from './FilterEditorRow';
+import { discoveryTrafficModel } from '../../../../test/mocks/mock-discovery-api-model';
 import { mockDimensionsOptions, mockMetricsOptions } from '../../../../test/mocks/mock-selectable-values';
 import { dimensionOperatorOptions, FilterFormModel, filterTypeOptions, metricOperatorOptions } from '../FormTypes';
 
@@ -19,7 +20,7 @@ describe('FilterEditorRow component', () => {
     const onChange = jest.fn();
 
     const tree = renderer.create(
-      <FilterEditorRow model={model} dimensions={mockDimensionsOptions} metrics={mockMetricsOptions} onChange={onChange}/>
+      <FilterEditorRow model={model} discoveryApiModel={discoveryTrafficModel} dimensions={mockDimensionsOptions} metrics={mockMetricsOptions} onChange={onChange}/>
     ).toJSON();
 
     expect(tree).toMatchSnapshot();
@@ -38,7 +39,7 @@ describe('FilterEditorRow component', () => {
     const onChange = jest.fn();
 
     const tree = renderer.create(
-      <FilterEditorRow model={model} dimensions={mockDimensionsOptions} metrics={mockMetricsOptions} onChange={onChange}/>
+      <FilterEditorRow model={model} discoveryApiModel={discoveryTrafficModel} dimensions={mockDimensionsOptions} metrics={mockMetricsOptions} onChange={onChange}/>
     ).toJSON();
 
     expect(tree).toMatchSnapshot();

@@ -135,6 +135,7 @@ export function DataSourceForm({ query, onChange, onRunQuery, model }: DataSourc
             model={filterModel}
             dimensions={dimensionsOptions}
             metrics={metricsOptions}
+            discoveryApiModel={model}
             onChange={updatedFilterModel => onSingleFilterChange(updatedFilterModel, index)}
           />}
       />

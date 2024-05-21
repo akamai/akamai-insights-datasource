@@ -5,8 +5,8 @@ import React, { JSX } from 'react';
 import '../../../../styles/styles.css';
 import { FilterEditor } from './FilterEditor';
 import { FormService } from '../../../../services/form.service';
+import { DiscoveryApiModel } from '../../../../types/discovery-api.model';
 import {
-  dimensionOperatorOptions,
   FilterFormModel,
   FilterType,
   filterTypeOptions,
@@ -16,6 +16,7 @@ import {
 
 interface FilterEditorProps {
   model: FilterFormModel;
+  discoveryApiModel: DiscoveryApiModel;
   dimensions: SelectableValue<string>[];
   metrics: SelectableValue<string>[];
   onChange: (value: FilterFormModel) => void;
@@ -26,6 +27,7 @@ function getFilterEditor(type: string | undefined,
                          dimensions: SelectableValue<string>[],
                          metrics: SelectableValue<string>[],
                          model: FilterFormModel,
+                         discoveryApiModel: DiscoveryApiModel,
                          onChange: (query: FilterFormModel) => void): JSX.Element {
   switch (type) {
     case FilterType.Dimension:
@@ -33,7 +35,7 @@ function getFilterEditor(type: string | undefined,
         <FilterEditor
           model={model.query}
           names={dimensions}
-          operators={dimensionOperatorOptions}
+          operators={FormService.getDimensionsOperatorsOptions(model, discoveryApiModel)}
           multiExpressions={true}
           onChange={query => onChange({ ...model, query })}
         />
@@ -53,8 +55,8 @@ function getFilterEditor(type: string | undefined,
   }
 }
 
-export function FilterEditorRow({ model, dimensions, metrics, onChange }: FilterEditorProps): JSX.Element {
-  const Editor = getFilterEditor(model.type?.value, dimensions, metrics, model, onChange);
+export function FilterEditorRow({ model, discoveryApiModel, dimensions, metrics, onChange }: FilterEditorProps): JSX.Element {
+  const Editor = getFilterEditor(model.type?.value, dimensions, metrics, model, discoveryApiModel, onChange);
 
   const changeFilterTypeQuery = (type: SelectableValue<string>): void => {
     let updatedModel = {} as FilterFormModel;
