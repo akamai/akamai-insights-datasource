@@ -80,6 +80,7 @@ type OpenApiErrorRspDto struct {
 func reportApiQuery(dataSourceSettings DataSourceSettings) (*ReportsApi, error) {
 	config := EdgeGridConfig(dataSourceSettings)
 	apireq, err := client.NewRequest(*config, "GET", ReportsApiUrl, nil)
+	addTrackingHeaderToRequest(*apireq)
 
 	if err != nil {
 		return nil, err
@@ -104,6 +105,7 @@ func reportApiQuery(dataSourceSettings DataSourceSettings) (*ReportsApi, error) 
 func discoveryApiQuery(dataSourceSettings DataSourceSettings, targetUrl string) (*DiscoveryApi, error) {
 	config := EdgeGridConfig(dataSourceSettings)
 	apireq, err := client.NewRequest(*config, "GET", targetUrl, nil)
+	addTrackingHeaderToRequest(*apireq)
 
 	if err != nil {
 		return nil, err
@@ -129,6 +131,7 @@ func dataQuery(dataSourceSettings DataSourceSettings, url string, body io.Reader
 	var errorDto = OpenApiErrorRspDto{Status: http.StatusBadRequest, Title: "Unknown error"}
 	config := EdgeGridConfig(dataSourceSettings)
 	apireq, err := client.NewRequest(*config, "POST", createOpenApiDataUrl(url, from, to), body)
+	addTrackingHeaderToRequest(*apireq)
 
 	if err != nil {
 		return nil, &errorDto
@@ -159,4 +162,8 @@ func dataQuery(dataSourceSettings DataSourceSettings, url string, body io.Reader
 	}
 
 	return &rspDto, nil
+}
+
+func addTrackingHeaderToRequest(req http.Request) {
+	req.Header.Set("Request-Source", "reporting-grafana-plugin")
 }
