@@ -1,5 +1,5 @@
 import { SelectableValue } from '@grafana/data';
-import { first, isEmpty, isUndefined, set } from 'lodash';
+import { first, intersection, isEmpty, isUndefined, set } from 'lodash';
 
 import {
   authorizableOrEnumFiltersOperatorOptions,
@@ -12,7 +12,7 @@ import {
   SortByFormModel,
   sortByOrderOptions
 } from '../components/query-editor/DataSourceForm/FormTypes';
-import { DiscoveryApiModel } from '../types/discovery-api.model';
+import { Dimension, DiscoveryApiModel, Metric } from '../types/discovery-api.model';
 import { ExpressionType, FilterQuery, SortByQuery } from '../types/types';
 import { prettyEnum, stringToSelectableValue } from '../utils/utils';
 
@@ -133,6 +133,10 @@ export class FormService {
   static getDimensionsOperatorsOptions({ query: { name } }: FilterFormModel, discoveryApiModel: DiscoveryApiModel): SelectableValue[] {
     const model = discoveryApiModel.dimensions.find(filter => filter.name === name?.value);
     return model?.filterType === FilterValueType.Enum || model?.authorizable ? authorizableOrEnumFiltersOperatorOptions : dimensionOperatorOptions;
+  }
+
+  static getIntersectedModelOptions(queryOptions: string[], modelOptions: Dimension[] | Metric[]): string[] {
+    return intersection(queryOptions, modelOptions.map(({ name }) => name));
   }
 
 }

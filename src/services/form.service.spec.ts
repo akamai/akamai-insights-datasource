@@ -262,4 +262,16 @@ describe('given FormService', () => {
       });
     });
   });
+
+  describe('given getInteresctedModelOptions', () => {
+    it('should return non empty array when there is an intersection', () => {
+      expect(FormService.getIntersectedModelOptions([ 'responseCode', 'cpcode' ], discoveryTrafficModel.dimensions))
+        .toEqual([ 'responseCode', 'cpcode' ]);
+    });
+
+    it('should return empty array when there is no intersection', () => {
+      expect(FormService.getIntersectedModelOptions([ 'test' ], discoveryTrafficModel.dimensions))
+        .toEqual([]);
+    });
+  });
 });

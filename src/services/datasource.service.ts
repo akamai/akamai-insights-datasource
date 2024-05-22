@@ -106,7 +106,8 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
             },
             params: {
               targetUrl: reportLink
-            }
+            },
+            hideFromInspector: false
           }),
         DatasourceService.discoveryApi(this.id, reportLink || '')
       ]).pipe(
