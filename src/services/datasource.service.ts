@@ -6,7 +6,7 @@ import {
   MutableDataFrame,
   TestDataSourceResponse
 } from '@grafana/data';
-import { BackendSrvRequest, DataSourceWithBackend, getBackendSrv } from '@grafana/runtime';
+import { BackendSrvRequest, DataSourceWithBackend, getBackendSrv, getTemplateSrv } from '@grafana/runtime';
 import { isEmpty, omitBy, uniq } from 'lodash';
 import {
   catchError,
@@ -82,6 +82,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
   }
 
   query(request: DataQueryRequest<MyQuery>): Observable<DataQueryResponse> {
+    const { scopedVars } = request;
     const dataObservables = request.targets.map(target => {
       const { dimensions, metrics, filters, sortBys, reportLink, refId } = target;
       const { from, to } = request.range;
@@ -93,6 +94,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
           sortBys
         }, isEmpty)
       };
+      const interpolatedBody = !isEmpty(scopedVars) ? JSON.parse(getTemplateSrv().replace(JSON.stringify(body), scopedVars)) : body;
 
       return forkJoin([
         getBackendSrv()
@@ -100,7 +102,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
             method: 'POST',
             url: `${DatasourceService.getBackendDataSourceUrl(this.id)}/${DatasourceService.DATA}`,
             data: {
-              body,
+              body: interpolatedBody,
               from: from.toISOString(),
               to: to.toISOString()
             },
