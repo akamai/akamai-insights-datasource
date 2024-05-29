@@ -1,13 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
   "type": "datasource",
-  "name": "Akamai Analytics datasource",
-  "id": "akamai-analytics-datasource",
+  "name": "Akamai Insights Datasource Plugin",
+  "id": "akamai-insights-datasource",
   "metrics": true,
   "backend": true,
-  "executable": "gpx_akamai-analytics-datasource-plugin",
+  "executable": "gpx_akamai-insights-datasource-plugin",
   "info": {
-    "description": "Akamai analytics",
+    "description": "Akamai insights data",
     "author": {
       "name": "Akamai Technologies"
     },
