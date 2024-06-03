@@ -98,6 +98,7 @@ export function DataSourceForm({ query, onChange, onRunQuery, model }: DataSourc
           width={mediumLabelWidth}
           options={dimensionsOptions}
           value={dimensions}
+          allowCustomValue={true}
           onChange={values => {
             setDimensions(values);
             onFormChange(values, metrics);
@@ -114,6 +115,7 @@ export function DataSourceForm({ query, onChange, onRunQuery, model }: DataSourc
           width={mediumLabelWidth}
           options={metricsOptions}
           value={metrics}
+          allowCustomValue={true}
           onChange={values => {
             setMetrics(values);
             onFormChange(dimensions, values);
