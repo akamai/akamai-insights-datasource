@@ -2,6 +2,7 @@ import {
   DataQueryRequest,
   DataQueryResponse,
   DataSourceInstanceSettings,
+  DataSourceVariableSupport,
   FieldType,
   MutableDataFrame,
   TestDataSourceResponse
@@ -20,7 +21,19 @@ import {
 } from 'rxjs';
 
 import { Dimension, DiscoveryApiModel, Metric, ReportsApiModel, TimeDimensionsTypes } from '../types/discovery-api.model';
-import { MyDataSourceOptions, MyQuery, TestDataSourceResponseStatus } from '../types/types';
+import { MyDataSourceOptions, MyQuery, TestDataSourceResponseStatus, VARIABLE_QUERY } from '../types/types';
+
+class QueryVariableSupport extends DataSourceVariableSupport<DatasourceService, MyQuery> {
+  getDefaultQuery(): Partial<MyQuery> {
+    return {
+      reportLink: '',
+      dimensions: [],
+      metrics: [],
+      filters: [],
+      sortBys: []
+    };
+  }
+}
 
 export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSourceOptions> {
 
@@ -33,6 +46,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
 
   constructor(protected readonly instanceSettings: DataSourceInstanceSettings<MyDataSourceOptions>) {
     super(instanceSettings);
+    this.variables = new QueryVariableSupport();
   }
 
   static discoveryApi(id: number, targetUrl: string): Observable<DiscoveryApiModel> {
@@ -114,7 +128,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
         DatasourceService.discoveryApi(this.id, reportLink || '')
       ]).pipe(
         map(([ { data: { data } }, discoveryApiModel ]) => ({
-          data: [ this.convertToDataFrame(data, discoveryApiModel, refId) ]
+          data: [ this.convertToDataFrame(data, discoveryApiModel, refId, dimensions) ]
         }))
       );
     });
@@ -125,8 +139,9 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
       );
   }
 
-  private convertToDataFrame(data: Record<string, any>[], { dimensions, metrics }: DiscoveryApiModel, refId: string) {
+  private convertToDataFrame(data: Record<string, any>[], { dimensions, metrics }: DiscoveryApiModel, refId: string, selectedDimensions?: string[]) {
     const fieldsData = [ ...dimensions, ...metrics ];
+
     const frame = new MutableDataFrame({
       fields: uniq(data?.map(row => Object.keys(row)).flat()).map(dataKey => {
         const fieldData = fieldsData.find(({ name }) => name === dataKey);
@@ -141,6 +156,17 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
         } : dataFrame;
       })
     });
+
+    if (refId === VARIABLE_QUERY) {
+      const stringFields = frame.fields.filter(({ type }) => type === FieldType.string);
+      const firstStringDimension = selectedDimensions?.find(dimension => stringFields.find(({ name }) => name === dimension));
+      const variableField = stringFields.find(field => field.name === firstStringDimension);
+
+      if (variableField) {
+        frame.fields = frame.fields.filter(({ type }) => type !== FieldType.string);
+        frame.fields.push(variableField);
+      }
+    }
 
     data?.forEach(row => frame.add(row));
 
