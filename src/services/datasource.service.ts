@@ -158,6 +158,12 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
     });
 
     if (refId === VARIABLE_QUERY) {
+      frame.fields.forEach(field => {
+        if (selectedDimensions?.includes(field.name) && field.type !== FieldType.time) {
+          field.type = FieldType.string;
+        }
+      });
+
       const stringFields = frame.fields.filter(({ type }) => type === FieldType.string);
       const firstStringDimension = selectedDimensions?.find(dimension => stringFields.find(({ name }) => name === dimension));
       const variableField = stringFields.find(field => field.name === firstStringDimension);
