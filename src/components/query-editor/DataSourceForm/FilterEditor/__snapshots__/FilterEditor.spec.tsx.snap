@@ -1,0 +1,521 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterEditor component should render dimension editor 1`] = `
+[
+  <div
+    className="css-1f5gueu"
+  >
+    <div
+      className="css-1rfunm5"
+    >
+      <div
+        className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+        onKeyDown={[Function]}
+      >
+        <span
+          className="css-1f43avz-a11yText-A11yText"
+          id="react-select-2-live-region"
+        />
+        <span
+          aria-atomic="false"
+          aria-live="polite"
+          aria-relevant="additions text"
+          className="css-1f43avz-a11yText-A11yText"
+        />
+        <div
+          className="css-1scgfe8"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+        >
+          <div
+            className="css-1kl463j-grafana-select-value-container"
+          >
+            <div
+              className="css-18bh10p-singleValue css-upz218-SingleValue"
+            >
+              time1Hour
+            </div>
+            <div
+              className=" css-lq7btu-Input"
+              data-value=""
+            >
+              <input
+                aria-autocomplete="list"
+                aria-expanded={false}
+                aria-haspopup={true}
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className=""
+                disabled={false}
+                id="react-select-2-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  {
+                    "background": 0,
+                    "border": 0,
+                    "color": "inherit",
+                    "font": "inherit",
+                    "gridArea": "1 / 2",
+                    "label": "input",
+                    "margin": 0,
+                    "minWidth": "2px",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "100%",
+                  }
+                }
+                tabIndex={0}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            className="css-uvldi-input-suffix"
+          >
+            <div
+              className="css-wf08df-Icon"
+            >
+              <svg
+                data-testid="angle-down"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="css-1f5gueu"
+  >
+    <div
+      className="css-1rfunm5"
+    >
+      <div
+        className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+        onKeyDown={[Function]}
+      >
+        <span
+          className="css-1f43avz-a11yText-A11yText"
+          id="react-select-3-live-region"
+        />
+        <span
+          aria-atomic="false"
+          aria-live="polite"
+          aria-relevant="additions text"
+          className="css-1f43avz-a11yText-A11yText"
+        />
+        <div
+          className="css-1scgfe8"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+        >
+          <div
+            className="css-1kl463j-grafana-select-value-container"
+          >
+            <div
+              className="css-18bh10p-singleValue css-upz218-SingleValue"
+            >
+              In list
+            </div>
+            <div
+              className=" css-lq7btu-Input"
+              data-value=""
+            >
+              <input
+                aria-autocomplete="list"
+                aria-expanded={false}
+                aria-haspopup={true}
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className=""
+                disabled={false}
+                id="react-select-3-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  {
+                    "background": 0,
+                    "border": 0,
+                    "color": "inherit",
+                    "font": "inherit",
+                    "gridArea": "1 / 2",
+                    "label": "input",
+                    "margin": 0,
+                    "minWidth": "2px",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "100%",
+                  }
+                }
+                tabIndex={0}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            className="css-uvldi-input-suffix"
+          >
+            <div
+              className="css-wf08df-Icon"
+            >
+              <svg
+                data-testid="angle-down"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="css-1f5gueu"
+  >
+    <div
+      className="css-1rfunm5"
+    >
+      <div
+        className="css-dvq0w4"
+      >
+        <div
+          className="css-xcstkt-input-wrapper"
+          data-testid="input-wrapper"
+        >
+          <div
+            className="css-1w5c5dq-input-inputWrapper"
+          >
+            <input
+              className="css-1n6y0bv-input-input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Expressions"
+              style={
+                {
+                  "paddingLeft": undefined,
+                  "paddingRight": 12,
+                }
+              }
+              value=""
+            />
+            <div
+              className="css-7y3u6k-input-suffix"
+            >
+              <button
+                className="css-m5e3oq-button"
+                disabled={true}
+                onClick={[Function]}
+                type="button"
+              >
+                <span
+                  className="css-1mhnkuh"
+                >
+                  Add
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul
+          className="css-1pmkqzh"
+        >
+          <li
+            className="css-1u6i1x"
+            style={
+              {
+                "backgroundColor": "#B15415",
+                "borderColor": "#E7823D",
+              }
+            }
+          >
+            <span
+              className="css-vf5797"
+            >
+              1234
+            </span>
+            <button
+              aria-label="Remove "1234" tag"
+              className="css-j97ryd"
+              onClick={[Function]}
+              type="button"
+            >
+              <div
+                className="css-wf08df-Icon"
+              >
+                <svg
+                  data-testid="times"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              </div>
+            </button>
+          </li>
+          <li
+            className="css-1u6i1x"
+            style={
+              {
+                "backgroundColor": "#3F2B5B",
+                "borderColor": "#655181",
+              }
+            }
+          >
+            <span
+              className="css-vf5797"
+            >
+              5678
+            </span>
+            <button
+              aria-label="Remove "5678" tag"
+              className="css-j97ryd"
+              onClick={[Function]}
+              type="button"
+            >
+              <div
+                className="css-wf08df-Icon"
+              >
+                <svg
+                  data-testid="times"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`FilterEditor component should render metric editor 1`] = `
+[
+  <div
+    className="css-1f5gueu"
+  >
+    <div
+      className="css-1rfunm5"
+    >
+      <div
+        className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+        onKeyDown={[Function]}
+      >
+        <span
+          className="css-1f43avz-a11yText-A11yText"
+          id="react-select-4-live-region"
+        />
+        <span
+          aria-atomic="false"
+          aria-live="polite"
+          aria-relevant="additions text"
+          className="css-1f43avz-a11yText-A11yText"
+        />
+        <div
+          className="css-1scgfe8"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+        >
+          <div
+            className="css-1kl463j-grafana-select-value-container"
+          >
+            <div
+              className="css-18bh10p-singleValue css-upz218-SingleValue"
+            >
+              edgeHitsSum
+            </div>
+            <div
+              className=" css-lq7btu-Input"
+              data-value=""
+            >
+              <input
+                aria-autocomplete="list"
+                aria-expanded={false}
+                aria-haspopup={true}
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className=""
+                disabled={false}
+                id="react-select-4-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  {
+                    "background": 0,
+                    "border": 0,
+                    "color": "inherit",
+                    "font": "inherit",
+                    "gridArea": "1 / 2",
+                    "label": "input",
+                    "margin": 0,
+                    "minWidth": "2px",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "100%",
+                  }
+                }
+                tabIndex={0}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            className="css-uvldi-input-suffix"
+          >
+            <div
+              className="css-wf08df-Icon"
+            >
+              <svg
+                data-testid="angle-down"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="css-1f5gueu"
+  >
+    <div
+      className="css-1rfunm5"
+    >
+      <div
+        className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+        onKeyDown={[Function]}
+      >
+        <span
+          className="css-1f43avz-a11yText-A11yText"
+          id="react-select-5-live-region"
+        />
+        <span
+          aria-atomic="false"
+          aria-live="polite"
+          aria-relevant="additions text"
+          className="css-1f43avz-a11yText-A11yText"
+        />
+        <div
+          className="css-1scgfe8"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+        >
+          <div
+            className="css-1kl463j-grafana-select-value-container"
+          >
+            <div
+              className="css-18bh10p-singleValue css-upz218-SingleValue"
+            >
+              Equal
+            </div>
+            <div
+              className=" css-lq7btu-Input"
+              data-value=""
+            >
+              <input
+                aria-autocomplete="list"
+                aria-expanded={false}
+                aria-haspopup={true}
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className=""
+                disabled={false}
+                id="react-select-5-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  {
+                    "background": 0,
+                    "border": 0,
+                    "color": "inherit",
+                    "font": "inherit",
+                    "gridArea": "1 / 2",
+                    "label": "input",
+                    "margin": 0,
+                    "minWidth": "2px",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "100%",
+                  }
+                }
+                tabIndex={0}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            className="css-uvldi-input-suffix"
+          >
+            <div
+              className="css-wf08df-Icon"
+            >
+              <svg
+                data-testid="angle-down"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="css-1f5gueu"
+  >
+    <div
+      className="css-1rfunm5"
+    >
+      <div
+        className="css-p7rfez-input-wrapper"
+        data-testid="input-wrapper"
+      >
+        <div
+          className="css-1w5c5dq-input-inputWrapper"
+        >
+          <input
+            className="css-1n6y0bv-input-input"
+            onChange={[Function]}
+            placeholder="Expression"
+            style={
+              {
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+              }
+            }
+            value="1000"
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

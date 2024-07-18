@@ -1,0 +1,354 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfigEditor component should mark textarea as invalid and not update form when credentials are in wrong format 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="gf-form-group"
+      >
+        <div
+          class="credentials__container"
+        >
+          <div
+            class="css-8e5b3"
+          >
+            <div
+              class="css-jt4xma-Label"
+            >
+              <label>
+                <div
+                  class="css-xhqy0o"
+                >
+                  Information
+                </div>
+                <span
+                  class="css-zjkzrp-Label-description"
+                >
+                  Paste credentials here to auto fill form below
+                </span>
+              </label>
+            </div>
+            <div>
+              <div>
+                <textarea
+                  class="css-b6cogb credentials__textarea"
+                  name="credentialsTextArea"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div
+          class="css-1f5gueu"
+        >
+          <label
+            class="css-tomx28"
+          >
+            Akamai Client Secret
+          </label>
+          <div
+            class="css-1rfunm5"
+          >
+            <div
+              class="css-yy0rti-input-wrapper"
+              data-testid="input-wrapper"
+            >
+              <div
+                class="css-1w5c5dq-input-inputWrapper"
+              >
+                <input
+                  class="css-1n6y0bv-input-input"
+                  placeholder="Enter client secret"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-1f5gueu"
+        >
+          <label
+            class="css-tomx28"
+          >
+            Host
+          </label>
+          <div
+            class="css-1rfunm5"
+          >
+            <div
+              class="css-yy0rti-input-wrapper"
+              data-testid="input-wrapper"
+            >
+              <div
+                class="css-1w5c5dq-input-inputWrapper"
+              >
+                <input
+                  class="css-1n6y0bv-input-input"
+                  placeholder="Enter host"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-1f5gueu"
+        >
+          <label
+            class="css-tomx28"
+          >
+            Access Token
+          </label>
+          <div
+            class="css-1rfunm5"
+          >
+            <div
+              class="css-yy0rti-input-wrapper"
+              data-testid="input-wrapper"
+            >
+              <div
+                class="css-1w5c5dq-input-inputWrapper"
+              >
+                <input
+                  class="css-1n6y0bv-input-input"
+                  placeholder="Enter access token"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-1f5gueu"
+        >
+          <label
+            class="css-tomx28"
+          >
+            Client Token
+          </label>
+          <div
+            class="css-1rfunm5"
+          >
+            <div
+              class="css-yy0rti-input-wrapper"
+              data-testid="input-wrapper"
+            >
+              <div
+                class="css-1w5c5dq-input-inputWrapper"
+              >
+                <input
+                  class="css-1n6y0bv-input-input"
+                  placeholder="Enter client token"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="gf-form-group"
+    >
+      <div
+        class="credentials__container"
+      >
+        <div
+          class="css-8e5b3"
+        >
+          <div
+            class="css-jt4xma-Label"
+          >
+            <label>
+              <div
+                class="css-xhqy0o"
+              >
+                Information
+              </div>
+              <span
+                class="css-zjkzrp-Label-description"
+              >
+                Paste credentials here to auto fill form below
+              </span>
+            </label>
+          </div>
+          <div>
+            <div>
+              <textarea
+                class="css-b6cogb credentials__textarea"
+                name="credentialsTextArea"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div
+        class="css-1f5gueu"
+      >
+        <label
+          class="css-tomx28"
+        >
+          Akamai Client Secret
+        </label>
+        <div
+          class="css-1rfunm5"
+        >
+          <div
+            class="css-yy0rti-input-wrapper"
+            data-testid="input-wrapper"
+          >
+            <div
+              class="css-1w5c5dq-input-inputWrapper"
+            >
+              <input
+                class="css-1n6y0bv-input-input"
+                placeholder="Enter client secret"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1f5gueu"
+      >
+        <label
+          class="css-tomx28"
+        >
+          Host
+        </label>
+        <div
+          class="css-1rfunm5"
+        >
+          <div
+            class="css-yy0rti-input-wrapper"
+            data-testid="input-wrapper"
+          >
+            <div
+              class="css-1w5c5dq-input-inputWrapper"
+            >
+              <input
+                class="css-1n6y0bv-input-input"
+                placeholder="Enter host"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1f5gueu"
+      >
+        <label
+          class="css-tomx28"
+        >
+          Access Token
+        </label>
+        <div
+          class="css-1rfunm5"
+        >
+          <div
+            class="css-yy0rti-input-wrapper"
+            data-testid="input-wrapper"
+          >
+            <div
+              class="css-1w5c5dq-input-inputWrapper"
+            >
+              <input
+                class="css-1n6y0bv-input-input"
+                placeholder="Enter access token"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1f5gueu"
+      >
+        <label
+          class="css-tomx28"
+        >
+          Client Token
+        </label>
+        <div
+          class="css-1rfunm5"
+        >
+          <div
+            class="css-yy0rti-input-wrapper"
+            data-testid="input-wrapper"
+          >
+            <div
+              class="css-1w5c5dq-input-inputWrapper"
+            >
+              <input
+                class="css-1n6y0bv-input-input"
+                placeholder="Enter client token"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

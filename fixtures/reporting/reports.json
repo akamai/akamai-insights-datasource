@@ -1,0 +1,52 @@
+{
+  "reports": [
+    {
+      "reportName": "Akamai CDN emissions report data",
+      "reportLink": "/reporting-api/v2/reports/delivery/traffic/emissions"
+    },
+    {
+      "reportName": "Akamai CDN traffic report data",
+      "reportLink": "/reporting-api/v2/reports/delivery/traffic/current-ui"
+    },
+    {
+      "reportName": "Akamai CDN traffic report data",
+      "reportLink": "/reporting-api/v2/reports/delivery/traffic/current-ui-top-hostnames"
+    },
+    {
+      "reportName": "Akamai CDN traffic report data",
+      "reportLink": "/reporting-api/v2/reports/delivery/traffic/current"
+    },
+    {
+      "reportName": "Akamai CDN traffic report data",
+      "reportLink": "/reporting-api/v2/reports/delivery/traffic/current-draft"
+    },
+    {
+      "reportName": "Akamai IVM video stats report data",
+      "reportLink": "/reporting-api/v2/reports/delivery/ivm/video-policy-stats"
+    },
+    {
+      "reportName": "Akamai IVM image stats report data",
+      "reportLink": "/reporting-api/v2/reports/delivery/ivm/image-policy-stats"
+    },
+    {
+      "reportName": "Akamai IVM image traffic data within interval of 1 day",
+      "reportLink": "/reporting-api/v2/reports/delivery/ivm/image-traffic"
+    },
+    {
+      "reportName": "Akamai IVM video url report data",
+      "reportLink": "/reporting-api/v2/reports/delivery/ivm/video-urls"
+    },
+    {
+      "reportName": "Akamai IVM image url report data",
+      "reportLink": "/reporting-api/v2/reports/delivery/ivm/image-urls"
+    },
+    {
+      "reportName": "Akamai Test Traffic",
+      "reportLink": "/reporting-api/v2/reports/test/traffic/test"
+    },
+    {
+      "reportName": "Akamai analytics - CDN observability POC",
+      "reportLink": "/reporting-api/v2/reports/analytics/cdn-observability/poc"
+    }
+  ]
+}
