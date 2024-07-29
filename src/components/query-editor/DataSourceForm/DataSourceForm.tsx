@@ -42,12 +42,13 @@ export function DataSourceForm({ query, onChange, onRunQuery, model }: DataSourc
     model.dimensions ? !isNil(query.dimensions) ? stringsToSelectableValues(FormService.getIntersectedModelOptions(query.dimensions, model.dimensions)) : defaultDimensionsOptions : []);
   const [ metrics, setMetrics ] = useState<SelectableValue[]>(
     model.metrics ? !isNil(query.metrics) ? stringsToSelectableValues(FormService.getIntersectedModelOptions(query.metrics, model.metrics)) : defaultMetricsOptions : []);
-  const [ filters, setFilters ] = useState<FilterFormModel[]>(model.metrics && model.dimensions ? FormService.toFilterFormModels(query.filters, dimensionsValues, metricsValues) : []);
+  const [ filters, setFilters ] = useState<FilterFormModel[]>(model.metrics || model.dimensions ? FormService.toFilterFormModels(query.filters, dimensionsValues, metricsValues) : []);
   const [ sortBys, setSortBys ] = useState<SortByFormModel[]>(
     model.metrics && model.dimensions ? !isNil(query.sortBys) ? FormService.toSortBysFormModel(query.sortBys, dimensionsValues, metricsValues) : defaultSortBysOptions : []
   );
   const [ applyDisabled, setApplyDisabled ] = useState<boolean>(isEmpty(dimensions) && isEmpty(metrics));
   const [ defaultValuesInfoVisible, setDefaultValuesInfoVisible ] = useState(!query.dimensions && !query.metrics);
+
   const onClear = () => {
     setDimensions([]);
     setMetrics([]);
