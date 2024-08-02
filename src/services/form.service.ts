@@ -18,6 +18,8 @@ import { prettyEnum, stringToSelectableValue } from '../utils/utils';
 
 export class FormService {
 
+  private static readonly VARIABLE_REGEX = /\${.+}/gm;
+
   static creteEmptyFilter(defaultDimension: SelectableValue<string>): FilterFormModel {
     return {
       type: filterTypeOptions[ 0 ],
@@ -48,12 +50,13 @@ export class FormService {
                             dimensions: string[],
                             metrics: string[]): FilterFormModel[] {
     return filterQueries?.map(query => {
-      const filterType = FormService.guessFilterType(query.name, dimensions, metrics);
+      const filterName = query.dimensionName || query.metricName;
+      const filterType = FormService.guessFilterType(filterName, dimensions, metrics);
 
       return filterType ? {
         type: filterTypeOptionsMap[ filterType ][ 0 ],
         query: {
-          name: query.name ? stringToSelectableValue(query.name) : undefined,
+          name: filterName ? stringToSelectableValue(filterName) : undefined,
           operator: query.operator ? stringToSelectableValue(query.operator, prettyEnum) : undefined,
           expressions: (query.expressions?.length ? query.expressions : [ query.expression ])
             .filter(val => !isUndefined(val))
@@ -136,7 +139,8 @@ export class FormService {
   }
 
   static getIntersectedModelOptions(queryOptions: string[], modelOptions: Dimension[] | Metric[]): string[] {
-    return intersection(queryOptions, modelOptions.map(({ name }) => name));
+    const queryVariables = queryOptions.filter(value => FormService.VARIABLE_REGEX.test(value));
+    return [ ...intersection(queryOptions, modelOptions.map(({ name }) => name)), ...(queryVariables || []) ];
   }
 
 }
