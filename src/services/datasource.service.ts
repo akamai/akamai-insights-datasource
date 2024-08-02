@@ -174,17 +174,6 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
       }
     }
 
-    if (refId === VARIABLE_QUERY) {
-      const stringFields = frame.fields.filter(({ type }) => type === FieldType.string);
-      const firstStringDimension = selectedDimensions?.find(dimension => stringFields.find(({ name }) => name === dimension));
-      const variableField = stringFields.find(field => field.name === firstStringDimension);
-
-      if (variableField) {
-        frame.fields = frame.fields.filter(({ type }) => type !== FieldType.string);
-        frame.fields.push(variableField);
-      }
-    }
-
     data?.forEach(row => frame.add(row));
 
     const hasTimeField = frame.fields.find(field => field.type === FieldType.time);
