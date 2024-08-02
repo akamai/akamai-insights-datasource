@@ -48,5 +48,3 @@ export interface Enum {
 export const API_URL = '/reporting-api/v2/reports/';
 
 export const VARIABLE_QUERY = 'variable-query';
-
-export const VARIABLE_QUERY = 'variable-query';
