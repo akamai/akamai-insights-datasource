@@ -330,6 +330,73 @@ describe('DatasourceService', () => {
           });
       });
     });
+
+    describe('and query is triggered by variable panel', () => {
+      beforeEach(() => {
+        // @ts-ignore
+        DatasourceService.cachedDiscoveryAPIMap.clear();
+      });
+
+      test('should filter results to return only one string field in frames', done => {
+        const target = {
+          dimensions: [ 'time5minutes', 'hostname', 'httpMethod' ],
+          metrics: [ 'edgeHitsSum' ],
+          limit: 1000,
+          reportLink: '/reporting-reports-executor-api/v2/reports/delivery/traffic',
+          refId: VARIABLE_QUERY
+        };
+        // @ts-ignore
+        getBackendSrv.mockImplementation(() => ({
+          fetch: (options: BackendSrvRequest) => {
+            if (options.url.includes('discovery')) {
+              return of({ data: discoveryTraffic });
+            }
+
+            return of({ data: { data: [ { edgeHitsSum: 1000, time5minutes: 1710155443, hostname: 'akamai.com', httpMethod: 'get_head' } ] } });
+          }
+        }));
+
+        service.query({ targets: [ target ], range: {
+            from: new Date('03-10-2024'),
+            to: new Date('03-12-2024')
+        } } as any)
+          .subscribe({
+              next: response => {
+                // @ts-ignore
+                expect(response.data[ 0 ].fields).toEqual([
+                  {
+                    config: {},
+                    name: 'edgeHitsSum',
+                    refId: VARIABLE_QUERY,
+                    type: 'number',
+                    values: [
+                      1000
+                    ]
+                  },
+                  {
+                    config: {},
+                    name: 'time5minutes',
+                    refId: VARIABLE_QUERY,
+                    type: 'time',
+                    values: [
+                      1710155443000
+                    ]
+                  },
+                  {
+                    config: {},
+                    name: 'hostname',
+                    refId: VARIABLE_QUERY,
+                    type: 'string',
+                    values: [
+                      'akamai.com'
+                    ]
+                  }
+                ]);
+                done();
+              }
+          });
+      });
+    });
   });
 
   describe('given testDatasource', () => {
