@@ -10,7 +10,8 @@ export interface MyQuery extends DataQuery {
 }
 
 export interface FilterQuery {
-  name?: string;
+  metricName?: string;
+  dimensionName?: string;
   operator?: string;
   expressions?: ExpressionType[];
   expression?: ExpressionType;

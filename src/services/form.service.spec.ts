@@ -63,12 +63,12 @@ describe('given FormService', () => {
     it('should convert to form model', () => {
       const filters: FilterQuery[] = [
         {
-          name: 'DIM1',
+          dimensionName: 'DIM1',
           operator: DimensionOperator.InList,
           expressions: [ 'value' ]
         },
         {
-          name: 'MET2',
+          metricName: 'MET2',
           operator: MetricOperator.Equal,
           expression: 100
         }
@@ -267,6 +267,11 @@ describe('given FormService', () => {
     it('should return non empty array when there is an intersection', () => {
       expect(FormService.getIntersectedModelOptions([ 'responseCode', 'cpcode' ], discoveryTrafficModel.dimensions))
         .toEqual([ 'responseCode', 'cpcode' ]);
+    });
+
+    it('should include query variables in intersection', () => {
+      expect(FormService.getIntersectedModelOptions([ 'responseCode', 'cpcode', '${hostname}' ], discoveryTrafficModel.dimensions))
+        .toEqual([ 'responseCode', 'cpcode', '${hostname}' ]);
     });
 
     it('should return empty array when there is no intersection', () => {
