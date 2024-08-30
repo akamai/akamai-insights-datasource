@@ -114,15 +114,15 @@ Read [Configuration](https://grafana.com/docs/grafana/latest/administration/conf
 plugins = /var/lib/grafana/plugins
 ```
 4. Under the [plugins] section header, uncomment "allow_loading_unsigned_plugins".
-5. To the right of "allow_loading_unsigned_plugins =", add "akamai-data-plugin" (without quotes). For example:
+5. To the right of "allow_loading_unsigned_plugins =", add "akamai-insights-datasource" (without quotes). For example:
 ```
 [plugins]
 # Enter a comma-separated list of plugin identifiers to identify plugins that are allowed to be loaded even if they lack a valid signature.
-allow_loading_unsigned_plugins = akamai-data-plugin
+allow_loading_unsigned_plugins = akamai-insights-datasource
 ```
 6. Restart Grafana See how to [Restart Grafana](https://grafana.com/docs/grafana/latest/installation/restart-grafana/) for each operating system. Under the log directory for your operating system, in "grafana.log", you should see something similar to:
 ```
-t=2021-03-24T10:31:09-0400 lvl=info msg="Registering plugin" logger=plugins id=akamai-data-plugin
+t=2021-03-24T10:31:09-0400 lvl=info msg="Registering plugin" logger=plugins id=akamai-insights-datasource
 ```
 
 See [Troubleshooting](https://grafana.com/docs/grafana/latest/troubleshooting/) for troubleshooting tips.
