@@ -179,7 +179,9 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
     const hasTimeField = frame.fields.find(field => field.type === FieldType.time);
 
     if (hasTimeField) {
-      hasTimeField.values = hasTimeField.values.map(value => value * DatasourceService.MILLISECONDS_IN_SECOND);
+      for (let i = 0; i < hasTimeField.values.length; i++) {
+        hasTimeField.values.set(i, hasTimeField.values.get(i) * DatasourceService.MILLISECONDS_IN_SECOND)
+      }
     }
 
     return frame;
