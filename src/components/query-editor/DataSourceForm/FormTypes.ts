@@ -28,10 +28,14 @@ export interface FilterQueryFormModel {
 
 export enum DimensionOperator {
   InList = 'IN_LIST',
-  RegExp = 'REGEXP',
+  MatchRegExp = 'MATCH_REGEXP',
+  NotMatchRegExp = 'NOT_MATCH_REGEXP',
   BeginsWith = 'BEGINS_WITH',
+  NotBeginsWith = 'NOT_BEGINS_WITH',
   EndsWith = 'ENDS_WITH',
-  Partial = 'PARTIAL',
+  NotEndsWith = 'NOT_ENDS_WITH',
+  Contains = 'CONTAINS',
+  NotContains = 'NOT_CONTAINS',
   Exact = 'EXACT'
 }
 
