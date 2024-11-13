@@ -37,7 +37,7 @@ export const splitByComma = (list: string[]): string [] => {
   );
 };
 
-export const toCascaderOption = ({ value, label, items = [] }: Partial<CascaderOption>): CascaderOption => {
+export const toCascaderOption = ({ value = '', label, items = [] }: Partial<CascaderOption>): CascaderOption => {
   return {
     value,
     label: label ?? value,

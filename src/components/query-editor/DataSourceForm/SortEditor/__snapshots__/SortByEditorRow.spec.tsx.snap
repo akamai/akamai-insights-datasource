@@ -2,16 +2,16 @@
 
 exports[`SortByEditorRow component should render dimension row 1`] = `
 <div
-  className="css-9doeo5-InlineFieldRow padding-left-20"
+  className="css-15ix71y-InlineFieldRow padding-left-20"
 >
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -23,25 +23,27 @@ exports[`SortByEditorRow component should render dimension row 1`] = `
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1kl463j-grafana-select-value-container"
+            className="css-1q0c0d5-grafana-select-value-container"
           >
             <div
-              className="css-18bh10p-singleValue css-upz218-SingleValue"
+              className="css-8nwx1l-singleValue css-0"
             >
               Dimension
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -79,30 +81,26 @@ exports[`SortByEditorRow component should render dimension row 1`] = `
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -114,25 +112,27 @@ exports[`SortByEditorRow component should render dimension row 1`] = `
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1kl463j-grafana-select-value-container"
+            className="css-1q0c0d5-grafana-select-value-container"
           >
             <div
-              className="css-18bh10p-singleValue css-upz218-SingleValue"
+              className="css-8nwx1l-singleValue css-0"
             >
               time1Hour
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -170,30 +170,26 @@ exports[`SortByEditorRow component should render dimension row 1`] = `
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -205,25 +201,27 @@ exports[`SortByEditorRow component should render dimension row 1`] = `
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1kl463j-grafana-select-value-container"
+            className="css-1q0c0d5-grafana-select-value-container"
           >
             <div
-              className="css-18bh10p-singleValue css-upz218-SingleValue"
+              className="css-8nwx1l-singleValue css-0"
             >
               Descending
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -261,17 +259,13 @@ exports[`SortByEditorRow component should render dimension row 1`] = `
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
@@ -282,16 +276,16 @@ exports[`SortByEditorRow component should render dimension row 1`] = `
 
 exports[`SortByEditorRow component should render metric row 1`] = `
 <div
-  className="css-9doeo5-InlineFieldRow padding-left-20"
+  className="css-15ix71y-InlineFieldRow padding-left-20"
 >
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -303,25 +297,27 @@ exports[`SortByEditorRow component should render metric row 1`] = `
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1kl463j-grafana-select-value-container"
+            className="css-1q0c0d5-grafana-select-value-container"
           >
             <div
-              className="css-18bh10p-singleValue css-upz218-SingleValue"
+              className="css-8nwx1l-singleValue css-0"
             >
               Metric
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -359,30 +355,26 @@ exports[`SortByEditorRow component should render metric row 1`] = `
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -394,25 +386,27 @@ exports[`SortByEditorRow component should render metric row 1`] = `
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1kl463j-grafana-select-value-container"
+            className="css-1q0c0d5-grafana-select-value-container"
           >
             <div
-              className="css-18bh10p-singleValue css-upz218-SingleValue"
+              className="css-8nwx1l-singleValue css-0"
             >
               edgeHitsSum
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -450,30 +444,26 @@ exports[`SortByEditorRow component should render metric row 1`] = `
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -485,25 +475,27 @@ exports[`SortByEditorRow component should render metric row 1`] = `
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1kl463j-grafana-select-value-container"
+            className="css-1q0c0d5-grafana-select-value-container"
           >
             <div
-              className="css-18bh10p-singleValue css-upz218-SingleValue"
+              className="css-8nwx1l-singleValue css-0"
             >
               Ascending
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -541,17 +533,13 @@ exports[`SortByEditorRow component should render metric row 1`] = `
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
