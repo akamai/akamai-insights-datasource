@@ -2,16 +2,16 @@
 
 exports[`FilterEditorRow component should render dimension row 1`] = `
 <div
-  className="css-9doeo5-InlineFieldRow padding-left-20"
+  className="css-15ix71y-InlineFieldRow padding-left-20"
 >
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -23,25 +23,27 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1kl463j-grafana-select-value-container"
+            className="css-1q0c0d5-grafana-select-value-container"
           >
             <div
-              className="css-18bh10p-singleValue css-upz218-SingleValue"
+              className="css-8nwx1l-singleValue css-0"
             >
               Dimension
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -79,30 +81,26 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -114,25 +112,27 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1kl463j-grafana-select-value-container"
+            className="css-1q0c0d5-grafana-select-value-container"
           >
             <div
-              className="css-18bh10p-singleValue css-upz218-SingleValue"
+              className="css-8nwx1l-singleValue css-0"
             >
               time1Hour
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -170,30 +170,26 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -205,25 +201,27 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1kl463j-grafana-select-value-container"
+            className="css-1q0c0d5-grafana-select-value-container"
           >
             <div
-              className="css-18bh10p-singleValue css-upz218-SingleValue"
+              className="css-8nwx1l-singleValue css-0"
             >
               In list
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -261,40 +259,36 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-dvq0w4"
+        className="css-1gwh1pd"
       >
         <div
-          className="css-xcstkt-input-wrapper"
+          className="css-1cvb0sk-input-wrapper"
           data-testid="input-wrapper"
         >
           <div
-            className="css-1w5c5dq-input-inputWrapper"
+            className="css-10lnb82-input-inputWrapper"
           >
             <input
-              className="css-1n6y0bv-input-input"
+              className="css-8tk2dk-input-input"
               onBlur={[Function]}
               onChange={[Function]}
               onKeyDown={[Function]}
@@ -308,16 +302,16 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
               value=""
             />
             <div
-              className="css-7y3u6k-input-suffix"
+              className="css-7099m8-input-suffix"
             >
               <button
-                className="css-m5e3oq-button"
+                aria-disabled={false}
+                className="css-kigwq3-button"
                 disabled={true}
-                onClick={[Function]}
                 type="button"
               >
                 <span
-                  className="css-1mhnkuh"
+                  className="css-1riaxdn"
                 >
                   Add
                 </span>
@@ -326,7 +320,7 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
           </div>
         </div>
         <ul
-          className="css-1pmkqzh"
+          className="css-bpjvw"
         >
           <li
             className="css-1u6i1x"
@@ -344,19 +338,24 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
             </span>
             <button
               aria-label="Remove "1234" tag"
-              className="css-j97ryd"
+              className="css-ic1rn9"
+              onBlur={[Function]}
               onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseMove={[Function]}
+              onPointerDown={[Function]}
+              onPointerEnter={[Function]}
+              size="lg"
+              tabIndex={0}
               type="button"
             >
-              <div
-                className="css-wf08df-Icon"
-              >
-                <svg
-                  data-testid="times"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </div>
+              <svg
+                data-testid="times"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
             </button>
           </li>
         </ul>
@@ -368,16 +367,16 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
 
 exports[`FilterEditorRow component should render metric row 1`] = `
 <div
-  className="css-9doeo5-InlineFieldRow padding-left-20"
+  className="css-15ix71y-InlineFieldRow padding-left-20"
 >
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -389,25 +388,27 @@ exports[`FilterEditorRow component should render metric row 1`] = `
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1kl463j-grafana-select-value-container"
+            className="css-1q0c0d5-grafana-select-value-container"
           >
             <div
-              className="css-18bh10p-singleValue css-upz218-SingleValue"
+              className="css-8nwx1l-singleValue css-0"
             >
               Metric
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -445,30 +446,26 @@ exports[`FilterEditorRow component should render metric row 1`] = `
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -480,25 +477,27 @@ exports[`FilterEditorRow component should render metric row 1`] = `
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1kl463j-grafana-select-value-container"
+            className="css-1q0c0d5-grafana-select-value-container"
           >
             <div
-              className="css-18bh10p-singleValue css-upz218-SingleValue"
+              className="css-8nwx1l-singleValue css-0"
             >
               edgeHitsSum
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -536,30 +535,26 @@ exports[`FilterEditorRow component should render metric row 1`] = `
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -571,25 +566,27 @@ exports[`FilterEditorRow component should render metric row 1`] = `
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1kl463j-grafana-select-value-container"
+            className="css-1q0c0d5-grafana-select-value-container"
           >
             <div
-              className="css-18bh10p-singleValue css-upz218-SingleValue"
+              className="css-8nwx1l-singleValue css-0"
             >
               Equal
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -627,37 +624,33 @@ exports[`FilterEditorRow component should render metric row 1`] = `
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-p7rfez-input-wrapper"
+        className="css-3qjwe0-input-wrapper"
         data-testid="input-wrapper"
       >
         <div
-          className="css-1w5c5dq-input-inputWrapper"
+          className="css-10lnb82-input-inputWrapper"
         >
           <input
-            className="css-1n6y0bv-input-input"
+            className="css-8tk2dk-input-input"
             onChange={[Function]}
             placeholder="Expression"
             style={
