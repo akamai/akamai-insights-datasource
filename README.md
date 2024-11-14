@@ -176,6 +176,14 @@ Fill form and apply query. Create additional queries, as needed.
 
 ![Visualization](static/rendered_vis.jpg)
 
+## Dashboard examples
+Dashboard examples placed in the 'examples' directory can be imported into Grafana.
 
-
+* Go to Home -> Dashboards page in Grafana
+![Dashboard](static/dashboards.jpg)
+* Select New -> Import
+* Upload dashboard JSON file 
+![Import](static/examples-import.jpg)
+* Select instance of Akamai Insights Datasource Plugin 
+* Click import
 
