@@ -85,7 +85,7 @@
               }
             ]
           },
-          "unit": "sishort"
+          "unit": "decbytes"
         },
         "overrides": []
       },
@@ -200,7 +200,7 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "req/s",
+            "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "barWidthFactor": 0.6,
@@ -243,7 +243,7 @@
               }
             ]
           },
-          "unit": "sishort"
+          "unit": "reqps"
         },
         "overrides": []
       },
@@ -474,7 +474,7 @@
               }
             ]
           },
-          "unit": "sishort"
+          "unit": "reqps"
         },
         "overrides": []
       },
@@ -623,7 +623,7 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "req/s",
+            "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "barWidthFactor": 0.6,
@@ -666,7 +666,7 @@
               }
             ]
           },
-          "unit": "sishort"
+          "unit": "reqps"
         },
         "overrides": []
       },
@@ -808,7 +808,7 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "req/s",
+            "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "barWidthFactor": 0.6,
@@ -851,7 +851,7 @@
               }
             ]
           },
-          "unit": "sishort"
+          "unit": "reqps"
         },
         "overrides": []
       },
@@ -1053,7 +1053,7 @@
               }
             ]
           },
-          "unit": "sishort"
+          "unit": "decbytes"
         },
         "overrides": []
       },
@@ -1173,9 +1173,7 @@
           "uid": "${DS_AKAMAI-INSIGHTS-DATASOURCE}"
         },
         "definition": "",
-        "hide": 0,
         "includeAll": false,
-        "multi": false,
         "name": "hostname",
         "options": [],
         "query": {
@@ -1189,20 +1187,18 @@
         },
         "refresh": 2,
         "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
         "type": "query"
       }
     ]
   },
   "time": {
-    "from": "now-7d",
+    "from": "now-2d",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
   "title": "Traffic Sample",
   "uid": "fe3po112ink74c",
-  "version": 25,
+  "version": 1,
   "weekStart": ""
 }
