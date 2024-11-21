@@ -12,19 +12,19 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
           class="credentials__container"
         >
           <div
-            class="css-8e5b3"
+            class="css-1rplq84"
           >
             <div
-              class="css-jt4xma-Label"
+              class="css-l4ykjo-Label"
             >
               <label>
                 <div
-                  class="css-xhqy0o"
+                  class="css-70qvj9"
                 >
                   Information
                 </div>
                 <span
-                  class="css-zjkzrp-Label-description"
+                  class="css-1qya104-Label-description"
                 >
                   Paste credentials here to auto fill form below
                 </span>
@@ -33,7 +33,7 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
             <div>
               <div>
                 <textarea
-                  class="css-b6cogb credentials__textarea"
+                  class="css-i28uzi credentials__textarea"
                   name="credentialsTextArea"
                 />
               </div>
@@ -42,25 +42,25 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
         </div>
         <hr />
         <div
-          class="css-1f5gueu"
+          class="css-1uqla6q"
         >
           <label
-            class="css-tomx28"
+            class="css-1hzpsg9"
           >
             Akamai Client Secret
           </label>
           <div
-            class="css-1rfunm5"
+            class="css-1tu59u4"
           >
             <div
-              class="css-yy0rti-input-wrapper"
+              class="css-1xvl4yl-input-wrapper"
               data-testid="input-wrapper"
             >
               <div
-                class="css-1w5c5dq-input-inputWrapper"
+                class="css-10lnb82-input-inputWrapper"
               >
                 <input
-                  class="css-1n6y0bv-input-input"
+                  class="css-8tk2dk-input-input"
                   placeholder="Enter client secret"
                   value=""
                 />
@@ -69,25 +69,25 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
           </div>
         </div>
         <div
-          class="css-1f5gueu"
+          class="css-1uqla6q"
         >
           <label
-            class="css-tomx28"
+            class="css-1hzpsg9"
           >
             Host
           </label>
           <div
-            class="css-1rfunm5"
+            class="css-1tu59u4"
           >
             <div
-              class="css-yy0rti-input-wrapper"
+              class="css-1xvl4yl-input-wrapper"
               data-testid="input-wrapper"
             >
               <div
-                class="css-1w5c5dq-input-inputWrapper"
+                class="css-10lnb82-input-inputWrapper"
               >
                 <input
-                  class="css-1n6y0bv-input-input"
+                  class="css-8tk2dk-input-input"
                   placeholder="Enter host"
                   value=""
                 />
@@ -96,25 +96,25 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
           </div>
         </div>
         <div
-          class="css-1f5gueu"
+          class="css-1uqla6q"
         >
           <label
-            class="css-tomx28"
+            class="css-1hzpsg9"
           >
             Access Token
           </label>
           <div
-            class="css-1rfunm5"
+            class="css-1tu59u4"
           >
             <div
-              class="css-yy0rti-input-wrapper"
+              class="css-1xvl4yl-input-wrapper"
               data-testid="input-wrapper"
             >
               <div
-                class="css-1w5c5dq-input-inputWrapper"
+                class="css-10lnb82-input-inputWrapper"
               >
                 <input
-                  class="css-1n6y0bv-input-input"
+                  class="css-8tk2dk-input-input"
                   placeholder="Enter access token"
                   value=""
                 />
@@ -123,25 +123,25 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
           </div>
         </div>
         <div
-          class="css-1f5gueu"
+          class="css-1uqla6q"
         >
           <label
-            class="css-tomx28"
+            class="css-1hzpsg9"
           >
             Client Token
           </label>
           <div
-            class="css-1rfunm5"
+            class="css-1tu59u4"
           >
             <div
-              class="css-yy0rti-input-wrapper"
+              class="css-1xvl4yl-input-wrapper"
               data-testid="input-wrapper"
             >
               <div
-                class="css-1w5c5dq-input-inputWrapper"
+                class="css-10lnb82-input-inputWrapper"
               >
                 <input
-                  class="css-1n6y0bv-input-input"
+                  class="css-8tk2dk-input-input"
                   placeholder="Enter client token"
                   value=""
                 />
@@ -160,19 +160,19 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
         class="credentials__container"
       >
         <div
-          class="css-8e5b3"
+          class="css-1rplq84"
         >
           <div
-            class="css-jt4xma-Label"
+            class="css-l4ykjo-Label"
           >
             <label>
               <div
-                class="css-xhqy0o"
+                class="css-70qvj9"
               >
                 Information
               </div>
               <span
-                class="css-zjkzrp-Label-description"
+                class="css-1qya104-Label-description"
               >
                 Paste credentials here to auto fill form below
               </span>
@@ -181,7 +181,7 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
           <div>
             <div>
               <textarea
-                class="css-b6cogb credentials__textarea"
+                class="css-i28uzi credentials__textarea"
                 name="credentialsTextArea"
               />
             </div>
@@ -190,25 +190,25 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
       </div>
       <hr />
       <div
-        class="css-1f5gueu"
+        class="css-1uqla6q"
       >
         <label
-          class="css-tomx28"
+          class="css-1hzpsg9"
         >
           Akamai Client Secret
         </label>
         <div
-          class="css-1rfunm5"
+          class="css-1tu59u4"
         >
           <div
-            class="css-yy0rti-input-wrapper"
+            class="css-1xvl4yl-input-wrapper"
             data-testid="input-wrapper"
           >
             <div
-              class="css-1w5c5dq-input-inputWrapper"
+              class="css-10lnb82-input-inputWrapper"
             >
               <input
-                class="css-1n6y0bv-input-input"
+                class="css-8tk2dk-input-input"
                 placeholder="Enter client secret"
                 value=""
               />
@@ -217,25 +217,25 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
         </div>
       </div>
       <div
-        class="css-1f5gueu"
+        class="css-1uqla6q"
       >
         <label
-          class="css-tomx28"
+          class="css-1hzpsg9"
         >
           Host
         </label>
         <div
-          class="css-1rfunm5"
+          class="css-1tu59u4"
         >
           <div
-            class="css-yy0rti-input-wrapper"
+            class="css-1xvl4yl-input-wrapper"
             data-testid="input-wrapper"
           >
             <div
-              class="css-1w5c5dq-input-inputWrapper"
+              class="css-10lnb82-input-inputWrapper"
             >
               <input
-                class="css-1n6y0bv-input-input"
+                class="css-8tk2dk-input-input"
                 placeholder="Enter host"
                 value=""
               />
@@ -244,25 +244,25 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
         </div>
       </div>
       <div
-        class="css-1f5gueu"
+        class="css-1uqla6q"
       >
         <label
-          class="css-tomx28"
+          class="css-1hzpsg9"
         >
           Access Token
         </label>
         <div
-          class="css-1rfunm5"
+          class="css-1tu59u4"
         >
           <div
-            class="css-yy0rti-input-wrapper"
+            class="css-1xvl4yl-input-wrapper"
             data-testid="input-wrapper"
           >
             <div
-              class="css-1w5c5dq-input-inputWrapper"
+              class="css-10lnb82-input-inputWrapper"
             >
               <input
-                class="css-1n6y0bv-input-input"
+                class="css-8tk2dk-input-input"
                 placeholder="Enter access token"
                 value=""
               />
@@ -271,25 +271,25 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
         </div>
       </div>
       <div
-        class="css-1f5gueu"
+        class="css-1uqla6q"
       >
         <label
-          class="css-tomx28"
+          class="css-1hzpsg9"
         >
           Client Token
         </label>
         <div
-          class="css-1rfunm5"
+          class="css-1tu59u4"
         >
           <div
-            class="css-yy0rti-input-wrapper"
+            class="css-1xvl4yl-input-wrapper"
             data-testid="input-wrapper"
           >
             <div
-              class="css-1w5c5dq-input-inputWrapper"
+              class="css-10lnb82-input-inputWrapper"
             >
               <input
-                class="css-1n6y0bv-input-input"
+                class="css-8tk2dk-input-input"
                 placeholder="Enter client token"
                 value=""
               />

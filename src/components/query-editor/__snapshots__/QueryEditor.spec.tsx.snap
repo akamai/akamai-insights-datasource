@@ -2,13 +2,17 @@
 
 exports[`given QueryEditor should render editor with initial value 1`] = `
 [
-  <i
-    className="fa fa-spinner fa-spin"
+  <svg
+    data-testid="spinner"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
   />,
   " Fetching...",
   <hr />,
-  <i
-    className="fa fa-spinner fa-spin"
+  <svg
+    data-testid="spinner"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
   />,
   " Fetching...",
 ]
@@ -18,18 +22,18 @@ exports[`given QueryEditor should render new empty editor 1`] = `
 [
   <div>
     <div
-      className="css-4339yg"
+      className="css-1nob2mz"
       onClick={[Function]}
     >
       <div
-        className="css-xcstkt-input-wrapper"
+        className="css-1cvb0sk-input-wrapper"
         data-testid="input-wrapper"
       >
         <div
-          className="css-1w5c5dq-input-inputWrapper"
+          className="css-10lnb82-input-inputWrapper"
         >
           <input
-            className="css-1n6y0bv-input-input"
+            className="css-8tk2dk-input-input"
             onBlur={[Function]}
             onChange={[Function]}
             onKeyDown={[Function]}
@@ -43,10 +47,10 @@ exports[`given QueryEditor should render new empty editor 1`] = `
             value=""
           />
           <div
-            className="css-7y3u6k-input-suffix"
+            className="css-7099m8-input-suffix"
           >
             <div
-              className="css-wf08df-Icon"
+              className="css-1e57u0i"
             >
               <svg
                 data-testid="angle-down"
