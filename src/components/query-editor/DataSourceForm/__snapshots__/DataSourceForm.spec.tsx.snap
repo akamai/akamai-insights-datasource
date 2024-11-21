@@ -7,28 +7,23 @@ exports[`DataSourceForm component should hide info about default values on form 
     <div>
       <div>
         <div
-          class="css-1f5gueu"
+          class="css-1uqla6q"
         >
           <label
-            class="css-1e5y6i9"
+            class="css-vilgwi"
           >
             Dimensions
-            <div
-              class="css-wf08df-Icon"
-              tabindex="0"
-            >
-              <svg
-                data-testid="info-circle"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="info-circle"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </label>
           <div
-            class="css-1rfunm5"
+            class="css-1tu59u4"
           >
             <div
-              class="css-jjhwg3-input-wrapper css-17r2o28-SelectContainer"
+              class="css-1nmqu8c-input-wrapper css-4hd1qm"
             >
               <span
                 class="css-1f43avz-a11yText-A11yText"
@@ -39,43 +34,43 @@ exports[`DataSourceForm component should hide info about default values on form 
                 aria-live="polite"
                 aria-relevant="additions text"
                 class="css-1f43avz-a11yText-A11yText"
+                role="log"
               />
               <div
-                class="css-1scgfe8"
+                class="css-1i88p6p"
               >
                 <div
-                  class="css-1eq04kg-grafana-select-value-container-grafana-select-value-container-multi"
+                  class="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
                 >
                   <div
-                    class="css-1idmvrx-grafana-select-multi-value-container"
+                    class="css-1pc1kg0-grafana-select-multi-value-container"
                     css="[object Object]"
                   >
                     <div
-                      class=" css-1l9kcyg-MultiValueGeneric"
+                      class="css-1o4wo1x"
                     >
                       cpcode
                     </div>
                     <button
-                      aria-label="Remove cpcode"
-                      class="css-1l39x10-grafana-select-multi-value-remove"
+                      aria-label="Remove"
+                      class="css-1s8m6sy-grafana-select-multi-value-remove"
                       css="[object Object]"
+                      tabindex="0"
+                      type="button"
                     >
-                      <div
-                        class="css-wf08df-Icon"
-                      >
-                        <svg
-                          data-testid="times"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        />
-                      </div>
+                      <svg
+                        data-testid="times"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      />
                     </button>
                   </div>
                   <div
-                    class=" css-lq7btu-Input"
+                    class="css-1eu65zc"
                     data-value=""
                   >
                     <input
+                      aria-activedescendant=""
                       aria-autocomplete="list"
                       aria-expanded="false"
                       aria-haspopup="true"
@@ -94,56 +89,41 @@ exports[`DataSourceForm component should hide info about default values on form 
                   </div>
                 </div>
                 <div
-                  class="css-uvldi-input-suffix"
+                  class="css-zyjsuv-input-suffix"
                 >
-                  <div
-                    aria-label="select-clear-value"
-                    class="css-wf08df-Icon"
-                    role="button"
-                  >
-                    <svg
-                      data-testid="times"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    />
-                  </div>
-                  <div
-                    class="css-wf08df-Icon"
-                  >
-                    <svg
-                      data-testid="angle-down"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    />
-                  </div>
+                  <svg
+                    data-testid="times"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
+                  <svg
+                    data-testid="angle-down"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="css-1f5gueu"
+          class="css-1uqla6q"
         >
           <label
-            class="css-1e5y6i9"
+            class="css-vilgwi"
           >
             Metrics
-            <div
-              class="css-wf08df-Icon"
-              tabindex="0"
-            >
-              <svg
-                data-testid="info-circle"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="info-circle"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </label>
           <div
-            class="css-1rfunm5"
+            class="css-1tu59u4"
           >
             <div
-              class="css-jjhwg3-input-wrapper css-17r2o28-SelectContainer"
+              class="css-1nmqu8c-input-wrapper css-4hd1qm"
             >
               <span
                 class="css-1f43avz-a11yText-A11yText"
@@ -154,43 +134,43 @@ exports[`DataSourceForm component should hide info about default values on form 
                 aria-live="polite"
                 aria-relevant="additions text"
                 class="css-1f43avz-a11yText-A11yText"
+                role="log"
               />
               <div
-                class="css-1scgfe8"
+                class="css-1i88p6p"
               >
                 <div
-                  class="css-1eq04kg-grafana-select-value-container-grafana-select-value-container-multi"
+                  class="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
                 >
                   <div
-                    class="css-1idmvrx-grafana-select-multi-value-container"
+                    class="css-1pc1kg0-grafana-select-multi-value-container"
                     css="[object Object]"
                   >
                     <div
-                      class=" css-1l9kcyg-MultiValueGeneric"
+                      class="css-1o4wo1x"
                     >
                       edgeHitsSum
                     </div>
                     <button
-                      aria-label="Remove edgeHitsSum"
-                      class="css-1l39x10-grafana-select-multi-value-remove"
+                      aria-label="Remove"
+                      class="css-1s8m6sy-grafana-select-multi-value-remove"
                       css="[object Object]"
+                      tabindex="0"
+                      type="button"
                     >
-                      <div
-                        class="css-wf08df-Icon"
-                      >
-                        <svg
-                          data-testid="times"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        />
-                      </div>
+                      <svg
+                        data-testid="times"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      />
                     </button>
                   </div>
                   <div
-                    class=" css-lq7btu-Input"
+                    class="css-1eu65zc"
                     data-value=""
                   >
                     <input
+                      aria-activedescendant=""
                       aria-autocomplete="list"
                       aria-expanded="false"
                       aria-haspopup="true"
@@ -209,154 +189,125 @@ exports[`DataSourceForm component should hide info about default values on form 
                   </div>
                 </div>
                 <div
-                  class="css-uvldi-input-suffix"
+                  class="css-zyjsuv-input-suffix"
                 >
-                  <div
-                    aria-label="select-clear-value"
-                    class="css-wf08df-Icon"
-                    role="button"
-                  >
-                    <svg
-                      data-testid="times"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    />
-                  </div>
-                  <div
-                    class="css-wf08df-Icon"
-                  >
-                    <svg
-                      data-testid="angle-down"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    />
-                  </div>
+                  <svg
+                    data-testid="times"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
+                  <svg
+                    data-testid="angle-down"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="css-9doeo5-InlineFieldRow"
+          class="css-15ix71y-InlineFieldRow"
         >
           <div
-            class="css-1f5gueu"
+            class="css-1uqla6q"
           >
             <label
-              class="css-1e5y6i9"
+              class="css-vilgwi"
             >
               Filters
-              <div
-                class="css-wf08df-Icon"
-                tabindex="0"
-              >
-                <svg
-                  data-testid="info-circle"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </div>
+              <svg
+                data-testid="info-circle"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
             </label>
             <div
-              class="css-1rfunm5"
+              class="css-1tu59u4"
             >
               <div
                 class="css-1uedr6a"
               >
                 <button
                   aria-label="Add new Filter"
-                  class="css-x1vujn"
+                  class="css-a2noi1"
                   tabindex="0"
+                  type="button"
                 >
-                  <div
-                    class="css-wf08df-Icon"
-                  >
-                    <svg
-                      data-testid="plus-circle"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    />
-                  </div>
+                  <svg
+                    data-testid="plus-circle"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
                 </button>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="css-9doeo5-InlineFieldRow"
+          class="css-15ix71y-InlineFieldRow"
         >
           <div
-            class="css-1f5gueu"
+            class="css-1uqla6q"
           >
             <label
-              class="css-1e5y6i9"
+              class="css-vilgwi"
             >
               Sort Bys
-              <div
-                class="css-wf08df-Icon"
-                tabindex="0"
-              >
-                <svg
-                  data-testid="info-circle"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </div>
+              <svg
+                data-testid="info-circle"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              />
             </label>
             <div
-              class="css-1rfunm5"
+              class="css-1tu59u4"
             >
               <div
                 class="css-1uedr6a"
               >
                 <button
                   aria-label="Remove all"
-                  class="css-x1vujn"
+                  class="css-a2noi1"
                   tabindex="0"
+                  type="button"
                 >
-                  <div
-                    class="css-wf08df-Icon"
-                  >
-                    <svg
-                      data-testid="trash-alt"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    />
-                  </div>
+                  <svg
+                    data-testid="trash-alt"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
                 </button>
                 <button
                   aria-label="Add new Sort By"
-                  class="css-x1vujn"
+                  class="css-a2noi1"
                   tabindex="0"
+                  type="button"
                 >
-                  <div
-                    class="css-wf08df-Icon"
-                  >
-                    <svg
-                      data-testid="plus-circle"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    />
-                  </div>
+                  <svg
+                    data-testid="plus-circle"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
                 </button>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="css-9doeo5-InlineFieldRow"
+          class="css-15ix71y-InlineFieldRow"
         >
           <div
-            class="css-9doeo5-InlineFieldRow padding-left-20"
+            class="css-15ix71y-InlineFieldRow padding-left-20"
           >
             <div
-              class="css-1f5gueu"
+              class="css-1uqla6q"
             >
               <div
-                class="css-1rfunm5"
+                class="css-1tu59u4"
               >
                 <div
-                  class="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+                  class="css-1nmqu8c-input-wrapper css-smf98s"
                 >
                   <span
                     class="css-1f43avz-a11yText-A11yText"
@@ -367,23 +318,25 @@ exports[`DataSourceForm component should hide info about default values on form 
                     aria-live="polite"
                     aria-relevant="additions text"
                     class="css-1f43avz-a11yText-A11yText"
+                    role="log"
                   />
                   <div
-                    class="css-1scgfe8"
+                    class="css-1i88p6p"
                   >
                     <div
-                      class="css-1kl463j-grafana-select-value-container"
+                      class="css-1q0c0d5-grafana-select-value-container"
                     >
                       <div
-                        class="css-18bh10p-singleValue css-upz218-SingleValue"
+                        class="css-8nwx1l-singleValue css-0"
                       >
                         Metric
                       </div>
                       <div
-                        class=" css-lq7btu-Input"
+                        class="css-1eu65zc"
                         data-value=""
                       >
                         <input
+                          aria-activedescendant=""
                           aria-autocomplete="list"
                           aria-expanded="false"
                           aria-haspopup="true"
@@ -402,30 +355,26 @@ exports[`DataSourceForm component should hide info about default values on form 
                       </div>
                     </div>
                     <div
-                      class="css-uvldi-input-suffix"
+                      class="css-zyjsuv-input-suffix"
                     >
-                      <div
-                        class="css-wf08df-Icon"
-                      >
-                        <svg
-                          data-testid="angle-down"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        />
-                      </div>
+                      <svg
+                        data-testid="angle-down"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div
-              class="css-1f5gueu"
+              class="css-1uqla6q"
             >
               <div
-                class="css-1rfunm5"
+                class="css-1tu59u4"
               >
                 <div
-                  class="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+                  class="css-1nmqu8c-input-wrapper css-smf98s"
                 >
                   <span
                     class="css-1f43avz-a11yText-A11yText"
@@ -436,23 +385,25 @@ exports[`DataSourceForm component should hide info about default values on form 
                     aria-live="polite"
                     aria-relevant="additions text"
                     class="css-1f43avz-a11yText-A11yText"
+                    role="log"
                   />
                   <div
-                    class="css-1scgfe8"
+                    class="css-1i88p6p"
                   >
                     <div
-                      class="css-1kl463j-grafana-select-value-container"
+                      class="css-1q0c0d5-grafana-select-value-container"
                     >
                       <div
-                        class="css-18bh10p-singleValue css-upz218-SingleValue"
+                        class="css-8nwx1l-singleValue css-0"
                       >
                         edgeHitsSum
                       </div>
                       <div
-                        class=" css-lq7btu-Input"
+                        class="css-1eu65zc"
                         data-value=""
                       >
                         <input
+                          aria-activedescendant=""
                           aria-autocomplete="list"
                           aria-expanded="false"
                           aria-haspopup="true"
@@ -471,30 +422,26 @@ exports[`DataSourceForm component should hide info about default values on form 
                       </div>
                     </div>
                     <div
-                      class="css-uvldi-input-suffix"
+                      class="css-zyjsuv-input-suffix"
                     >
-                      <div
-                        class="css-wf08df-Icon"
-                      >
-                        <svg
-                          data-testid="angle-down"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        />
-                      </div>
+                      <svg
+                        data-testid="angle-down"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div
-              class="css-1f5gueu"
+              class="css-1uqla6q"
             >
               <div
-                class="css-1rfunm5"
+                class="css-1tu59u4"
               >
                 <div
-                  class="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+                  class="css-1nmqu8c-input-wrapper css-smf98s"
                 >
                   <span
                     class="css-1f43avz-a11yText-A11yText"
@@ -505,23 +452,25 @@ exports[`DataSourceForm component should hide info about default values on form 
                     aria-live="polite"
                     aria-relevant="additions text"
                     class="css-1f43avz-a11yText-A11yText"
+                    role="log"
                   />
                   <div
-                    class="css-1scgfe8"
+                    class="css-1i88p6p"
                   >
                     <div
-                      class="css-1kl463j-grafana-select-value-container"
+                      class="css-1q0c0d5-grafana-select-value-container"
                     >
                       <div
-                        class="css-18bh10p-singleValue css-upz218-SingleValue"
+                        class="css-8nwx1l-singleValue css-0"
                       >
                         Descending
                       </div>
                       <div
-                        class=" css-lq7btu-Input"
+                        class="css-1eu65zc"
                         data-value=""
                       >
                         <input
+                          aria-activedescendant=""
                           aria-autocomplete="list"
                           aria-expanded="false"
                           aria-haspopup="true"
@@ -540,17 +489,13 @@ exports[`DataSourceForm component should hide info about default values on form 
                       </div>
                     </div>
                     <div
-                      class="css-uvldi-input-suffix"
+                      class="css-zyjsuv-input-suffix"
                     >
-                      <div
-                        class="css-wf08df-Icon"
-                      >
-                        <svg
-                          data-testid="angle-down"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        />
-                      </div>
+                      <svg
+                        data-testid="angle-down"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      />
                     </div>
                   </div>
                 </div>
@@ -558,48 +503,46 @@ exports[`DataSourceForm component should hide info about default values on form 
             </div>
           </div>
           <div
-            class="css-1f5gueu"
+            class="css-1uqla6q"
           >
             <div
-              class="css-1rfunm5"
+              class="css-1tu59u4"
             >
               <div
                 class="css-1uedr6a"
               >
                 <button
                   aria-label="Remove Sort By"
-                  class="css-x1vujn"
+                  class="css-a2noi1"
                   tabindex="0"
+                  type="button"
                 >
-                  <div
-                    class="css-wf08df-Icon"
-                  >
-                    <svg
-                      data-testid="minus-circle"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    />
-                  </div>
+                  <svg
+                    data-testid="minus-circle"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
                 </button>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="css-9doeo5-InlineFieldRow"
+          class="css-15ix71y-InlineFieldRow"
         >
           <div
-            class="css-1f5gueu"
+            class="css-1uqla6q"
           >
             <div
-              class="css-1rfunm5"
+              class="css-1tu59u4"
             >
               <button
+                aria-disabled="false"
                 class="css-1oe1lwi-button"
                 type="reset"
               >
                 <span
-                  class="css-1mhnkuh"
+                  class="css-1riaxdn"
                 >
                   Clear
                 </span>
@@ -607,17 +550,18 @@ exports[`DataSourceForm component should hide info about default values on form 
             </div>
           </div>
           <div
-            class="css-1f5gueu"
+            class="css-1uqla6q"
           >
             <div
-              class="css-1rfunm5"
+              class="css-1tu59u4"
             >
               <button
+                aria-disabled="false"
                 class="css-td06pi-button"
                 type="submit"
               >
                 <span
-                  class="css-1mhnkuh"
+                  class="css-1riaxdn"
                 >
                   Apply
                 </span>
@@ -625,17 +569,18 @@ exports[`DataSourceForm component should hide info about default values on form 
             </div>
           </div>
           <div
-            class="css-1f5gueu"
+            class="css-1uqla6q"
           >
             <div
-              class="css-1rfunm5"
+              class="css-1tu59u4"
             >
               <button
+                aria-disabled="false"
                 class="css-8b29hm-button"
                 type="reset"
               >
                 <span
-                  class="css-1mhnkuh"
+                  class="css-1riaxdn"
                 >
                   Restore defaults
                 </span>
@@ -649,28 +594,23 @@ exports[`DataSourceForm component should hide info about default values on form 
   "container": <div>
     <div>
       <div
-        class="css-1f5gueu"
+        class="css-1uqla6q"
       >
         <label
-          class="css-1e5y6i9"
+          class="css-vilgwi"
         >
           Dimensions
-          <div
-            class="css-wf08df-Icon"
-            tabindex="0"
-          >
-            <svg
-              data-testid="info-circle"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </div>
+          <svg
+            data-testid="info-circle"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          />
         </label>
         <div
-          class="css-1rfunm5"
+          class="css-1tu59u4"
         >
           <div
-            class="css-jjhwg3-input-wrapper css-17r2o28-SelectContainer"
+            class="css-1nmqu8c-input-wrapper css-4hd1qm"
           >
             <span
               class="css-1f43avz-a11yText-A11yText"
@@ -681,43 +621,43 @@ exports[`DataSourceForm component should hide info about default values on form 
               aria-live="polite"
               aria-relevant="additions text"
               class="css-1f43avz-a11yText-A11yText"
+              role="log"
             />
             <div
-              class="css-1scgfe8"
+              class="css-1i88p6p"
             >
               <div
-                class="css-1eq04kg-grafana-select-value-container-grafana-select-value-container-multi"
+                class="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
               >
                 <div
-                  class="css-1idmvrx-grafana-select-multi-value-container"
+                  class="css-1pc1kg0-grafana-select-multi-value-container"
                   css="[object Object]"
                 >
                   <div
-                    class=" css-1l9kcyg-MultiValueGeneric"
+                    class="css-1o4wo1x"
                   >
                     cpcode
                   </div>
                   <button
-                    aria-label="Remove cpcode"
-                    class="css-1l39x10-grafana-select-multi-value-remove"
+                    aria-label="Remove"
+                    class="css-1s8m6sy-grafana-select-multi-value-remove"
                     css="[object Object]"
+                    tabindex="0"
+                    type="button"
                   >
-                    <div
-                      class="css-wf08df-Icon"
-                    >
-                      <svg
-                        data-testid="times"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      />
-                    </div>
+                    <svg
+                      data-testid="times"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    />
                   </button>
                 </div>
                 <div
-                  class=" css-lq7btu-Input"
+                  class="css-1eu65zc"
                   data-value=""
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
                     aria-expanded="false"
                     aria-haspopup="true"
@@ -736,56 +676,41 @@ exports[`DataSourceForm component should hide info about default values on form 
                 </div>
               </div>
               <div
-                class="css-uvldi-input-suffix"
+                class="css-zyjsuv-input-suffix"
               >
-                <div
-                  aria-label="select-clear-value"
-                  class="css-wf08df-Icon"
-                  role="button"
-                >
-                  <svg
-                    data-testid="times"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
-                <div
-                  class="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="angle-down"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="times"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+                <svg
+                  data-testid="angle-down"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="css-1f5gueu"
+        class="css-1uqla6q"
       >
         <label
-          class="css-1e5y6i9"
+          class="css-vilgwi"
         >
           Metrics
-          <div
-            class="css-wf08df-Icon"
-            tabindex="0"
-          >
-            <svg
-              data-testid="info-circle"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </div>
+          <svg
+            data-testid="info-circle"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          />
         </label>
         <div
-          class="css-1rfunm5"
+          class="css-1tu59u4"
         >
           <div
-            class="css-jjhwg3-input-wrapper css-17r2o28-SelectContainer"
+            class="css-1nmqu8c-input-wrapper css-4hd1qm"
           >
             <span
               class="css-1f43avz-a11yText-A11yText"
@@ -796,43 +721,43 @@ exports[`DataSourceForm component should hide info about default values on form 
               aria-live="polite"
               aria-relevant="additions text"
               class="css-1f43avz-a11yText-A11yText"
+              role="log"
             />
             <div
-              class="css-1scgfe8"
+              class="css-1i88p6p"
             >
               <div
-                class="css-1eq04kg-grafana-select-value-container-grafana-select-value-container-multi"
+                class="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
               >
                 <div
-                  class="css-1idmvrx-grafana-select-multi-value-container"
+                  class="css-1pc1kg0-grafana-select-multi-value-container"
                   css="[object Object]"
                 >
                   <div
-                    class=" css-1l9kcyg-MultiValueGeneric"
+                    class="css-1o4wo1x"
                   >
                     edgeHitsSum
                   </div>
                   <button
-                    aria-label="Remove edgeHitsSum"
-                    class="css-1l39x10-grafana-select-multi-value-remove"
+                    aria-label="Remove"
+                    class="css-1s8m6sy-grafana-select-multi-value-remove"
                     css="[object Object]"
+                    tabindex="0"
+                    type="button"
                   >
-                    <div
-                      class="css-wf08df-Icon"
-                    >
-                      <svg
-                        data-testid="times"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      />
-                    </div>
+                    <svg
+                      data-testid="times"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    />
                   </button>
                 </div>
                 <div
-                  class=" css-lq7btu-Input"
+                  class="css-1eu65zc"
                   data-value=""
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
                     aria-expanded="false"
                     aria-haspopup="true"
@@ -851,154 +776,125 @@ exports[`DataSourceForm component should hide info about default values on form 
                 </div>
               </div>
               <div
-                class="css-uvldi-input-suffix"
+                class="css-zyjsuv-input-suffix"
               >
-                <div
-                  aria-label="select-clear-value"
-                  class="css-wf08df-Icon"
-                  role="button"
-                >
-                  <svg
-                    data-testid="times"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
-                <div
-                  class="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="angle-down"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="times"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+                <svg
+                  data-testid="angle-down"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="css-9doeo5-InlineFieldRow"
+        class="css-15ix71y-InlineFieldRow"
       >
         <div
-          class="css-1f5gueu"
+          class="css-1uqla6q"
         >
           <label
-            class="css-1e5y6i9"
+            class="css-vilgwi"
           >
             Filters
-            <div
-              class="css-wf08df-Icon"
-              tabindex="0"
-            >
-              <svg
-                data-testid="info-circle"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="info-circle"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </label>
           <div
-            class="css-1rfunm5"
+            class="css-1tu59u4"
           >
             <div
               class="css-1uedr6a"
             >
               <button
                 aria-label="Add new Filter"
-                class="css-x1vujn"
+                class="css-a2noi1"
                 tabindex="0"
+                type="button"
               >
-                <div
-                  class="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="plus-circle"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="plus-circle"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </button>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="css-9doeo5-InlineFieldRow"
+        class="css-15ix71y-InlineFieldRow"
       >
         <div
-          class="css-1f5gueu"
+          class="css-1uqla6q"
         >
           <label
-            class="css-1e5y6i9"
+            class="css-vilgwi"
           >
             Sort Bys
-            <div
-              class="css-wf08df-Icon"
-              tabindex="0"
-            >
-              <svg
-                data-testid="info-circle"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="info-circle"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </label>
           <div
-            class="css-1rfunm5"
+            class="css-1tu59u4"
           >
             <div
               class="css-1uedr6a"
             >
               <button
                 aria-label="Remove all"
-                class="css-x1vujn"
+                class="css-a2noi1"
                 tabindex="0"
+                type="button"
               >
-                <div
-                  class="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="trash-alt"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="trash-alt"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </button>
               <button
                 aria-label="Add new Sort By"
-                class="css-x1vujn"
+                class="css-a2noi1"
                 tabindex="0"
+                type="button"
               >
-                <div
-                  class="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="plus-circle"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="plus-circle"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </button>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="css-9doeo5-InlineFieldRow"
+        class="css-15ix71y-InlineFieldRow"
       >
         <div
-          class="css-9doeo5-InlineFieldRow padding-left-20"
+          class="css-15ix71y-InlineFieldRow padding-left-20"
         >
           <div
-            class="css-1f5gueu"
+            class="css-1uqla6q"
           >
             <div
-              class="css-1rfunm5"
+              class="css-1tu59u4"
             >
               <div
-                class="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+                class="css-1nmqu8c-input-wrapper css-smf98s"
               >
                 <span
                   class="css-1f43avz-a11yText-A11yText"
@@ -1009,23 +905,25 @@ exports[`DataSourceForm component should hide info about default values on form 
                   aria-live="polite"
                   aria-relevant="additions text"
                   class="css-1f43avz-a11yText-A11yText"
+                  role="log"
                 />
                 <div
-                  class="css-1scgfe8"
+                  class="css-1i88p6p"
                 >
                   <div
-                    class="css-1kl463j-grafana-select-value-container"
+                    class="css-1q0c0d5-grafana-select-value-container"
                   >
                     <div
-                      class="css-18bh10p-singleValue css-upz218-SingleValue"
+                      class="css-8nwx1l-singleValue css-0"
                     >
                       Metric
                     </div>
                     <div
-                      class=" css-lq7btu-Input"
+                      class="css-1eu65zc"
                       data-value=""
                     >
                       <input
+                        aria-activedescendant=""
                         aria-autocomplete="list"
                         aria-expanded="false"
                         aria-haspopup="true"
@@ -1044,30 +942,26 @@ exports[`DataSourceForm component should hide info about default values on form 
                     </div>
                   </div>
                   <div
-                    class="css-uvldi-input-suffix"
+                    class="css-zyjsuv-input-suffix"
                   >
-                    <div
-                      class="css-wf08df-Icon"
-                    >
-                      <svg
-                        data-testid="angle-down"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      />
-                    </div>
+                    <svg
+                      data-testid="angle-down"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    />
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div
-            class="css-1f5gueu"
+            class="css-1uqla6q"
           >
             <div
-              class="css-1rfunm5"
+              class="css-1tu59u4"
             >
               <div
-                class="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+                class="css-1nmqu8c-input-wrapper css-smf98s"
               >
                 <span
                   class="css-1f43avz-a11yText-A11yText"
@@ -1078,23 +972,25 @@ exports[`DataSourceForm component should hide info about default values on form 
                   aria-live="polite"
                   aria-relevant="additions text"
                   class="css-1f43avz-a11yText-A11yText"
+                  role="log"
                 />
                 <div
-                  class="css-1scgfe8"
+                  class="css-1i88p6p"
                 >
                   <div
-                    class="css-1kl463j-grafana-select-value-container"
+                    class="css-1q0c0d5-grafana-select-value-container"
                   >
                     <div
-                      class="css-18bh10p-singleValue css-upz218-SingleValue"
+                      class="css-8nwx1l-singleValue css-0"
                     >
                       edgeHitsSum
                     </div>
                     <div
-                      class=" css-lq7btu-Input"
+                      class="css-1eu65zc"
                       data-value=""
                     >
                       <input
+                        aria-activedescendant=""
                         aria-autocomplete="list"
                         aria-expanded="false"
                         aria-haspopup="true"
@@ -1113,30 +1009,26 @@ exports[`DataSourceForm component should hide info about default values on form 
                     </div>
                   </div>
                   <div
-                    class="css-uvldi-input-suffix"
+                    class="css-zyjsuv-input-suffix"
                   >
-                    <div
-                      class="css-wf08df-Icon"
-                    >
-                      <svg
-                        data-testid="angle-down"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      />
-                    </div>
+                    <svg
+                      data-testid="angle-down"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    />
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div
-            class="css-1f5gueu"
+            class="css-1uqla6q"
           >
             <div
-              class="css-1rfunm5"
+              class="css-1tu59u4"
             >
               <div
-                class="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+                class="css-1nmqu8c-input-wrapper css-smf98s"
               >
                 <span
                   class="css-1f43avz-a11yText-A11yText"
@@ -1147,23 +1039,25 @@ exports[`DataSourceForm component should hide info about default values on form 
                   aria-live="polite"
                   aria-relevant="additions text"
                   class="css-1f43avz-a11yText-A11yText"
+                  role="log"
                 />
                 <div
-                  class="css-1scgfe8"
+                  class="css-1i88p6p"
                 >
                   <div
-                    class="css-1kl463j-grafana-select-value-container"
+                    class="css-1q0c0d5-grafana-select-value-container"
                   >
                     <div
-                      class="css-18bh10p-singleValue css-upz218-SingleValue"
+                      class="css-8nwx1l-singleValue css-0"
                     >
                       Descending
                     </div>
                     <div
-                      class=" css-lq7btu-Input"
+                      class="css-1eu65zc"
                       data-value=""
                     >
                       <input
+                        aria-activedescendant=""
                         aria-autocomplete="list"
                         aria-expanded="false"
                         aria-haspopup="true"
@@ -1182,17 +1076,13 @@ exports[`DataSourceForm component should hide info about default values on form 
                     </div>
                   </div>
                   <div
-                    class="css-uvldi-input-suffix"
+                    class="css-zyjsuv-input-suffix"
                   >
-                    <div
-                      class="css-wf08df-Icon"
-                    >
-                      <svg
-                        data-testid="angle-down"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      />
-                    </div>
+                    <svg
+                      data-testid="angle-down"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    />
                   </div>
                 </div>
               </div>
@@ -1200,48 +1090,46 @@ exports[`DataSourceForm component should hide info about default values on form 
           </div>
         </div>
         <div
-          class="css-1f5gueu"
+          class="css-1uqla6q"
         >
           <div
-            class="css-1rfunm5"
+            class="css-1tu59u4"
           >
             <div
               class="css-1uedr6a"
             >
               <button
                 aria-label="Remove Sort By"
-                class="css-x1vujn"
+                class="css-a2noi1"
                 tabindex="0"
+                type="button"
               >
-                <div
-                  class="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="minus-circle"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="minus-circle"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </button>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="css-9doeo5-InlineFieldRow"
+        class="css-15ix71y-InlineFieldRow"
       >
         <div
-          class="css-1f5gueu"
+          class="css-1uqla6q"
         >
           <div
-            class="css-1rfunm5"
+            class="css-1tu59u4"
           >
             <button
+              aria-disabled="false"
               class="css-1oe1lwi-button"
               type="reset"
             >
               <span
-                class="css-1mhnkuh"
+                class="css-1riaxdn"
               >
                 Clear
               </span>
@@ -1249,17 +1137,18 @@ exports[`DataSourceForm component should hide info about default values on form 
           </div>
         </div>
         <div
-          class="css-1f5gueu"
+          class="css-1uqla6q"
         >
           <div
-            class="css-1rfunm5"
+            class="css-1tu59u4"
           >
             <button
+              aria-disabled="false"
               class="css-td06pi-button"
               type="submit"
             >
               <span
-                class="css-1mhnkuh"
+                class="css-1riaxdn"
               >
                 Apply
               </span>
@@ -1267,17 +1156,18 @@ exports[`DataSourceForm component should hide info about default values on form 
           </div>
         </div>
         <div
-          class="css-1f5gueu"
+          class="css-1uqla6q"
         >
           <div
-            class="css-1rfunm5"
+            class="css-1tu59u4"
           >
             <button
+              aria-disabled="false"
               class="css-8b29hm-button"
               type="reset"
             >
               <span
-                class="css-1mhnkuh"
+                class="css-1riaxdn"
               >
                 Restore defaults
               </span>
@@ -1345,75 +1235,74 @@ exports[`DataSourceForm component should render editor with default values and i
 <div>
   <div
     aria-label="Default values"
-    className="css-1va3yw4"
-    data-testid="data-testid Alert info"
+    className="css-10yjoiw"
     role="status"
   >
     <div
-      className="css-i9j2dh"
+      className="css-1ewk8v0"
+      data-testid="data-testid Alert info"
     >
       <div
-        className="css-wf08df-Icon"
-      >
-        <svg
-          data-testid="info-circle"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </div>
-    </div>
-    <div
-      className="css-gbej4t"
-    >
-      <div
-        className="css-10rvbm3"
-      >
-        Default values
-      </div>
-      <div
-        className="css-dczef0"
+        className="css-9n8jpb"
       >
         <div
-          className="css-1j7sh2x-vertical-group"
-          style={
-            {
-              "height": "100%",
-              "width": "100%",
-            }
-          }
+          className="css-1v96adi"
+        >
+          <svg
+            data-testid="info-circle"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </div>
+      </div>
+      <div
+        className="css-vjkmk1"
+      >
+        <span
+          className="css-b9x8ok"
+        >
+          Default values
+        </span>
+        <div
+          className="css-91zald"
         >
           <div
-            className="css-bxa289-layoutChildrenWrapper"
+            className="css-gjl87o-vertical-group"
+            style={
+              {
+                "height": "100%",
+                "width": "100%",
+              }
+            }
           >
-            Default values have been set for the form since the panel was opened for the first time or data for query was not saved.
+            <div
+              className="css-gxt817-layoutChildrenWrapper"
+            >
+              Default values have been set for the form since the panel was opened for the first time or data for query was not saved.
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <label
-      className="css-1e5y6i9"
+      className="css-vilgwi"
     >
       Dimensions
-      <div
-        className="css-wf08df-Icon"
-        tabIndex={0}
-      >
-        <svg
-          data-testid="info-circle"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </div>
+      <svg
+        data-testid="info-circle"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
     </label>
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-17r2o28-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-4hd1qm"
         onKeyDown={[Function]}
       >
         <span
@@ -1425,48 +1314,56 @@ exports[`DataSourceForm component should render editor with default values and i
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1eq04kg-grafana-select-value-container-grafana-select-value-container-multi"
+            className="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
           >
             <div
-              className="css-1idmvrx-grafana-select-multi-value-container"
+              className="css-1pc1kg0-grafana-select-multi-value-container"
               css={{}}
             >
               <div
-                className=" css-1l9kcyg-MultiValueGeneric"
+                className="css-1o4wo1x"
               >
                 cpcode
               </div>
               <button
-                aria-label="Remove cpcode"
-                className="css-1l39x10-grafana-select-multi-value-remove"
+                aria-label="Remove"
+                className="css-1s8m6sy-grafana-select-multi-value-remove"
                 css={{}}
+                onBlur={[Function]}
                 onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
                 onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseMove={[Function]}
+                onPointerDown={[Function]}
+                onPointerEnter={[Function]}
                 onTouchEnd={[Function]}
+                size="sm"
+                tabIndex={0}
+                type="button"
               >
-                <div
-                  className="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="times"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="times"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </button>
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -1504,57 +1401,41 @@ exports[`DataSourceForm component should render editor with default values and i
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              aria-label="select-clear-value"
-              className="css-wf08df-Icon"
-              onMouseDown={[Function]}
-              role="button"
-            >
-              <svg
-                data-testid="times"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="times"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <label
-      className="css-1e5y6i9"
+      className="css-vilgwi"
     >
       Metrics
-      <div
-        className="css-wf08df-Icon"
-        tabIndex={0}
-      >
-        <svg
-          data-testid="info-circle"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </div>
+      <svg
+        data-testid="info-circle"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
     </label>
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-17r2o28-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-4hd1qm"
         onKeyDown={[Function]}
       >
         <span
@@ -1566,48 +1447,56 @@ exports[`DataSourceForm component should render editor with default values and i
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1eq04kg-grafana-select-value-container-grafana-select-value-container-multi"
+            className="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
           >
             <div
-              className="css-1idmvrx-grafana-select-multi-value-container"
+              className="css-1pc1kg0-grafana-select-multi-value-container"
               css={{}}
             >
               <div
-                className=" css-1l9kcyg-MultiValueGeneric"
+                className="css-1o4wo1x"
               >
                 edgeHitsSum
               </div>
               <button
-                aria-label="Remove edgeHitsSum"
-                className="css-1l39x10-grafana-select-multi-value-remove"
+                aria-label="Remove"
+                className="css-1s8m6sy-grafana-select-multi-value-remove"
                 css={{}}
+                onBlur={[Function]}
                 onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
                 onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseMove={[Function]}
+                onPointerDown={[Function]}
+                onPointerEnter={[Function]}
                 onTouchEnd={[Function]}
+                size="sm"
+                tabIndex={0}
+                type="button"
               >
-                <div
-                  className="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="times"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="times"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </button>
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -1645,158 +1534,149 @@ exports[`DataSourceForm component should render editor with default values and i
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              aria-label="select-clear-value"
-              className="css-wf08df-Icon"
-              onMouseDown={[Function]}
-              role="button"
-            >
-              <svg
-                data-testid="times"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="times"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-9doeo5-InlineFieldRow"
+    className="css-15ix71y-InlineFieldRow"
   >
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <label
-        className="css-1e5y6i9"
+        className="css-vilgwi"
       >
         Filters
-        <div
-          className="css-wf08df-Icon"
-          tabIndex={0}
-        >
-          <svg
-            data-testid="info-circle"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          />
-        </div>
+        <svg
+          data-testid="info-circle"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        />
       </label>
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <div
           className="css-1uedr6a"
         >
           <button
             aria-label="Add new Filter"
-            className="css-x1vujn"
+            className="css-a2noi1"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
             tabIndex={0}
+            type="button"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="plus-circle"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="plus-circle"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-9doeo5-InlineFieldRow"
+    className="css-15ix71y-InlineFieldRow"
   >
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <label
-        className="css-1e5y6i9"
+        className="css-vilgwi"
       >
         Sort Bys
-        <div
-          className="css-wf08df-Icon"
-          tabIndex={0}
-        >
-          <svg
-            data-testid="info-circle"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          />
-        </div>
+        <svg
+          data-testid="info-circle"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        />
       </label>
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <div
           className="css-1uedr6a"
         >
           <button
             aria-label="Remove all"
-            className="css-x1vujn"
+            className="css-a2noi1"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
             tabIndex={0}
+            type="button"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="trash-alt"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="trash-alt"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
           <button
             aria-label="Add new Sort By"
-            className="css-x1vujn"
+            className="css-a2noi1"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
             tabIndex={0}
+            type="button"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="plus-circle"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="plus-circle"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-9doeo5-InlineFieldRow"
+    className="css-15ix71y-InlineFieldRow"
   >
     <div
-      className="css-9doeo5-InlineFieldRow padding-left-20"
+      className="css-15ix71y-InlineFieldRow padding-left-20"
     >
       <div
-        className="css-1f5gueu"
+        className="css-1uqla6q"
       >
         <div
-          className="css-1rfunm5"
+          className="css-1tu59u4"
         >
           <div
-            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            className="css-1nmqu8c-input-wrapper css-smf98s"
             onKeyDown={[Function]}
           >
             <span
@@ -1808,25 +1688,27 @@ exports[`DataSourceForm component should render editor with default values and i
               aria-live="polite"
               aria-relevant="additions text"
               className="css-1f43avz-a11yText-A11yText"
+              role="log"
             />
             <div
-              className="css-1scgfe8"
+              className="css-1i88p6p"
               onMouseDown={[Function]}
               onTouchEnd={[Function]}
             >
               <div
-                className="css-1kl463j-grafana-select-value-container"
+                className="css-1q0c0d5-grafana-select-value-container"
               >
                 <div
-                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                  className="css-8nwx1l-singleValue css-0"
                 >
                   Metric
                 </div>
                 <div
-                  className=" css-lq7btu-Input"
+                  className="css-1eu65zc"
                   data-value=""
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
                     aria-expanded={false}
                     aria-haspopup={true}
@@ -1864,30 +1746,26 @@ exports[`DataSourceForm component should render editor with default values and i
                 </div>
               </div>
               <div
-                className="css-uvldi-input-suffix"
+                className="css-zyjsuv-input-suffix"
               >
-                <div
-                  className="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="angle-down"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="angle-down"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        className="css-1f5gueu"
+        className="css-1uqla6q"
       >
         <div
-          className="css-1rfunm5"
+          className="css-1tu59u4"
         >
           <div
-            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            className="css-1nmqu8c-input-wrapper css-smf98s"
             onKeyDown={[Function]}
           >
             <span
@@ -1899,25 +1777,27 @@ exports[`DataSourceForm component should render editor with default values and i
               aria-live="polite"
               aria-relevant="additions text"
               className="css-1f43avz-a11yText-A11yText"
+              role="log"
             />
             <div
-              className="css-1scgfe8"
+              className="css-1i88p6p"
               onMouseDown={[Function]}
               onTouchEnd={[Function]}
             >
               <div
-                className="css-1kl463j-grafana-select-value-container"
+                className="css-1q0c0d5-grafana-select-value-container"
               >
                 <div
-                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                  className="css-8nwx1l-singleValue css-0"
                 >
                   edgeHitsSum
                 </div>
                 <div
-                  className=" css-lq7btu-Input"
+                  className="css-1eu65zc"
                   data-value=""
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
                     aria-expanded={false}
                     aria-haspopup={true}
@@ -1955,30 +1835,26 @@ exports[`DataSourceForm component should render editor with default values and i
                 </div>
               </div>
               <div
-                className="css-uvldi-input-suffix"
+                className="css-zyjsuv-input-suffix"
               >
-                <div
-                  className="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="angle-down"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="angle-down"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        className="css-1f5gueu"
+        className="css-1uqla6q"
       >
         <div
-          className="css-1rfunm5"
+          className="css-1tu59u4"
         >
           <div
-            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            className="css-1nmqu8c-input-wrapper css-smf98s"
             onKeyDown={[Function]}
           >
             <span
@@ -1990,25 +1866,27 @@ exports[`DataSourceForm component should render editor with default values and i
               aria-live="polite"
               aria-relevant="additions text"
               className="css-1f43avz-a11yText-A11yText"
+              role="log"
             />
             <div
-              className="css-1scgfe8"
+              className="css-1i88p6p"
               onMouseDown={[Function]}
               onTouchEnd={[Function]}
             >
               <div
-                className="css-1kl463j-grafana-select-value-container"
+                className="css-1q0c0d5-grafana-select-value-container"
               >
                 <div
-                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                  className="css-8nwx1l-singleValue css-0"
                 >
                   Descending
                 </div>
                 <div
-                  className=" css-lq7btu-Input"
+                  className="css-1eu65zc"
                   data-value=""
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
                     aria-expanded={false}
                     aria-haspopup={true}
@@ -2046,17 +1924,13 @@ exports[`DataSourceForm component should render editor with default values and i
                 </div>
               </div>
               <div
-                className="css-uvldi-input-suffix"
+                className="css-zyjsuv-input-suffix"
               >
-                <div
-                  className="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="angle-down"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="angle-down"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </div>
             </div>
           </div>
@@ -2064,50 +1938,55 @@ exports[`DataSourceForm component should render editor with default values and i
       </div>
     </div>
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <div
           className="css-1uedr6a"
         >
           <button
             aria-label="Remove Sort By"
-            className="css-x1vujn"
+            className="css-a2noi1"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
             tabIndex={0}
+            type="button"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="minus-circle"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="minus-circle"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-9doeo5-InlineFieldRow"
+    className="css-15ix71y-InlineFieldRow"
   >
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <button
+          aria-disabled={false}
           className="css-1oe1lwi-button"
           onClick={[Function]}
           type="reset"
         >
           <span
-            className="css-1mhnkuh"
+            className="css-1riaxdn"
           >
             Clear
           </span>
@@ -2115,19 +1994,20 @@ exports[`DataSourceForm component should render editor with default values and i
       </div>
     </div>
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <button
+          aria-disabled={false}
           className="css-td06pi-button"
           disabled={false}
           onClick={[Function]}
           type="submit"
         >
           <span
-            className="css-1mhnkuh"
+            className="css-1riaxdn"
           >
             Apply
           </span>
@@ -2135,18 +2015,19 @@ exports[`DataSourceForm component should render editor with default values and i
       </div>
     </div>
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <button
+          aria-disabled={false}
           className="css-8b29hm-button"
           onClick={[Function]}
           type="reset"
         >
           <span
-            className="css-1mhnkuh"
+            className="css-1riaxdn"
           >
             Restore defaults
           </span>
@@ -2160,28 +2041,23 @@ exports[`DataSourceForm component should render editor with default values and i
 exports[`DataSourceForm component should render existing edit editor 1`] = `
 <div>
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <label
-      className="css-1e5y6i9"
+      className="css-vilgwi"
     >
       Dimensions
-      <div
-        className="css-wf08df-Icon"
-        tabIndex={0}
-      >
-        <svg
-          data-testid="info-circle"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </div>
+      <svg
+        data-testid="info-circle"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
     </label>
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-17r2o28-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-4hd1qm"
         onKeyDown={[Function]}
       >
         <span
@@ -2193,48 +2069,56 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1eq04kg-grafana-select-value-container-grafana-select-value-container-multi"
+            className="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
           >
             <div
-              className="css-1idmvrx-grafana-select-multi-value-container"
+              className="css-1pc1kg0-grafana-select-multi-value-container"
               css={{}}
             >
               <div
-                className=" css-1l9kcyg-MultiValueGeneric"
+                className="css-1o4wo1x"
               >
                 cpcode
               </div>
               <button
-                aria-label="Remove cpcode"
-                className="css-1l39x10-grafana-select-multi-value-remove"
+                aria-label="Remove"
+                className="css-1s8m6sy-grafana-select-multi-value-remove"
                 css={{}}
+                onBlur={[Function]}
                 onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
                 onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseMove={[Function]}
+                onPointerDown={[Function]}
+                onPointerEnter={[Function]}
                 onTouchEnd={[Function]}
+                size="sm"
+                tabIndex={0}
+                type="button"
               >
-                <div
-                  className="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="times"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="times"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </button>
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -2272,57 +2156,41 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              aria-label="select-clear-value"
-              className="css-wf08df-Icon"
-              onMouseDown={[Function]}
-              role="button"
-            >
-              <svg
-                data-testid="times"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="times"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <label
-      className="css-1e5y6i9"
+      className="css-vilgwi"
     >
       Metrics
-      <div
-        className="css-wf08df-Icon"
-        tabIndex={0}
-      >
-        <svg
-          data-testid="info-circle"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </div>
+      <svg
+        data-testid="info-circle"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
     </label>
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-17r2o28-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-4hd1qm"
         onKeyDown={[Function]}
       >
         <span
@@ -2334,48 +2202,56 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1eq04kg-grafana-select-value-container-grafana-select-value-container-multi"
+            className="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
           >
             <div
-              className="css-1idmvrx-grafana-select-multi-value-container"
+              className="css-1pc1kg0-grafana-select-multi-value-container"
               css={{}}
             >
               <div
-                className=" css-1l9kcyg-MultiValueGeneric"
+                className="css-1o4wo1x"
               >
                 edgeHitsSum
               </div>
               <button
-                aria-label="Remove edgeHitsSum"
-                className="css-1l39x10-grafana-select-multi-value-remove"
+                aria-label="Remove"
+                className="css-1s8m6sy-grafana-select-multi-value-remove"
                 css={{}}
+                onBlur={[Function]}
                 onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
                 onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseMove={[Function]}
+                onPointerDown={[Function]}
+                onPointerEnter={[Function]}
                 onTouchEnd={[Function]}
+                size="sm"
+                tabIndex={0}
+                type="button"
               >
-                <div
-                  className="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="times"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="times"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </button>
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -2413,158 +2289,149 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              aria-label="select-clear-value"
-              className="css-wf08df-Icon"
-              onMouseDown={[Function]}
-              role="button"
-            >
-              <svg
-                data-testid="times"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="times"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-9doeo5-InlineFieldRow"
+    className="css-15ix71y-InlineFieldRow"
   >
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <label
-        className="css-1e5y6i9"
+        className="css-vilgwi"
       >
         Filters
-        <div
-          className="css-wf08df-Icon"
-          tabIndex={0}
-        >
-          <svg
-            data-testid="info-circle"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          />
-        </div>
+        <svg
+          data-testid="info-circle"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        />
       </label>
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <div
           className="css-1uedr6a"
         >
           <button
             aria-label="Add new Filter"
-            className="css-x1vujn"
+            className="css-a2noi1"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
             tabIndex={0}
+            type="button"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="plus-circle"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="plus-circle"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-9doeo5-InlineFieldRow"
+    className="css-15ix71y-InlineFieldRow"
   >
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <label
-        className="css-1e5y6i9"
+        className="css-vilgwi"
       >
         Sort Bys
-        <div
-          className="css-wf08df-Icon"
-          tabIndex={0}
-        >
-          <svg
-            data-testid="info-circle"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          />
-        </div>
+        <svg
+          data-testid="info-circle"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        />
       </label>
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <div
           className="css-1uedr6a"
         >
           <button
             aria-label="Remove all"
-            className="css-x1vujn"
+            className="css-a2noi1"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
             tabIndex={0}
+            type="button"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="trash-alt"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="trash-alt"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
           <button
             aria-label="Add new Sort By"
-            className="css-x1vujn"
+            className="css-a2noi1"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
             tabIndex={0}
+            type="button"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="plus-circle"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="plus-circle"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-9doeo5-InlineFieldRow"
+    className="css-15ix71y-InlineFieldRow"
   >
     <div
-      className="css-9doeo5-InlineFieldRow padding-left-20"
+      className="css-15ix71y-InlineFieldRow padding-left-20"
     >
       <div
-        className="css-1f5gueu"
+        className="css-1uqla6q"
       >
         <div
-          className="css-1rfunm5"
+          className="css-1tu59u4"
         >
           <div
-            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            className="css-1nmqu8c-input-wrapper css-smf98s"
             onKeyDown={[Function]}
           >
             <span
@@ -2576,25 +2443,27 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
               aria-live="polite"
               aria-relevant="additions text"
               className="css-1f43avz-a11yText-A11yText"
+              role="log"
             />
             <div
-              className="css-1scgfe8"
+              className="css-1i88p6p"
               onMouseDown={[Function]}
               onTouchEnd={[Function]}
             >
               <div
-                className="css-1kl463j-grafana-select-value-container"
+                className="css-1q0c0d5-grafana-select-value-container"
               >
                 <div
-                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                  className="css-8nwx1l-singleValue css-0"
                 >
                   Metric
                 </div>
                 <div
-                  className=" css-lq7btu-Input"
+                  className="css-1eu65zc"
                   data-value=""
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
                     aria-expanded={false}
                     aria-haspopup={true}
@@ -2632,30 +2501,26 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
                 </div>
               </div>
               <div
-                className="css-uvldi-input-suffix"
+                className="css-zyjsuv-input-suffix"
               >
-                <div
-                  className="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="angle-down"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="angle-down"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        className="css-1f5gueu"
+        className="css-1uqla6q"
       >
         <div
-          className="css-1rfunm5"
+          className="css-1tu59u4"
         >
           <div
-            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            className="css-1nmqu8c-input-wrapper css-smf98s"
             onKeyDown={[Function]}
           >
             <span
@@ -2667,25 +2532,27 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
               aria-live="polite"
               aria-relevant="additions text"
               className="css-1f43avz-a11yText-A11yText"
+              role="log"
             />
             <div
-              className="css-1scgfe8"
+              className="css-1i88p6p"
               onMouseDown={[Function]}
               onTouchEnd={[Function]}
             >
               <div
-                className="css-1kl463j-grafana-select-value-container"
+                className="css-1q0c0d5-grafana-select-value-container"
               >
                 <div
-                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                  className="css-8nwx1l-singleValue css-0"
                 >
                   edgeHitsSum
                 </div>
                 <div
-                  className=" css-lq7btu-Input"
+                  className="css-1eu65zc"
                   data-value=""
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
                     aria-expanded={false}
                     aria-haspopup={true}
@@ -2723,30 +2590,26 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
                 </div>
               </div>
               <div
-                className="css-uvldi-input-suffix"
+                className="css-zyjsuv-input-suffix"
               >
-                <div
-                  className="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="angle-down"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="angle-down"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        className="css-1f5gueu"
+        className="css-1uqla6q"
       >
         <div
-          className="css-1rfunm5"
+          className="css-1tu59u4"
         >
           <div
-            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            className="css-1nmqu8c-input-wrapper css-smf98s"
             onKeyDown={[Function]}
           >
             <span
@@ -2758,25 +2621,27 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
               aria-live="polite"
               aria-relevant="additions text"
               className="css-1f43avz-a11yText-A11yText"
+              role="log"
             />
             <div
-              className="css-1scgfe8"
+              className="css-1i88p6p"
               onMouseDown={[Function]}
               onTouchEnd={[Function]}
             >
               <div
-                className="css-1kl463j-grafana-select-value-container"
+                className="css-1q0c0d5-grafana-select-value-container"
               >
                 <div
-                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                  className="css-8nwx1l-singleValue css-0"
                 >
                   Descending
                 </div>
                 <div
-                  className=" css-lq7btu-Input"
+                  className="css-1eu65zc"
                   data-value=""
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
                     aria-expanded={false}
                     aria-haspopup={true}
@@ -2814,17 +2679,13 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
                 </div>
               </div>
               <div
-                className="css-uvldi-input-suffix"
+                className="css-zyjsuv-input-suffix"
               >
-                <div
-                  className="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="angle-down"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="angle-down"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </div>
             </div>
           </div>
@@ -2832,50 +2693,55 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
       </div>
     </div>
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <div
           className="css-1uedr6a"
         >
           <button
             aria-label="Remove Sort By"
-            className="css-x1vujn"
+            className="css-a2noi1"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
             tabIndex={0}
+            type="button"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="minus-circle"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="minus-circle"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-9doeo5-InlineFieldRow"
+    className="css-15ix71y-InlineFieldRow"
   >
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <button
+          aria-disabled={false}
           className="css-1oe1lwi-button"
           onClick={[Function]}
           type="reset"
         >
           <span
-            className="css-1mhnkuh"
+            className="css-1riaxdn"
           >
             Clear
           </span>
@@ -2883,19 +2749,20 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
       </div>
     </div>
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <button
+          aria-disabled={false}
           className="css-td06pi-button"
           disabled={false}
           onClick={[Function]}
           type="submit"
         >
           <span
-            className="css-1mhnkuh"
+            className="css-1riaxdn"
           >
             Apply
           </span>
@@ -2903,18 +2770,19 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
       </div>
     </div>
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <button
+          aria-disabled={false}
           className="css-8b29hm-button"
           onClick={[Function]}
           type="reset"
         >
           <span
-            className="css-1mhnkuh"
+            className="css-1riaxdn"
           >
             Restore defaults
           </span>
@@ -2928,28 +2796,23 @@ exports[`DataSourceForm component should render existing edit editor 1`] = `
 exports[`DataSourceForm component should render new empty editor 1`] = `
 <div>
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <label
-      className="css-1e5y6i9"
+      className="css-vilgwi"
     >
       Dimensions
-      <div
-        className="css-wf08df-Icon"
-        tabIndex={0}
-      >
-        <svg
-          data-testid="info-circle"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </div>
+      <svg
+        data-testid="info-circle"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
     </label>
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-17r2o28-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-4hd1qm"
         onKeyDown={[Function]}
       >
         <span
@@ -2961,26 +2824,28 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1eq04kg-grafana-select-value-container-grafana-select-value-container-multi"
+            className="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
           >
             <div
-              className=" css-1n8tjau-placeholder"
+              className="css-1n8tjau-placeholder"
               id="react-select-7-placeholder"
             >
-              Choose
+              Select...
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-describedby="react-select-7-placeholder"
                 aria-expanded={false}
@@ -3019,45 +2884,36 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-1f5gueu"
+    className="css-1uqla6q"
   >
     <label
-      className="css-1e5y6i9"
+      className="css-vilgwi"
     >
       Metrics
-      <div
-        className="css-wf08df-Icon"
-        tabIndex={0}
-      >
-        <svg
-          data-testid="info-circle"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </div>
+      <svg
+        data-testid="info-circle"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
     </label>
     <div
-      className="css-1rfunm5"
+      className="css-1tu59u4"
     >
       <div
-        className="css-jjhwg3-input-wrapper css-17r2o28-SelectContainer"
+        className="css-1nmqu8c-input-wrapper css-4hd1qm"
         onKeyDown={[Function]}
       >
         <span
@@ -3069,26 +2925,28 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
           aria-live="polite"
           aria-relevant="additions text"
           className="css-1f43avz-a11yText-A11yText"
+          role="log"
         />
         <div
-          className="css-1scgfe8"
+          className="css-1i88p6p"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1eq04kg-grafana-select-value-container-grafana-select-value-container-multi"
+            className="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
           >
             <div
-              className=" css-1n8tjau-placeholder"
+              className="css-1n8tjau-placeholder"
               id="react-select-8-placeholder"
             >
-              Choose
+              Select...
             </div>
             <div
-              className=" css-lq7btu-Input"
+              className="css-1eu65zc"
               data-value=""
             >
               <input
+                aria-activedescendant=""
                 aria-autocomplete="list"
                 aria-describedby="react-select-8-placeholder"
                 aria-expanded={false}
@@ -3127,146 +2985,144 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
             </div>
           </div>
           <div
-            className="css-uvldi-input-suffix"
+            className="css-zyjsuv-input-suffix"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="angle-down"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="angle-down"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-9doeo5-InlineFieldRow"
+    className="css-15ix71y-InlineFieldRow"
   >
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <label
-        className="css-1e5y6i9"
+        className="css-vilgwi"
       >
         Filters
-        <div
-          className="css-wf08df-Icon"
-          tabIndex={0}
-        >
-          <svg
-            data-testid="info-circle"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          />
-        </div>
+        <svg
+          data-testid="info-circle"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        />
       </label>
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <div
           className="css-1uedr6a"
         >
           <button
             aria-label="Add new Filter"
-            className="css-x1vujn"
+            className="css-a2noi1"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
             tabIndex={0}
+            type="button"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="plus-circle"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="plus-circle"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-9doeo5-InlineFieldRow"
+    className="css-15ix71y-InlineFieldRow"
   >
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <label
-        className="css-1e5y6i9"
+        className="css-vilgwi"
       >
         Sort Bys
-        <div
-          className="css-wf08df-Icon"
-          tabIndex={0}
-        >
-          <svg
-            data-testid="info-circle"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          />
-        </div>
+        <svg
+          data-testid="info-circle"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        />
       </label>
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <div
           className="css-1uedr6a"
         >
           <button
             aria-label="Remove all"
-            className="css-x1vujn"
+            className="css-a2noi1"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
             tabIndex={0}
+            type="button"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="trash-alt"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="trash-alt"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
           <button
             aria-label="Add new Sort By"
-            className="css-x1vujn"
+            className="css-a2noi1"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
             tabIndex={0}
+            type="button"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="plus-circle"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="plus-circle"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-9doeo5-InlineFieldRow"
+    className="css-15ix71y-InlineFieldRow"
   >
     <div
-      className="css-9doeo5-InlineFieldRow padding-left-20"
+      className="css-15ix71y-InlineFieldRow padding-left-20"
     >
       <div
-        className="css-1f5gueu"
+        className="css-1uqla6q"
       >
         <div
-          className="css-1rfunm5"
+          className="css-1tu59u4"
         >
           <div
-            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            className="css-1nmqu8c-input-wrapper css-smf98s"
             onKeyDown={[Function]}
           >
             <span
@@ -3278,25 +3134,27 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
               aria-live="polite"
               aria-relevant="additions text"
               className="css-1f43avz-a11yText-A11yText"
+              role="log"
             />
             <div
-              className="css-1scgfe8"
+              className="css-1i88p6p"
               onMouseDown={[Function]}
               onTouchEnd={[Function]}
             >
               <div
-                className="css-1kl463j-grafana-select-value-container"
+                className="css-1q0c0d5-grafana-select-value-container"
               >
                 <div
-                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                  className="css-8nwx1l-singleValue css-0"
                 >
                   Metric
                 </div>
                 <div
-                  className=" css-lq7btu-Input"
+                  className="css-1eu65zc"
                   data-value=""
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
                     aria-expanded={false}
                     aria-haspopup={true}
@@ -3334,30 +3192,26 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
                 </div>
               </div>
               <div
-                className="css-uvldi-input-suffix"
+                className="css-zyjsuv-input-suffix"
               >
-                <div
-                  className="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="angle-down"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="angle-down"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        className="css-1f5gueu"
+        className="css-1uqla6q"
       >
         <div
-          className="css-1rfunm5"
+          className="css-1tu59u4"
         >
           <div
-            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            className="css-1nmqu8c-input-wrapper css-smf98s"
             onKeyDown={[Function]}
           >
             <span
@@ -3369,25 +3223,27 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
               aria-live="polite"
               aria-relevant="additions text"
               className="css-1f43avz-a11yText-A11yText"
+              role="log"
             />
             <div
-              className="css-1scgfe8"
+              className="css-1i88p6p"
               onMouseDown={[Function]}
               onTouchEnd={[Function]}
             >
               <div
-                className="css-1kl463j-grafana-select-value-container"
+                className="css-1q0c0d5-grafana-select-value-container"
               >
                 <div
-                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                  className="css-8nwx1l-singleValue css-0"
                 >
                   edgeHitsSum
                 </div>
                 <div
-                  className=" css-lq7btu-Input"
+                  className="css-1eu65zc"
                   data-value=""
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
                     aria-expanded={false}
                     aria-haspopup={true}
@@ -3425,30 +3281,26 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
                 </div>
               </div>
               <div
-                className="css-uvldi-input-suffix"
+                className="css-zyjsuv-input-suffix"
               >
-                <div
-                  className="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="angle-down"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="angle-down"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        className="css-1f5gueu"
+        className="css-1uqla6q"
       >
         <div
-          className="css-1rfunm5"
+          className="css-1tu59u4"
         >
           <div
-            className="css-jjhwg3-input-wrapper css-rmjxhr-SelectContainer"
+            className="css-1nmqu8c-input-wrapper css-smf98s"
             onKeyDown={[Function]}
           >
             <span
@@ -3460,25 +3312,27 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
               aria-live="polite"
               aria-relevant="additions text"
               className="css-1f43avz-a11yText-A11yText"
+              role="log"
             />
             <div
-              className="css-1scgfe8"
+              className="css-1i88p6p"
               onMouseDown={[Function]}
               onTouchEnd={[Function]}
             >
               <div
-                className="css-1kl463j-grafana-select-value-container"
+                className="css-1q0c0d5-grafana-select-value-container"
               >
                 <div
-                  className="css-18bh10p-singleValue css-upz218-SingleValue"
+                  className="css-8nwx1l-singleValue css-0"
                 >
                   Descending
                 </div>
                 <div
-                  className=" css-lq7btu-Input"
+                  className="css-1eu65zc"
                   data-value=""
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
                     aria-expanded={false}
                     aria-haspopup={true}
@@ -3516,17 +3370,13 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
                 </div>
               </div>
               <div
-                className="css-uvldi-input-suffix"
+                className="css-zyjsuv-input-suffix"
               >
-                <div
-                  className="css-wf08df-Icon"
-                >
-                  <svg
-                    data-testid="angle-down"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </div>
+                <svg
+                  data-testid="angle-down"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
               </div>
             </div>
           </div>
@@ -3534,50 +3384,55 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
       </div>
     </div>
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <div
           className="css-1uedr6a"
         >
           <button
             aria-label="Remove Sort By"
-            className="css-x1vujn"
+            className="css-a2noi1"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
             tabIndex={0}
+            type="button"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="minus-circle"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="minus-circle"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="css-9doeo5-InlineFieldRow"
+    className="css-15ix71y-InlineFieldRow"
   >
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <button
+          aria-disabled={false}
           className="css-1oe1lwi-button"
           onClick={[Function]}
           type="reset"
         >
           <span
-            className="css-1mhnkuh"
+            className="css-1riaxdn"
           >
             Clear
           </span>
@@ -3585,19 +3440,19 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
       </div>
     </div>
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <button
-          className="css-td06pi-button"
+          aria-disabled={false}
+          className="css-9hybrt-button"
           disabled={true}
-          onClick={[Function]}
           type="submit"
         >
           <span
-            className="css-1mhnkuh"
+            className="css-1riaxdn"
           >
             Apply
           </span>
@@ -3605,18 +3460,19 @@ exports[`DataSourceForm component should render new empty editor 1`] = `
       </div>
     </div>
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <button
+          aria-disabled={false}
           className="css-8b29hm-button"
           onClick={[Function]}
           type="reset"
         >
           <span
-            className="css-1mhnkuh"
+            className="css-1riaxdn"
           >
             Restore defaults
           </span>

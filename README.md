@@ -155,5 +155,15 @@ The plugin lets you use variables of the Query type.
 2. [Use the created variable](https://grafana.com/docs/grafana/latest/dashboards/variables/variable-syntax/) in your visualization queries. 
 ![Variable](static/variable.jpg)
 
+## Dashboard examples
+Dashboard examples placed in the 'examples' directory can be imported into Grafana.
+
+* Go to Home -> Dashboards page in Grafana
+  ![Dashboard](static/dashboards.jpg)
+* Select New -> Import
+* Upload dashboard JSON file
+  ![Import](static/examples-import.jpg)
+* Select instance of Akamai Insights Datasource Plugin
+* Click import
 
 

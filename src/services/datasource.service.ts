@@ -5,7 +5,8 @@ import {
   DataSourceVariableSupport,
   FieldType,
   MutableDataFrame,
-  TestDataSourceResponse
+  TestDataSourceResponse,
+  VariableSupportType
 } from '@grafana/data';
 import { BackendSrvRequest, DataSourceWithBackend, getBackendSrv, getTemplateSrv } from '@grafana/runtime';
 import { isEmpty, omitBy, uniq } from 'lodash';
@@ -24,6 +25,15 @@ import { Dimension, DiscoveryApiModel, Metric, ReportsApiModel, TimeDimensionsTy
 import { MyDataSourceOptions, MyQuery, TestDataSourceResponseStatus, VARIABLE_QUERY } from '../types/types';
 
 class QueryVariableSupport extends DataSourceVariableSupport<DatasourceService, MyQuery> {
+  query: (request: DataQueryRequest<MyQuery>) => Observable<DataQueryResponse>;
+  editor = {};
+  id: number;
+
+  constructor({ query, id }: DataSourceWithBackend) {
+    super();
+    this.query = query;
+    this.id = id;
+  }
   getDefaultQuery(): Partial<MyQuery> {
     return {
       reportLink: '',
@@ -32,6 +42,10 @@ class QueryVariableSupport extends DataSourceVariableSupport<DatasourceService, 
       filters: [],
       sortBys: []
     };
+  }
+
+  getType(): VariableSupportType {
+    return VariableSupportType.Custom;
   }
 }
 
@@ -46,7 +60,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
 
   constructor(protected readonly instanceSettings: DataSourceInstanceSettings<MyDataSourceOptions>) {
     super(instanceSettings);
-    this.variables = new QueryVariableSupport();
+    this.variables = new QueryVariableSupport(this);
   }
 
   static discoveryApi(id: number, targetUrl: string): Observable<DiscoveryApiModel> {
@@ -97,6 +111,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
 
   query(request: DataQueryRequest<MyQuery>): Observable<DataQueryResponse> {
     const { scopedVars } = request;
+
     const dataObservables = request.targets.map(target => {
       const { dimensions, metrics, filters, sortBys, reportLink, refId } = target;
       const { from, to } = request.range;
@@ -128,7 +143,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
         DatasourceService.discoveryApi(this.id, reportLink || '')
       ]).pipe(
         map(([ { data: { data } }, discoveryApiModel ]) => ({
-          data: [ this.convertToDataFrame(data, discoveryApiModel, refId, dimensions) ]
+          data: [ DatasourceService.convertToDataFrame(data, discoveryApiModel, refId, dimensions) ]
         }))
       );
     });
@@ -139,7 +154,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
       );
   }
 
-  private convertToDataFrame(data: Record<string, any>[], { dimensions, metrics }: DiscoveryApiModel, refId: string, selectedDimensions?: string[]) {
+  private static convertToDataFrame(data: Record<string, any>[], { dimensions, metrics }: DiscoveryApiModel, refId: string, selectedDimensions?: string[]) {
     const fieldsData = [ ...dimensions, ...metrics ];
 
     const frame = new MutableDataFrame({
@@ -152,7 +167,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
 
         return fieldData ? {
           ...dataFrame,
-          type: this.getFieldDataType(fieldData)
+          type: DatasourceService.getFieldDataType(fieldData)
         } : dataFrame;
       })
     });
@@ -202,7 +217,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
     
   }
 
-  private getFieldDataType({ type }: Dimension | Metric): FieldType {
+  private static getFieldDataType({ type }: Dimension | Metric): FieldType {
     if (TimeDimensionsTypes.includes(type)) {
       return FieldType.time;
     }

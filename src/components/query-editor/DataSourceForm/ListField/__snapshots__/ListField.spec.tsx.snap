@@ -3,80 +3,83 @@
 exports[`ListField component should render list with custom row Editor 1`] = `
 [
   <div
-    className="css-9doeo5-InlineFieldRow"
+    className="css-15ix71y-InlineFieldRow"
   >
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <label
-        className="css-1e5y6i9"
+        className="css-vilgwi"
       >
         List label
-        <div
-          className="css-wf08df-Icon"
-          tabIndex={0}
-        >
-          <svg
-            data-testid="info-circle"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          />
-        </div>
+        <svg
+          data-testid="info-circle"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        />
       </label>
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <div
           className="css-1uedr6a"
         >
           <button
             aria-label="Remove all"
-            className="css-x1vujn"
+            className="css-a2noi1"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
             tabIndex={0}
+            type="button"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="trash-alt"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="trash-alt"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
           <button
             aria-label="Add new resource"
-            className="css-x1vujn"
+            className="css-a2noi1"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
             tabIndex={0}
+            type="button"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="plus-circle"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="plus-circle"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
         </div>
       </div>
     </div>
   </div>,
   <div
-    className="css-9doeo5-InlineFieldRow"
+    className="css-15ix71y-InlineFieldRow"
   >
     <div
-      className="css-xcstkt-input-wrapper"
+      className="css-1cvb0sk-input-wrapper"
       data-testid="input-wrapper"
     >
       <div
-        className="css-1w5c5dq-input-inputWrapper"
+        className="css-10lnb82-input-inputWrapper"
       >
         <input
-          className="css-1n6y0bv-input-input"
+          className="css-8tk2dk-input-input"
           style={
             {
               "paddingLeft": undefined,
@@ -88,46 +91,50 @@ exports[`ListField component should render list with custom row Editor 1`] = `
       </div>
     </div>
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <div
           className="css-1uedr6a"
         >
           <button
             aria-label="Remove resource"
-            className="css-x1vujn"
+            className="css-a2noi1"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
             tabIndex={0}
+            type="button"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="minus-circle"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="minus-circle"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
         </div>
       </div>
     </div>
   </div>,
   <div
-    className="css-9doeo5-InlineFieldRow"
+    className="css-15ix71y-InlineFieldRow"
   >
     <div
-      className="css-xcstkt-input-wrapper"
+      className="css-1cvb0sk-input-wrapper"
       data-testid="input-wrapper"
     >
       <div
-        className="css-1w5c5dq-input-inputWrapper"
+        className="css-10lnb82-input-inputWrapper"
       >
         <input
-          className="css-1n6y0bv-input-input"
+          className="css-8tk2dk-input-input"
           style={
             {
               "paddingLeft": undefined,
@@ -139,29 +146,33 @@ exports[`ListField component should render list with custom row Editor 1`] = `
       </div>
     </div>
     <div
-      className="css-1f5gueu"
+      className="css-1uqla6q"
     >
       <div
-        className="css-1rfunm5"
+        className="css-1tu59u4"
       >
         <div
           className="css-1uedr6a"
         >
           <button
             aria-label="Remove resource"
-            className="css-x1vujn"
+            className="css-a2noi1"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
             tabIndex={0}
+            type="button"
           >
-            <div
-              className="css-wf08df-Icon"
-            >
-              <svg
-                data-testid="minus-circle"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </div>
+            <svg
+              data-testid="minus-circle"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
         </div>
       </div>
