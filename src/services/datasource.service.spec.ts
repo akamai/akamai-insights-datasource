@@ -395,7 +395,7 @@ describe('DatasourceService', () => {
     scenarios.forEach(({ type, expected }) => {
       it(`should return ${expected} when data of type ${type}`, () => {
         // @ts-ignore
-        expect(service.getFieldDataType({ type })).toEqual(expected);
+        expect(DatasourceService.getFieldDataType({ type })).toEqual(expected);
       });
     });
   });

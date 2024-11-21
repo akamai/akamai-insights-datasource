@@ -1,6 +1,6 @@
 {
-  "name": "analytics-grafana-datasource",
-  "version": "1.0.1",
+  "name": "akamai-insights-datasource",
+  "version": "1.0.0",
   "description": "Easy way to access your akamai data",
   "scripts": {
     "build": "npm run test && npm run lint && webpack -c ./.config/webpack/webpack.config.ts --env production",
@@ -74,10 +74,10 @@
   "dependencies": {
     "@emotion/css": "11.10.6",
     "@emotion/styled": "^11.11.0",
-    "@grafana/data": "10.0.3",
-    "@grafana/runtime": "10.0.3",
-    "@grafana/schema": "10.0.3",
-    "@grafana/ui": "10.0.3",
+    "@grafana/data": "^11.3.0",
+    "@grafana/runtime": "^11.3.0",
+    "@grafana/schema": "^11.3.0",
+    "@grafana/ui": "^11.3.0",
     "lodash": "^4.17.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
