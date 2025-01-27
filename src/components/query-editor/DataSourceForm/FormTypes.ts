@@ -28,6 +28,7 @@ export interface FilterQueryFormModel {
 
 export enum DimensionOperator {
   InList = 'IN_LIST',
+  NotInList = 'NOT_IN_LIST',
   RegExp = 'REGEXP',
   BeginsWith = 'BEGINS_WITH',
   EndsWith = 'ENDS_WITH',
