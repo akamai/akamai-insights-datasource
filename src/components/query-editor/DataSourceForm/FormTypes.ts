@@ -43,7 +43,7 @@ export enum FilterValueType {
 
 export const dimensionOperatorOptions = enumToSelectableValues(DimensionOperator);
 
-export const authorizableOrEnumFiltersOperatorOptions = stringsToSelectableValues([ DimensionOperator.InList ], prettyEnum);
+export const authorizableOrEnumFiltersOperatorOptions = stringsToSelectableValues([ DimensionOperator.InList, DimensionOperator.NotInList ], prettyEnum);
 
 export enum MetricOperator {
   Equal = 'EQUAL',
