@@ -28,6 +28,7 @@ export interface FilterQueryFormModel {
 
 export enum DimensionOperator {
   InList = 'IN_LIST',
+  NotInList = 'NOT_IN_LIST',
   MatchRegExp = 'MATCH_REGEXP',
   NotMatchRegExp = 'NOT_MATCH_REGEXP',
   BeginsWith = 'BEGINS_WITH',
@@ -46,7 +47,7 @@ export enum FilterValueType {
 
 export const dimensionOperatorOptions = enumToSelectableValues(DimensionOperator);
 
-export const authorizableOrEnumFiltersOperatorOptions = stringsToSelectableValues([ DimensionOperator.InList ], prettyEnum);
+export const authorizableOrEnumFiltersOperatorOptions = stringsToSelectableValues([ DimensionOperator.InList, DimensionOperator.NotInList ], prettyEnum);
 
 export enum MetricOperator {
   Equal = 'EQUAL',
