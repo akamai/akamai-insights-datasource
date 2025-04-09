@@ -79,5 +79,8 @@
     "react-dom": "18.2.0",
     "tslib": "2.5.3"
   },
+  "overrides": {
+    "prismjs": "1.30.0"
+  },
   "packageManager": "npm@10.2.5"
 }
