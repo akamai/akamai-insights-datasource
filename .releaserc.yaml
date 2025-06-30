@@ -1,6 +1,5 @@
 branches:
   - "master"
-  - "feature/release-workflow"
 
 plugins:
   - "@semantic-release/commit-analyzer"
