@@ -3,18 +3,19 @@ import { camelCase, isEmpty } from 'lodash';
 import React, { ChangeEvent, useState } from 'react';
 
 import { inputWidth, labelWidth, Secret, secretsNames } from './types';
-import { DataSourceProps } from '../../types/types';
+import { DataSourceProps, MyDataSourceOptions } from '../../types/types';
 import './ConfigEditor.css';
 
 export function ConfigEditor({ options, onOptionsChange }: DataSourceProps) {
+  const secureJsonData = options.secureJsonData || {};
 
   const [ credentialsTextAreaInvalid, setCredentialsTextAreaInvalid ] = useState<boolean>(false);
   const onInputChange = ({ target: { value } }: ChangeEvent<HTMLInputElement>, fieldName: string) => {
-    const jsonData = {
-      ...options.jsonData,
+    const updatedSecureJsonData = {
+      ...secureJsonData,
       [ fieldName ]: value
     };
-    onOptionsChange({ ...options, jsonData });
+    onOptionsChange({ ...options, secureJsonData: updatedSecureJsonData });
   };
 
   const onClientSecretChange = (event: ChangeEvent<HTMLInputElement>) => onInputChange(event, Secret.ClientSecret);
@@ -34,16 +35,16 @@ export function ConfigEditor({ options, onOptionsChange }: DataSourceProps) {
     setCredentialsTextAreaInvalid(isCredentialsTextAreaInvalid);
 
     if (!isCredentialsTextAreaInvalid) {
-      const jsonData = {
-        ...options.jsonData,
+      const updatedSecureJsonData = {
+        ...secureJsonData,
         ...secrets
       };
 
-      onOptionsChange({ ...options, jsonData });
+      onOptionsChange({ ...options, secureJsonData: updatedSecureJsonData });
     }
   };
 
-  const { jsonData: { clientSecret, host, clientToken, accessToken } } = options;
+  const { clientSecret, host, clientToken, accessToken } = secureJsonData as MyDataSourceOptions;
 
   return (
     <div className="gf-form-group">

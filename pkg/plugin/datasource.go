@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
+	"fmt"
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/datasource"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/instancemgmt"
@@ -32,11 +33,15 @@ type DataSourceSettings struct {
 }
 
 func newDataSourceInstance(ctx context.Context, setting backend.DataSourceInstanceSettings) (instancemgmt.Instance, error) {
-	var dss DataSourceSettings
-	err := json.Unmarshal(setting.JSONData, &dss)
+	dss := DataSourceSettings{
+		ClientSecret: setting.DecryptedSecureJSONData["clientSecret"],
+		Host:         setting.DecryptedSecureJSONData["host"],
+		AccessToken:  setting.DecryptedSecureJSONData["accessToken"],
+		ClientToken:  setting.DecryptedSecureJSONData["clientToken"],
+	}
 
-	if err != nil {
-		return 1, err
+	if dss.ClientSecret == "" || dss.Host == "" || dss.AccessToken == "" || dss.ClientToken == "" {
+		return 1, fmt.Errorf("incomplete datasource configuration")
 	}
 
 	return &instanceSettings{
@@ -68,10 +73,11 @@ type AkamaiEdgeDnsDatasource struct {
 }
 
 func (td *AkamaiEdgeDnsDatasource) CallResource(ctx context.Context, req *backend.CallResourceRequest, sender backend.CallResourceResponseSender) error {
-	var dataSourceSettings DataSourceSettings
-
-	if err := json.Unmarshal(req.PluginContext.DataSourceInstanceSettings.JSONData, &dataSourceSettings); err != nil {
-		return err
+	dataSourceSettings := DataSourceSettings{
+		ClientSecret: req.PluginContext.DataSourceInstanceSettings.DecryptedSecureJSONData["clientSecret"],
+		Host:         req.PluginContext.DataSourceInstanceSettings.DecryptedSecureJSONData["host"],
+		AccessToken:  req.PluginContext.DataSourceInstanceSettings.DecryptedSecureJSONData["accessToken"],
+		ClientToken:  req.PluginContext.DataSourceInstanceSettings.DecryptedSecureJSONData["clientToken"],
 	}
 
 	switch req.Path {

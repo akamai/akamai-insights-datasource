@@ -31,7 +31,7 @@ export interface MyDataSourceOptions extends DataSourceJsonData {
   clientToken?: string;
 }
 
-export interface DataSourceProps extends DataSourcePluginOptionsEditorProps<MyDataSourceOptions> {}
+export interface DataSourceProps extends DataSourcePluginOptionsEditorProps<MyDataSourceOptions, MyDataSourceOptions> {}
 
 export enum TestDataSourceResponseStatus {
   Success = 'success',
