@@ -131,7 +131,7 @@
             "midgressHitsSum"
           ],
           "refId": "A",
-          "reportLink": "/reporting-api/v2/reports/delivery/traffic/current-ui",
+          "reportLink": "/reporting-api/v2/reports/delivery/traffic/current",
           "sortBys": []
         }
       ],
@@ -253,7 +253,7 @@
         "x": 0,
         "y": 3
       },
-      "id": 3,
+      "id": 9,
       "options": {
         "legend": {
           "calcs": [],
@@ -277,141 +277,106 @@
             "responseClass",
             "time5minutes"
           ],
-          "filters": [
-            {
-              "dimensionName": "hostname",
-              "expressions": [
-                "${hostname}"
-              ],
-              "operator": "IN_LIST"
-            }
-          ],
+          "filters": [],
           "metrics": [
-            "edgeRequestBitsPerSecond",
-            "originRequestBitsPerSecond",
-            "midgressRequestBitsPerSecond"
+            "edgeRequestBytesSum",
+            "midgressRequestBytesSum",
+            "originRequestBytesSum"
           ],
           "refId": "A",
-          "reportLink": "/reporting-api/v2/reports/delivery/traffic/current-ui",
+          "reportLink": "/reporting-api/v2/reports/delivery/traffic/current",
           "sortBys": []
         }
       ],
-      "title": "Requests per second by HTTP status code",
+      "title": "Requests per second by HTTP status code and hostname: ${hostname}",
       "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "edgeRequestPerSecond",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "edgeRequestBytesSum"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "fixed": "60"
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "midgressRequestPerSecond",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "midgressRequestBytesSum"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "fixed": "60"
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "originRequestPerSecond",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "originRequestBytesSum"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "fixed": "60"
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "responseClass",
+                "time5minutes",
+                "edgeRequestPerSecond",
+                "midgressRequestPerSecond",
+                "originRequestPerSecond"
+              ]
+            }
+          }
+        },
         {
           "id": "partitionByValues",
           "options": {
             "fields": [
               "responseClass"
             ],
-            "keepFields": true
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "3xx",
-            "mode": "reduceRow",
-            "reduce": {
-              "include": [
-                "edgeRequestBitsPerSecond 3xx",
-                "midgressRequestBitsPerSecond 3xx",
-                "originRequestBitsPerSecond 3xx"
-              ],
-              "reducer": "sum"
-            },
-            "replaceFields": false
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "4xx",
-            "mode": "reduceRow",
-            "reduce": {
-              "include": [
-                "edgeRequestBitsPerSecond 4xx",
-                "midgressRequestBitsPerSecond 4xx",
-                "originRequestBitsPerSecond 4xx"
-              ],
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "0xx",
-            "mode": "reduceRow",
-            "reduce": {
-              "include": [
-                "edgeRequestBitsPerSecond 0xx",
-                "midgressRequestBitsPerSecond 0xx",
-                "originRequestBitsPerSecond 0xx"
-              ],
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "5xx",
-            "mode": "reduceRow",
-            "reduce": {
-              "include": [
-                "edgeRequestBitsPerSecond 5xx",
-                "midgressRequestBitsPerSecond 5xx",
-                "originRequestBitsPerSecond 5xx"
-              ],
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "2xx",
-            "mode": "reduceRow",
-            "reduce": {
-              "include": [
-                "edgeRequestBitsPerSecond 2xx",
-                "midgressRequestBitsPerSecond 2xx",
-                "originRequestBitsPerSecond 2xx"
-              ],
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "edgeRequestBitsPerSecond 0xx": true,
-              "edgeRequestBitsPerSecond 2xx": true,
-              "edgeRequestBitsPerSecond 3xx": true,
-              "edgeRequestBitsPerSecond 4xx": true,
-              "edgeRequestBitsPerSecond 5xx": true,
-              "midgressRequestBitsPerSecond 0xx": true,
-              "midgressRequestBitsPerSecond 2xx": true,
-              "midgressRequestBitsPerSecond 3xx": true,
-              "midgressRequestBitsPerSecond 4xx": true,
-              "midgressRequestBitsPerSecond 5xx": true,
-              "originRequestBitsPerSecond 0xx": true,
-              "originRequestBitsPerSecond 2xx": true,
-              "originRequestBitsPerSecond 3xx": true,
-              "originRequestBitsPerSecond 4xx": true,
-              "originRequestBitsPerSecond 5xx": true,
-              "responseClass 0xx": true,
-              "responseClass 2xx": true,
-              "responseClass 3xx": true,
-              "responseClass 4xx": true,
-              "responseClass 5xx": true,
-              "time5minutes 3xx": false
-            },
-            "includeByName": {},
-            "indexByName": {},
-            "renameByName": {}
+            "keepFields": false
           }
         }
       ],
@@ -509,36 +474,12 @@
           ],
           "filters": [],
           "metrics": [
-            "edgeRequestBitsPerSecond",
-            "midgressRequestBitsPerSecond",
-            "originRequestBitsPerSecond"
+            "edgeResponseBytesSum",
+            "originResponseBytesSum",
+            "midgressResponseBytesSum"
           ],
           "refId": "A",
-          "reportLink": "/reporting-api/v2/reports/delivery/traffic/current-ui",
-          "sortBys": [
-            {
-              "name": "time5minutes",
-              "sortOrder": "ASCENDING"
-            }
-          ]
-        },
-        {
-          "datasource": {
-            "type": "akamai-insights-datasource",
-            "uid": "${DS_AKAMAI-INSIGHTS-DATASOURCE}"
-          },
-          "dimensions": [
-            "time5minutes"
-          ],
-          "filters": [],
-          "hide": false,
-          "metrics": [
-            "edgeResponseBitsPerSecond",
-            "originResponseBitsPerSecond",
-            "midgressResponseBitsPerSecond"
-          ],
-          "refId": "B",
-          "reportLink": "/reporting-api/v2/reports/delivery/traffic/current-ui",
+          "reportLink": "/reporting-api/v2/reports/delivery/traffic/current",
           "sortBys": [
             {
               "name": "time5minutes",
@@ -550,60 +491,82 @@
       "title": "Bandwidth",
       "transformations": [
         {
-          "id": "concatenate",
-          "options": {}
-        },
-        {
           "id": "calculateField",
           "options": {
-            "alias": "Requests per second",
-            "mode": "reduceRow",
-            "reduce": {
-              "include": [
-                "edgeRequestBitsPerSecond",
-                "midgressRequestBitsPerSecond",
-                "originRequestBitsPerSecond"
-              ],
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "Responses per second",
-            "mode": "reduceRow",
-            "reduce": {
-              "include": [
-                "edgeResponseBitsPerSecond",
-                "midgressResponseBitsPerSecond",
-                "originResponseBitsPerSecond"
-              ],
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "edgeRequestBitsPerSecond": true,
-              "edgeRequestBytesSum": true,
-              "edgeResponseBitsPerSecond": true,
-              "edgeResponseBytesSum": true,
-              "midgressBytesSum": true,
-              "midgressRequestBitsPerSecond": true,
-              "midgressRequestBytesSum": true,
-              "midgressResponseBitsPerSecond": true,
-              "midgressResponseBytesSum": true,
-              "originRequestBitsPerSecond": true,
-              "originRequestBytesSum": true,
-              "originResponseBitsPerSecond": true,
-              "originResponseBytesSum": true
+            "alias": "edgeResponseBytes",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "edgeResponseBytesSum"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "fixed": "60"
+              }
             },
-            "includeByName": {},
-            "indexByName": {},
-            "renameByName": {}
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "midgressResponseBytes",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "midgressResponseBytesSum"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "fixed": "60"
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "originResponseBytes",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "originResponseBytesSum"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "fixed": "60"
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "time5minutes",
+                "edgeResponseBytes",
+                "midgressResponseBytes",
+                "originResponseBytes"
+              ]
+            }
           }
         }
       ],
@@ -676,7 +639,7 @@
         "x": 0,
         "y": 13
       },
-      "id": 5,
+      "id": 10,
       "options": {
         "legend": {
           "calcs": [],
@@ -702,93 +665,104 @@
           ],
           "filters": [],
           "metrics": [
-            "edgeRequestBitsPerSecond",
-            "originRequestBitsPerSecond",
-            "midgressRequestBitsPerSecond"
+            "edgeRequestBytesSum",
+            "midgressRequestBytesSum",
+            "originRequestBytesSum"
           ],
           "refId": "A",
-          "reportLink": "/reporting-api/v2/reports/delivery/traffic/current-ui",
+          "reportLink": "/reporting-api/v2/reports/delivery/traffic/current",
           "sortBys": []
         }
       ],
       "title": "Requests by HTTP method",
       "transformations": [
         {
+          "id": "calculateField",
+          "options": {
+            "alias": "edgeRequestPerSecond",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "edgeRequestBytesSum"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "fixed": "60"
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "midgressRequestPerSecond",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "midgressRequestBytesSum"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "fixed": "60"
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "originRequestPerSecond",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "originRequestBytesSum"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "fixed": "60"
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "time5minutes",
+                "edgeRequestPerSecond",
+                "midgressRequestPerSecond",
+                "originRequestPerSecond",
+                "httpMethod"
+              ]
+            }
+          }
+        },
+        {
           "id": "partitionByValues",
           "options": {
             "fields": [
               "httpMethod"
             ],
-            "keepFields": true
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "GET/HEAD",
-            "mode": "reduceRow",
-            "reduce": {
-              "include": [
-                "edgeRequestBitsPerSecond get_head",
-                "midgressRequestBitsPerSecond get_head",
-                "originRequestBitsPerSecond get_head"
-              ],
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "PUT/POST",
-            "mode": "reduceRow",
-            "reduce": {
-              "include": [
-                "edgeRequestBitsPerSecond put_post",
-                "midgressRequestBitsPerSecond put_post",
-                "originRequestBitsPerSecond put_post"
-              ],
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "edgeRequestBitsPerSecond 0xx": true,
-              "edgeRequestBitsPerSecond 2xx": true,
-              "edgeRequestBitsPerSecond 3xx": true,
-              "edgeRequestBitsPerSecond 4xx": true,
-              "edgeRequestBitsPerSecond 5xx": true,
-              "edgeRequestBitsPerSecond get_head": true,
-              "edgeRequestBitsPerSecond put_post": true,
-              "httpMethod get_head": true,
-              "httpMethod put_post": true,
-              "midgressRequestBitsPerSecond 0xx": true,
-              "midgressRequestBitsPerSecond 2xx": true,
-              "midgressRequestBitsPerSecond 3xx": true,
-              "midgressRequestBitsPerSecond 4xx": true,
-              "midgressRequestBitsPerSecond 5xx": true,
-              "midgressRequestBitsPerSecond get_head": true,
-              "midgressRequestBitsPerSecond put_post": true,
-              "originRequestBitsPerSecond 0xx": true,
-              "originRequestBitsPerSecond 2xx": true,
-              "originRequestBitsPerSecond 3xx": true,
-              "originRequestBitsPerSecond 4xx": true,
-              "originRequestBitsPerSecond 5xx": true,
-              "originRequestBitsPerSecond get_head": true,
-              "originRequestBitsPerSecond put_post": true,
-              "responseClass 0xx": true,
-              "responseClass 2xx": true,
-              "responseClass 3xx": true,
-              "responseClass 4xx": true,
-              "responseClass 5xx": true,
-              "time5minutes 3xx": false
-            },
-            "includeByName": {},
-            "indexByName": {},
-            "renameByName": {}
+            "keepFields": false
           }
         }
       ],
@@ -861,7 +835,7 @@
         "x": 12,
         "y": 13
       },
-      "id": 6,
+      "id": 11,
       "options": {
         "legend": {
           "calcs": [],
@@ -887,139 +861,104 @@
           ],
           "filters": [],
           "metrics": [
-            "edgeRequestBitsPerSecond",
-            "originRequestBitsPerSecond",
-            "midgressRequestBitsPerSecond"
+            "edgeRequestBytesSum",
+            "midgressRequestBytesSum",
+            "originRequestBytesSum"
           ],
           "refId": "A",
-          "reportLink": "/reporting-api/v2/reports/delivery/traffic/current-ui",
+          "reportLink": "/reporting-api/v2/reports/delivery/traffic/current",
           "sortBys": []
         }
       ],
       "title": "Requests by HTTP version",
       "transformations": [
         {
+          "id": "calculateField",
+          "options": {
+            "alias": "edgeRequestPerSecond",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "edgeRequestBytesSum"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "fixed": "60"
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "midgressRequestPerSecond",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "midgressRequestBytesSum"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "fixed": "60"
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "originRequestPerSecond",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "originRequestBytesSum"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "fixed": "60"
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "time5minutes",
+                "edgeRequestPerSecond",
+                "midgressRequestPerSecond",
+                "originRequestPerSecond",
+                "httpProtocol"
+              ]
+            }
+          }
+        },
+        {
           "id": "partitionByValues",
           "options": {
             "fields": [
               "httpProtocol"
             ],
-            "keepFields": true
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "http1.1",
-            "mode": "reduceRow",
-            "reduce": {
-              "include": [
-                "edgeRequestBitsPerSecond http1.1",
-                "midgressRequestBitsPerSecond http1.1",
-                "originRequestBitsPerSecond http1.1"
-              ],
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "https1.1",
-            "mode": "reduceRow",
-            "reduce": {
-              "include": [
-                "edgeRequestBitsPerSecond https1.1",
-                "midgressRequestBitsPerSecond https1.1",
-                "originRequestBitsPerSecond https1.1"
-              ],
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "http2",
-            "mode": "reduceRow",
-            "reduce": {
-              "include": [
-                "edgeRequestBitsPerSecond http2",
-                "midgressRequestBitsPerSecond http2",
-                "originRequestBitsPerSecond http2"
-              ],
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "http3",
-            "mode": "reduceRow",
-            "reduce": {
-              "include": [
-                "edgeRequestBitsPerSecond http3",
-                "midgressRequestBitsPerSecond http3",
-                "originRequestBitsPerSecond http3"
-              ],
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "edgeRequestBitsPerSecond 0xx": true,
-              "edgeRequestBitsPerSecond 2xx": true,
-              "edgeRequestBitsPerSecond 3xx": true,
-              "edgeRequestBitsPerSecond 4xx": true,
-              "edgeRequestBitsPerSecond 5xx": true,
-              "edgeRequestBitsPerSecond get_head": true,
-              "edgeRequestBitsPerSecond http1.1": true,
-              "edgeRequestBitsPerSecond http2": true,
-              "edgeRequestBitsPerSecond http3": true,
-              "edgeRequestBitsPerSecond https1.1": true,
-              "edgeRequestBitsPerSecond put_post": true,
-              "httpMethod get_head": true,
-              "httpMethod put_post": true,
-              "httpProtocol http1.1": true,
-              "httpProtocol http2": true,
-              "httpProtocol http3": true,
-              "httpProtocol https1.1": true,
-              "midgressRequestBitsPerSecond 0xx": true,
-              "midgressRequestBitsPerSecond 2xx": true,
-              "midgressRequestBitsPerSecond 3xx": true,
-              "midgressRequestBitsPerSecond 4xx": true,
-              "midgressRequestBitsPerSecond 5xx": true,
-              "midgressRequestBitsPerSecond get_head": true,
-              "midgressRequestBitsPerSecond http1.1": true,
-              "midgressRequestBitsPerSecond http2": true,
-              "midgressRequestBitsPerSecond http3": true,
-              "midgressRequestBitsPerSecond https1.1": true,
-              "midgressRequestBitsPerSecond put_post": true,
-              "originRequestBitsPerSecond 0xx": true,
-              "originRequestBitsPerSecond 2xx": true,
-              "originRequestBitsPerSecond 3xx": true,
-              "originRequestBitsPerSecond 4xx": true,
-              "originRequestBitsPerSecond 5xx": true,
-              "originRequestBitsPerSecond get_head": true,
-              "originRequestBitsPerSecond http1.1": true,
-              "originRequestBitsPerSecond http2": true,
-              "originRequestBitsPerSecond http3": true,
-              "originRequestBitsPerSecond https1.1": true,
-              "originRequestBitsPerSecond put_post": true,
-              "responseClass 0xx": true,
-              "responseClass 2xx": true,
-              "responseClass 3xx": true,
-              "responseClass 4xx": true,
-              "responseClass 5xx": true,
-              "time5minutes 3xx": false
-            },
-            "includeByName": {},
-            "indexByName": {},
-            "renameByName": {}
+            "keepFields": false
           }
         }
       ],
@@ -1182,7 +1121,7 @@
           ],
           "filters": [],
           "metrics": [],
-          "reportLink": "/reporting-api/v2/reports/delivery/traffic/current-ui",
+          "reportLink": "/reporting-api/v2/reports/delivery/traffic/current",
           "sortBys": []
         },
         "refresh": 2,
