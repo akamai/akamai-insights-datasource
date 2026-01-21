@@ -6,7 +6,7 @@ import { ConfigEditor } from './ConfigEditor';
 describe('ConfigEditor component', () => {
   it('should trigger onOptionsChange when one of inputs has changed', () => {
     const options: any = {
-      jsonData: {
+      secureJsonData: {
         clientToken: 'testToken'
       }
     };
@@ -19,7 +19,7 @@ describe('ConfigEditor component', () => {
     fireEvent.change(getByPlaceholderText('Enter host'), { target: { value: 'akamai.com' } });
 
     expect(onOptionsChange).toHaveBeenCalledWith({
-      jsonData: {
+      secureJsonData: {
         clientToken: 'testToken',
         host: 'akamai.com'
       }
@@ -28,7 +28,7 @@ describe('ConfigEditor component', () => {
 
   it('should update all fields when credentials are pasted into textarea', () => {
     const options: any = {
-      jsonData: {}
+      secureJsonData: {}
     };
     const onOptionsChange = jest.fn();
 
@@ -46,7 +46,7 @@ describe('ConfigEditor component', () => {
     });
 
     expect(onOptionsChange).toHaveBeenCalledWith({
-      jsonData: {
+      secureJsonData: {
         clientSecret: 'test=',
         host: 'test.net',
         accessToken: 'test-123',
@@ -57,7 +57,7 @@ describe('ConfigEditor component', () => {
 
   it('should mark textarea as invalid and not update form when credentials are in wrong format', () => {
     const options: any = {
-      jsonData: {}
+      secureJsonData: {}
     };
     const onOptionsChange = jest.fn();
 
