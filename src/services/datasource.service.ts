@@ -1,14 +1,15 @@
 import {
+  createDataFrame,
+  DataFrame,
   DataQueryRequest,
   DataQueryResponse,
   DataSourceInstanceSettings,
   DataSourceVariableSupport,
   FieldType,
-  MutableDataFrame,
   TestDataSourceResponse,
   VariableSupportType
 } from '@grafana/data';
-import { BackendSrvRequest, DataSourceWithBackend, getBackendSrv, getTemplateSrv } from '@grafana/runtime';
+import { BackendSrvRequest, DataSourceWithBackend, FetchResponse, getBackendSrv, getTemplateSrv } from '@grafana/runtime';
 import { isEmpty, omitBy, uniq } from 'lodash';
 import {
   catchError,
@@ -25,15 +26,18 @@ import { Dimension, DiscoveryApiModel, Metric, ReportsApiModel, TimeDimensionsTy
 import { MyDataSourceOptions, MyQuery, TestDataSourceResponseStatus, VARIABLE_QUERY } from '../types/types';
 
 class QueryVariableSupport extends DataSourceVariableSupport<DatasourceService, MyQuery> {
-  query: (request: DataQueryRequest<MyQuery>) => Observable<DataQueryResponse>;
-  editor = {};
-  id: number;
+  readonly editor = {};
+  private readonly datasource: DatasourceService;
 
-  constructor({ query, id }: DataSourceWithBackend) {
+  constructor(datasource: DatasourceService) {
     super();
-    this.query = query;
-    this.id = id;
+    this.datasource = datasource;
   }
+
+  query(request: DataQueryRequest<MyQuery>): Observable<DataQueryResponse> {
+    return this.datasource.query(request) as any;
+  }
+
   getDefaultQuery(): Partial<MyQuery> {
     return {
       reportLink: '',
@@ -60,7 +64,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
 
   constructor(protected readonly instanceSettings: DataSourceInstanceSettings<MyDataSourceOptions>) {
     super(instanceSettings);
-    this.variables = new QueryVariableSupport(this);
+    this.variables = new QueryVariableSupport(this) as any;
   }
 
   static discoveryApi(id: number, targetUrl: string): Observable<DiscoveryApiModel> {
@@ -88,11 +92,11 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
   }
 
   private static makeBackendSrvCall<T>(options: BackendSrvRequest): Observable<T> {
-    return getBackendSrv()
-      .fetch<T>(options)
+    return (getBackendSrv()
+      .fetch<T>(options) as any as Observable<FetchResponse<T>>)
       .pipe(
         map(({ data }) => data)
-      );
+      ) as any as Observable<T>;
   }
 
   private static getBackendDataSourceUrl(id: number): string {
@@ -125,50 +129,50 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
       };
       const interpolatedBody = !isEmpty(scopedVars) ? JSON.parse(getTemplateSrv().replace(JSON.stringify(body), scopedVars)) : body;
 
+      const fetchObservable = (getBackendSrv()
+        .fetch<Record<string, any>>({
+          method: 'POST',
+          url: `${DatasourceService.getBackendDataSourceUrl(this.id)}/${DatasourceService.DATA}`,
+          data: {
+            body: interpolatedBody,
+            from: from.toISOString(),
+            to: to.toISOString()
+          },
+          params: {
+            targetUrl: reportLink
+          },
+          hideFromInspector: false
+        }) as any) as Observable<FetchResponse<Record<string, any>>>;
+
       return forkJoin([
-        getBackendSrv()
-          .fetch<Record<string, any>>({
-            method: 'POST',
-            url: `${DatasourceService.getBackendDataSourceUrl(this.id)}/${DatasourceService.DATA}`,
-            data: {
-              body: interpolatedBody,
-              from: from.toISOString(),
-              to: to.toISOString()
-            },
-            params: {
-              targetUrl: reportLink
-            },
-            hideFromInspector: false
-          }),
-        DatasourceService.discoveryApi(this.id, reportLink || '')
+        fetchObservable,
+        DatasourceService.discoveryApi(this.id as number, reportLink || '') as any as Observable<DiscoveryApiModel>
       ]).pipe(
-        map(([ { data: { data } }, discoveryApiModel ]) => ({
-          data: [ DatasourceService.convertToDataFrame(data, discoveryApiModel, refId, dimensions) ]
+        map(([ fetchResponse, discoveryApiModel ]: [FetchResponse<Record<string, any>>, DiscoveryApiModel]) => ({
+          data: [ DatasourceService.convertToDataFrame(fetchResponse.data?.data, discoveryApiModel, refId, dimensions) ]
         }))
       );
     });
 
-    return forkJoin([ ...dataObservables ])
+    return (forkJoin([ ...dataObservables ]) as any as Observable<Array<{ data: DataFrame[] }>>)
       .pipe(
         map(data => ({ data: data.map(singleQuery => singleQuery.data).flat() }))
-      );
+      ) as any;
   }
 
-  private static convertToDataFrame(data: Record<string, any>[], { dimensions, metrics }: DiscoveryApiModel, refId: string, selectedDimensions?: string[]) {
+  private static convertToDataFrame(data: Record<string, any>[], { dimensions, metrics }: DiscoveryApiModel, refId: string, selectedDimensions?: string[]): DataFrame {
     const fieldsData = [ ...dimensions, ...metrics ];
+    const keys = uniq((data ?? []).flatMap(row => Object.keys(row)));
 
-    const frame = new MutableDataFrame({
-      fields: uniq(data?.map(row => Object.keys(row)).flat()).map(dataKey => {
+    const frame = createDataFrame({
+      refId,
+      fields: keys.map(dataKey => {
         const fieldData = fieldsData.find(({ name }) => name === dataKey);
-        const dataFrame = {
+        return {
           name: dataKey,
-          refId
+          ...(fieldData ? { type: DatasourceService.getFieldDataType(fieldData) } : {}),
+          values: (data ?? []).map(row => row[ dataKey ])
         };
-
-        return fieldData ? {
-          ...dataFrame,
-          type: DatasourceService.getFieldDataType(fieldData)
-        } : dataFrame;
       })
     });
 
@@ -186,21 +190,20 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
       if (variableField) {
         frame.fields = frame.fields.filter(({ type }) => type !== FieldType.string);
         frame.fields.push(variableField);
+        frame.length = frame.fields[ 0 ]?.values.length ?? 0;
       }
     }
-
-    data?.forEach(row => frame.add(row));
 
     const hasTimeField = frame.fields.find(field => field.type === FieldType.time);
 
     if (hasTimeField) {
-      for (let i = 0; i < hasTimeField.values.length; i++) {
-        hasTimeField.values.set(i, hasTimeField.values.get(i) * DatasourceService.MILLISECONDS_IN_SECOND)
-      }
+      hasTimeField.values = (hasTimeField.values as number[]).map(
+        val => val * DatasourceService.MILLISECONDS_IN_SECOND
+      );
     }
 
     return frame;
-  };
+  }
 
   private createTestDataSourceResponse(status: TestDataSourceResponseStatus): TestDataSourceResponse {
     if (status === TestDataSourceResponseStatus.Error) {
@@ -214,7 +217,6 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
       status: TestDataSourceResponseStatus.Success,
       message: 'Data source is working properly.'
     };
-    
   }
 
   private static getFieldDataType({ type }: Dimension | Metric): FieldType {
@@ -225,4 +227,3 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
     return type.toLowerCase() === FieldType.string ? FieldType.string : FieldType.number;
   };
 }
-
