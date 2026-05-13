@@ -1,6 +1,6 @@
 {
   "name": "akamai-insights-datasource",
-  "version": "1.2.4",
+  "version": "1.2.6",
   "description": "Easy way to access your akamai data",
   "scripts": {
     "build": "npm run test && npm run lint && webpack -c ./webpack.config.ts --env production",
