@@ -11,7 +11,7 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
       className="css-1tu59u4"
     >
       <div
-        className="css-1nmqu8c-input-wrapper css-smf98s"
+        className="css-j1vt9l-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -52,7 +52,7 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
                 autoCorrect="off"
                 className=""
                 disabled={false}
-                id="react-select-2-input"
+                id=":r0:"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -81,7 +81,7 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
             </div>
           </div>
           <div
-            className="css-zyjsuv-input-suffix"
+            className="css-1ms3s8l-input-suffix"
           >
             <svg
               data-testid="angle-down"
@@ -100,7 +100,7 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
       className="css-1tu59u4"
     >
       <div
-        className="css-1nmqu8c-input-wrapper css-smf98s"
+        className="css-j1vt9l-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -141,7 +141,7 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
                 autoCorrect="off"
                 className=""
                 disabled={false}
-                id="react-select-3-input"
+                id=":r3:"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -170,7 +170,7 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
             </div>
           </div>
           <div
-            className="css-zyjsuv-input-suffix"
+            className="css-1ms3s8l-input-suffix"
           >
             <svg
               data-testid="angle-down"
@@ -189,7 +189,7 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
       className="css-1tu59u4"
     >
       <div
-        className="css-1nmqu8c-input-wrapper css-smf98s"
+        className="css-j1vt9l-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -230,7 +230,7 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
                 autoCorrect="off"
                 className=""
                 disabled={false}
-                id="react-select-4-input"
+                id=":r6:"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -259,7 +259,7 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
             </div>
           </div>
           <div
-            className="css-zyjsuv-input-suffix"
+            className="css-1ms3s8l-input-suffix"
           >
             <svg
               data-testid="angle-down"
@@ -281,14 +281,16 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
         className="css-1gwh1pd"
       >
         <div
-          className="css-1cvb0sk-input-wrapper"
+          className="css-1eu8dn3-input-wrapper"
           data-testid="input-wrapper"
         >
           <div
-            className="css-10lnb82-input-inputWrapper"
+            className="css-1kr5nyd-input-inputWrapper"
           >
             <input
-              className="css-8tk2dk-input-input"
+              aria-invalid={false}
+              className="css-r3ryyz-input-input"
+              id=":r9:"
               onBlur={[Function]}
               onChange={[Function]}
               onKeyDown={[Function]}
@@ -302,11 +304,11 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
               value=""
             />
             <div
-              className="css-7099m8-input-suffix"
+              className="css-h4nffn-input-suffix"
             >
               <button
                 aria-disabled={false}
-                className="css-kigwq3-button"
+                className="css-1sak3dw-button"
                 disabled={true}
                 type="button"
               >
@@ -323,7 +325,7 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
           className="css-bpjvw"
         >
           <li
-            className="css-1u6i1x"
+            className="css-193qen2"
             style={
               {
                 "backgroundColor": "#B15415",
@@ -337,8 +339,8 @@ exports[`FilterEditorRow component should render dimension row 1`] = `
               1234
             </span>
             <button
-              aria-label="Remove "1234" tag"
-              className="css-ic1rn9"
+              aria-label="Remove tag: 1234"
+              className="css-19ayuns"
               onBlur={[Function]}
               onClick={[Function]}
               onFocus={[Function]}
@@ -376,7 +378,7 @@ exports[`FilterEditorRow component should render metric row 1`] = `
       className="css-1tu59u4"
     >
       <div
-        className="css-1nmqu8c-input-wrapper css-smf98s"
+        className="css-j1vt9l-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -417,7 +419,7 @@ exports[`FilterEditorRow component should render metric row 1`] = `
                 autoCorrect="off"
                 className=""
                 disabled={false}
-                id="react-select-5-input"
+                id=":re:"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -446,7 +448,7 @@ exports[`FilterEditorRow component should render metric row 1`] = `
             </div>
           </div>
           <div
-            className="css-zyjsuv-input-suffix"
+            className="css-1ms3s8l-input-suffix"
           >
             <svg
               data-testid="angle-down"
@@ -465,7 +467,7 @@ exports[`FilterEditorRow component should render metric row 1`] = `
       className="css-1tu59u4"
     >
       <div
-        className="css-1nmqu8c-input-wrapper css-smf98s"
+        className="css-j1vt9l-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -506,7 +508,7 @@ exports[`FilterEditorRow component should render metric row 1`] = `
                 autoCorrect="off"
                 className=""
                 disabled={false}
-                id="react-select-6-input"
+                id=":rh:"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -535,7 +537,7 @@ exports[`FilterEditorRow component should render metric row 1`] = `
             </div>
           </div>
           <div
-            className="css-zyjsuv-input-suffix"
+            className="css-1ms3s8l-input-suffix"
           >
             <svg
               data-testid="angle-down"
@@ -554,7 +556,7 @@ exports[`FilterEditorRow component should render metric row 1`] = `
       className="css-1tu59u4"
     >
       <div
-        className="css-1nmqu8c-input-wrapper css-smf98s"
+        className="css-j1vt9l-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -595,7 +597,7 @@ exports[`FilterEditorRow component should render metric row 1`] = `
                 autoCorrect="off"
                 className=""
                 disabled={false}
-                id="react-select-7-input"
+                id=":rk:"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -624,7 +626,7 @@ exports[`FilterEditorRow component should render metric row 1`] = `
             </div>
           </div>
           <div
-            className="css-zyjsuv-input-suffix"
+            className="css-1ms3s8l-input-suffix"
           >
             <svg
               data-testid="angle-down"
@@ -643,14 +645,16 @@ exports[`FilterEditorRow component should render metric row 1`] = `
       className="css-1tu59u4"
     >
       <div
-        className="css-3qjwe0-input-wrapper"
+        className="css-1nvt9es-input-wrapper"
         data-testid="input-wrapper"
       >
         <div
-          className="css-10lnb82-input-inputWrapper"
+          className="css-1kr5nyd-input-inputWrapper"
         >
           <input
-            className="css-8tk2dk-input-input"
+            aria-invalid={false}
+            className="css-r3ryyz-input-input"
+            id=":rn:"
             onChange={[Function]}
             placeholder="Expression"
             style={

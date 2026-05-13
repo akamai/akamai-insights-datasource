@@ -92,7 +92,6 @@ describe('DatasourceService', () => {
                 {
                   config: {},
                   name: 'edgeHitsSum',
-                  refId: 'A',
                   type: 'number',
                   values: [
                     1000
@@ -101,7 +100,6 @@ describe('DatasourceService', () => {
                 {
                   config: {},
                   name: 'time5minutes',
-                  refId: 'A',
                   type: 'time',
                   values: [
                     1710155443000
@@ -110,7 +108,6 @@ describe('DatasourceService', () => {
                 {
                   config: {},
                   name: 'hostname',
-                  refId: 'A',
                   type: 'string',
                   values: [
                     'akamai.com'
@@ -156,7 +153,6 @@ describe('DatasourceService', () => {
                 {
                   config: {},
                   name: 'edgeHitsSum',
-                  refId: 'A',
                   type: 'number',
                   values: [
                     1000
@@ -165,7 +161,6 @@ describe('DatasourceService', () => {
                 {
                   config: {},
                   name: 'time5minutes',
-                  refId: 'A',
                   type: 'time',
                   values: [
                     1710155443000
@@ -176,7 +171,6 @@ describe('DatasourceService', () => {
                 {
                   config: {},
                   name: 'edgeBytesSum',
-                  refId: 'B',
                   type: 'number',
                   values: [
                     20000
@@ -185,7 +179,6 @@ describe('DatasourceService', () => {
                 {
                   config: {},
                   name: 'time5minutes',
-                  refId: 'B',
                   type: 'time',
                   values: [
                     1710155443000
@@ -233,7 +226,6 @@ describe('DatasourceService', () => {
                 {
                   config: {},
                   name: 'edgeHitsSum',
-                  refId: 'A',
                   type: 'number',
                   values: [
                     1000
@@ -242,7 +234,6 @@ describe('DatasourceService', () => {
                 {
                   config: {},
                   name: 'time5minutes',
-                  refId: 'A',
                   type: 'time',
                   values: [
                     1710155443000
@@ -251,7 +242,6 @@ describe('DatasourceService', () => {
                 {
                   config: {},
                   name: 'hostname',
-                  refId: 'A',
                   type: 'string',
                   values: [
                     'akamai.com'
@@ -300,7 +290,6 @@ describe('DatasourceService', () => {
                   {
                     config: {},
                     name: 'edgeHitsSum',
-                    refId: VARIABLE_QUERY,
                     type: 'number',
                     values: [
                       1000
@@ -309,7 +298,6 @@ describe('DatasourceService', () => {
                   {
                     config: {},
                     name: 'time5minutes',
-                    refId: VARIABLE_QUERY,
                     type: 'time',
                     values: [
                       1710155443000
@@ -318,7 +306,6 @@ describe('DatasourceService', () => {
                   {
                     config: {},
                     name: 'hostname',
-                    refId: VARIABLE_QUERY,
                     type: 'string',
                     values: [
                       'akamai.com'

@@ -17,7 +17,9 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
             <div
               class="css-l4ykjo-Label"
             >
-              <label>
+              <label
+                for=":rs:"
+              >
                 <div
                   class="css-70qvj9"
                 >
@@ -33,7 +35,8 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
             <div>
               <div>
                 <textarea
-                  class="css-i28uzi credentials__textarea"
+                  class="css-jphfoo credentials__textarea"
+                  id=":rs:"
                   name="credentialsTextArea"
                 />
               </div>
@@ -45,7 +48,9 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
           class="css-1uqla6q"
         >
           <label
-            class="css-1hzpsg9"
+            class="css-jw25bk"
+            for=":ru:"
+            id=":rv:"
           >
             Akamai Client Secret
           </label>
@@ -53,14 +58,16 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
             class="css-1tu59u4"
           >
             <div
-              class="css-1xvl4yl-input-wrapper"
+              class="css-1rekjmw-input-wrapper"
               data-testid="input-wrapper"
             >
               <div
-                class="css-10lnb82-input-inputWrapper"
+                class="css-1kr5nyd-input-inputWrapper"
               >
                 <input
-                  class="css-8tk2dk-input-input"
+                  aria-invalid="false"
+                  class="css-r3ryyz-input-input"
+                  id=":ru:"
                   placeholder="Enter client secret"
                   value=""
                 />
@@ -72,7 +79,9 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
           class="css-1uqla6q"
         >
           <label
-            class="css-1hzpsg9"
+            class="css-jw25bk"
+            for=":r11:"
+            id=":r12:"
           >
             Host
           </label>
@@ -80,14 +89,16 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
             class="css-1tu59u4"
           >
             <div
-              class="css-1xvl4yl-input-wrapper"
+              class="css-1rekjmw-input-wrapper"
               data-testid="input-wrapper"
             >
               <div
-                class="css-10lnb82-input-inputWrapper"
+                class="css-1kr5nyd-input-inputWrapper"
               >
                 <input
-                  class="css-8tk2dk-input-input"
+                  aria-invalid="false"
+                  class="css-r3ryyz-input-input"
+                  id=":r11:"
                   placeholder="Enter host"
                   value=""
                 />
@@ -99,7 +110,9 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
           class="css-1uqla6q"
         >
           <label
-            class="css-1hzpsg9"
+            class="css-jw25bk"
+            for=":r14:"
+            id=":r15:"
           >
             Access Token
           </label>
@@ -107,14 +120,16 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
             class="css-1tu59u4"
           >
             <div
-              class="css-1xvl4yl-input-wrapper"
+              class="css-1rekjmw-input-wrapper"
               data-testid="input-wrapper"
             >
               <div
-                class="css-10lnb82-input-inputWrapper"
+                class="css-1kr5nyd-input-inputWrapper"
               >
                 <input
-                  class="css-8tk2dk-input-input"
+                  aria-invalid="false"
+                  class="css-r3ryyz-input-input"
+                  id=":r14:"
                   placeholder="Enter access token"
                   value=""
                 />
@@ -126,7 +141,9 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
           class="css-1uqla6q"
         >
           <label
-            class="css-1hzpsg9"
+            class="css-jw25bk"
+            for=":r17:"
+            id=":r18:"
           >
             Client Token
           </label>
@@ -134,14 +151,16 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
             class="css-1tu59u4"
           >
             <div
-              class="css-1xvl4yl-input-wrapper"
+              class="css-1rekjmw-input-wrapper"
               data-testid="input-wrapper"
             >
               <div
-                class="css-10lnb82-input-inputWrapper"
+                class="css-1kr5nyd-input-inputWrapper"
               >
                 <input
-                  class="css-8tk2dk-input-input"
+                  aria-invalid="false"
+                  class="css-r3ryyz-input-input"
+                  id=":r17:"
                   placeholder="Enter client token"
                   value=""
                 />
@@ -165,7 +184,9 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
           <div
             class="css-l4ykjo-Label"
           >
-            <label>
+            <label
+              for=":rs:"
+            >
               <div
                 class="css-70qvj9"
               >
@@ -181,7 +202,8 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
           <div>
             <div>
               <textarea
-                class="css-i28uzi credentials__textarea"
+                class="css-jphfoo credentials__textarea"
+                id=":rs:"
                 name="credentialsTextArea"
               />
             </div>
@@ -193,7 +215,9 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
         class="css-1uqla6q"
       >
         <label
-          class="css-1hzpsg9"
+          class="css-jw25bk"
+          for=":ru:"
+          id=":rv:"
         >
           Akamai Client Secret
         </label>
@@ -201,14 +225,16 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
           class="css-1tu59u4"
         >
           <div
-            class="css-1xvl4yl-input-wrapper"
+            class="css-1rekjmw-input-wrapper"
             data-testid="input-wrapper"
           >
             <div
-              class="css-10lnb82-input-inputWrapper"
+              class="css-1kr5nyd-input-inputWrapper"
             >
               <input
-                class="css-8tk2dk-input-input"
+                aria-invalid="false"
+                class="css-r3ryyz-input-input"
+                id=":ru:"
                 placeholder="Enter client secret"
                 value=""
               />
@@ -220,7 +246,9 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
         class="css-1uqla6q"
       >
         <label
-          class="css-1hzpsg9"
+          class="css-jw25bk"
+          for=":r11:"
+          id=":r12:"
         >
           Host
         </label>
@@ -228,14 +256,16 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
           class="css-1tu59u4"
         >
           <div
-            class="css-1xvl4yl-input-wrapper"
+            class="css-1rekjmw-input-wrapper"
             data-testid="input-wrapper"
           >
             <div
-              class="css-10lnb82-input-inputWrapper"
+              class="css-1kr5nyd-input-inputWrapper"
             >
               <input
-                class="css-8tk2dk-input-input"
+                aria-invalid="false"
+                class="css-r3ryyz-input-input"
+                id=":r11:"
                 placeholder="Enter host"
                 value=""
               />
@@ -247,7 +277,9 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
         class="css-1uqla6q"
       >
         <label
-          class="css-1hzpsg9"
+          class="css-jw25bk"
+          for=":r14:"
+          id=":r15:"
         >
           Access Token
         </label>
@@ -255,14 +287,16 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
           class="css-1tu59u4"
         >
           <div
-            class="css-1xvl4yl-input-wrapper"
+            class="css-1rekjmw-input-wrapper"
             data-testid="input-wrapper"
           >
             <div
-              class="css-10lnb82-input-inputWrapper"
+              class="css-1kr5nyd-input-inputWrapper"
             >
               <input
-                class="css-8tk2dk-input-input"
+                aria-invalid="false"
+                class="css-r3ryyz-input-input"
+                id=":r14:"
                 placeholder="Enter access token"
                 value=""
               />
@@ -274,7 +308,9 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
         class="css-1uqla6q"
       >
         <label
-          class="css-1hzpsg9"
+          class="css-jw25bk"
+          for=":r17:"
+          id=":r18:"
         >
           Client Token
         </label>
@@ -282,14 +318,16 @@ exports[`ConfigEditor component should mark textarea as invalid and not update f
           class="css-1tu59u4"
         >
           <div
-            class="css-1xvl4yl-input-wrapper"
+            class="css-1rekjmw-input-wrapper"
             data-testid="input-wrapper"
           >
             <div
-              class="css-10lnb82-input-inputWrapper"
+              class="css-1kr5nyd-input-inputWrapper"
             >
               <input
-                class="css-8tk2dk-input-input"
+                aria-invalid="false"
+                class="css-r3ryyz-input-input"
+                id=":r17:"
                 placeholder="Enter client token"
                 value=""
               />
