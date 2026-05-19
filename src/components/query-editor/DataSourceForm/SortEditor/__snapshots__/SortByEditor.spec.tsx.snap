@@ -9,7 +9,7 @@ exports[`SortEditor component should render dimension editor 1`] = `
       className="css-1tu59u4"
     >
       <div
-        className="css-1nmqu8c-input-wrapper css-smf98s"
+        className="css-j1vt9l-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -50,7 +50,7 @@ exports[`SortEditor component should render dimension editor 1`] = `
                 autoCorrect="off"
                 className=""
                 disabled={false}
-                id="react-select-2-input"
+                id=":r0:"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -79,7 +79,7 @@ exports[`SortEditor component should render dimension editor 1`] = `
             </div>
           </div>
           <div
-            className="css-zyjsuv-input-suffix"
+            className="css-1ms3s8l-input-suffix"
           >
             <svg
               data-testid="angle-down"
@@ -98,7 +98,7 @@ exports[`SortEditor component should render dimension editor 1`] = `
       className="css-1tu59u4"
     >
       <div
-        className="css-1nmqu8c-input-wrapper css-smf98s"
+        className="css-j1vt9l-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -139,7 +139,7 @@ exports[`SortEditor component should render dimension editor 1`] = `
                 autoCorrect="off"
                 className=""
                 disabled={false}
-                id="react-select-3-input"
+                id=":r3:"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -168,7 +168,7 @@ exports[`SortEditor component should render dimension editor 1`] = `
             </div>
           </div>
           <div
-            className="css-zyjsuv-input-suffix"
+            className="css-1ms3s8l-input-suffix"
           >
             <svg
               data-testid="angle-down"
@@ -192,7 +192,7 @@ exports[`SortEditor component should render metric editor 1`] = `
       className="css-1tu59u4"
     >
       <div
-        className="css-1nmqu8c-input-wrapper css-smf98s"
+        className="css-j1vt9l-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -233,7 +233,7 @@ exports[`SortEditor component should render metric editor 1`] = `
                 autoCorrect="off"
                 className=""
                 disabled={false}
-                id="react-select-4-input"
+                id=":r6:"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -262,7 +262,7 @@ exports[`SortEditor component should render metric editor 1`] = `
             </div>
           </div>
           <div
-            className="css-zyjsuv-input-suffix"
+            className="css-1ms3s8l-input-suffix"
           >
             <svg
               data-testid="angle-down"
@@ -281,7 +281,7 @@ exports[`SortEditor component should render metric editor 1`] = `
       className="css-1tu59u4"
     >
       <div
-        className="css-1nmqu8c-input-wrapper css-smf98s"
+        className="css-j1vt9l-input-wrapper css-smf98s"
         onKeyDown={[Function]}
       >
         <span
@@ -322,7 +322,7 @@ exports[`SortEditor component should render metric editor 1`] = `
                 autoCorrect="off"
                 className=""
                 disabled={false}
-                id="react-select-5-input"
+                id=":r9:"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -351,7 +351,7 @@ exports[`SortEditor component should render metric editor 1`] = `
             </div>
           </div>
           <div
-            className="css-zyjsuv-input-suffix"
+            className="css-1ms3s8l-input-suffix"
           >
             <svg
               data-testid="angle-down"
