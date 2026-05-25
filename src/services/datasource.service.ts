@@ -104,7 +104,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
   }
 
   async testDatasource(): Promise<TestDataSourceResponse> {
-    const source$ = DatasourceService.reportsApi(this.id)
+    const source$ = DatasourceService.reportsApi(this.id!)
       .pipe(
         map(data => this.createTestDataSourceResponse(data ? TestDataSourceResponseStatus.Success : TestDataSourceResponseStatus.Error)),
         catchError(() => of(this.createTestDataSourceResponse(TestDataSourceResponseStatus.Error)))
@@ -132,7 +132,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
       const fetchObservable = (getBackendSrv()
         .fetch<Record<string, any>>({
           method: 'POST',
-          url: `${DatasourceService.getBackendDataSourceUrl(this.id)}/${DatasourceService.DATA}`,
+          url: `${DatasourceService.getBackendDataSourceUrl(this.id!)}/${DatasourceService.DATA}`,
           data: {
             body: interpolatedBody,
             from: from.toISOString(),

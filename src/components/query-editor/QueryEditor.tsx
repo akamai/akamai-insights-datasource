@@ -25,7 +25,7 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
 
     if (value) {
       setIsDataSourceLoading(true);
-      DatasourceService.discoveryApi(datasource.id, value).subscribe({
+      DatasourceService.discoveryApi(datasource.id!, value).subscribe({
         next: data => setState(data),
         complete: () => setIsDataSourceLoading(false)
       });
@@ -33,7 +33,7 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
   };
 
   useLayoutEffect(() => {
-    const subscription = DatasourceService.reportsApi(datasource.id).subscribe({
+    const subscription = DatasourceService.reportsApi(datasource.id!).subscribe({
       next: data => {
         setCascaderOptions(DatasourcesCascaderService.getCascaderOptions(data));
         onDataSourceOptionChange(query.reportLink || '');
