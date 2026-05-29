@@ -23,19 +23,25 @@ exports[`given QueryEditor should render new empty editor 1`] = `
   <div>
     <div
       className="css-1nob2mz"
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
     >
       <div
-        className="css-1cvb0sk-input-wrapper"
+        className="css-1eu8dn3-input-wrapper"
         data-testid="input-wrapper"
       >
         <div
-          className="css-10lnb82-input-inputWrapper"
+          className="css-1kr5nyd-input-inputWrapper"
         >
           <input
-            className="css-8tk2dk-input-input"
+            aria-invalid={false}
+            className="css-r3ryyz-input-input"
             onBlur={[Function]}
             onChange={[Function]}
+            onFocus={[Function]}
             onKeyDown={[Function]}
             placeholder="Select report data source"
             style={
@@ -47,10 +53,10 @@ exports[`given QueryEditor should render new empty editor 1`] = `
             value=""
           />
           <div
-            className="css-7099m8-input-suffix"
+            className="css-h4nffn-input-suffix"
           >
             <div
-              className="css-1e57u0i"
+              className="css-16aduu2"
             >
               <svg
                 data-testid="angle-down"

@@ -2,7 +2,18 @@
 // generally used by snapshots, but can affect specific tests
 process.env.TZ = 'UTC';
 
+const { grafanaESModules, nodeModulesToTransform } = require('./.config/jest/utils');
+
+const extraESModules = [
+  'marked',
+];
+
 module.exports = {
-  // Jest configuration provided by Grafana scaffolding
-  ...require('./.config/jest.config')
+  ...require('./.config/jest.config'),
+  moduleNameMapper: {
+    ...require('./.config/jest.config').moduleNameMapper,
+    '^react-calendar$': '<rootDir>/src/test/mocks/react-calendar.tsx',
+    '^react-calendar/(.*)$': '<rootDir>/src/test/mocks/react-calendar.tsx',
+  },
+  transformIgnorePatterns: [nodeModulesToTransform([...grafanaESModules, ...extraESModules])],
 };

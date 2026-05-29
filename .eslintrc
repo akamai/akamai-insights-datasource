@@ -3,6 +3,9 @@
   "parserOptions": {
     "ecmaVersion": 2022
   },
+  "rules": {
+    "@typescript-eslint/type-annotation-spacing": "off"
+  },
   "overrides": [
     {
       "files": [
@@ -101,8 +104,9 @@
           }
         ],
         "@typescript-eslint/no-unused-vars": "off",
-        "unused-imports/no-unused-imports-ts": "error",
-        "unused-imports/no-unused-vars-ts": [
+        "@typescript-eslint/type-annotation-spacing": "off",
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
           "warn",
           {
             "vars": "all",
