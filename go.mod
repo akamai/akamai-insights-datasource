@@ -93,6 +93,6 @@ require (
 	github.com/olekukonko/tablewriter v1.1.4 // indirect
 	github.com/prometheus/client_golang v1.23.2 // indirect
 	golang.org/x/net v0.54.0 // indirect
-	google.golang.org/grpc v1.81.0 // indirect
+	google.golang.org/grpc v1.82.1 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
 )
