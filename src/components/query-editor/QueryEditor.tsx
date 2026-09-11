@@ -18,14 +18,15 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
   const [ isDataSourceLoading, setIsDataSourceLoading ] = useState(false);
   const [ isReportListLoading, setIsReportListLoading ] = useState(true);
   const [ cascaderOptions, setCascaderOptions ] = useState([] as CascaderOption[]);
+  const datasourceId = datasource.id;
 
   const onDataSourceOptionChange = (value: string) => {
     query.reportLink = value;
     setDataSource(value || '');
 
-    if (value) {
+    if (value && datasourceId != null) {
       setIsDataSourceLoading(true);
-      DatasourceService.discoveryApi(datasource.id, value).subscribe({
+      DatasourceService.discoveryApi(datasource, value).subscribe({
         next: data => setState(data),
         complete: () => setIsDataSourceLoading(false)
       });
@@ -33,7 +34,11 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
   };
 
   useLayoutEffect(() => {
-    const subscription = DatasourceService.reportsApi(datasource.id).subscribe({
+    if (datasourceId == null) {
+      throw new Error('Datasource id is not available');
+    }
+
+    const subscription = DatasourceService.reportsApi(datasource).subscribe({
       next: data => {
         setCascaderOptions(DatasourcesCascaderService.getCascaderOptions(data));
         onDataSourceOptionChange(query.reportLink || '');
@@ -47,7 +52,7 @@ export function QueryEditor({ query, onChange, onRunQuery, datasource }: Props) 
 
     return () => subscription.unsubscribe();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ datasource.id ]);
+  }, [ datasourceId ]);
 
   return (
     <>

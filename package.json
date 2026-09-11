@@ -9,7 +9,7 @@
     "test:watch": "jest --watch --onlyChanged",
     "test:ci": "jest --passWithNoTests --maxWorkers 4",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint --cache --ignore-path ./.gitignore --ext .js,.jsx,.ts,.tsx .",
+    "lint": "eslint --cache --ignore-path ./.gitignore --ext .js,.jsx,.ts,.tsx src webpack.config.ts jest.config.js jest-setup.js",
     "lint:fix": "npm run lint -- --fix",
     "server": "docker-compose up --build",
     "server:dev": "mage -v && npm run server",
