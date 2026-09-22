@@ -277,7 +277,15 @@
             "responseClass",
             "time5minutes"
           ],
-          "filters": [],
+          "filters": [
+            {
+              "dimensionName": "hostname",
+              "expressions": [
+                "${hostname}"
+              ],
+              "operator": "IN_LIST"
+            }
+          ],
           "metrics": [
             "edgeRequestBytesSum",
             "midgressRequestBytesSum",
