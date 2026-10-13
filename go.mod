@@ -3,7 +3,7 @@ module github.com/akamai/analytics
 go 1.26.0
 
 require (
-	github.com/apache/thrift v0.23.0
+	github.com/apache/thrift v0.24.0
 	github.com/go-jose/go-jose/v4 v4.1.4
 	github.com/grafana/grafana-plugin-sdk-go v0.292.0
 	github.com/yuin/goldmark v1.8.2
