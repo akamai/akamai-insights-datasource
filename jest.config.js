@@ -6,6 +6,8 @@ const { grafanaESModules, nodeModulesToTransform } = require('./.config/jest/uti
 
 const extraESModules = [
   'marked',
+  '@react-hookz/web',
+  '@ver0/deep-equal',
 ];
 
 module.exports = {

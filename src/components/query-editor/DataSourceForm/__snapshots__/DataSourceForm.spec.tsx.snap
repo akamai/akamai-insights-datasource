@@ -11,8 +11,8 @@ exports[`DataSourceForm component should hide info about default values on form 
         >
           <label
             class="css-mw5erd"
-            for=":r0:"
-            id=":r1:"
+            for="_r_0_"
+            id="_r_1_"
           >
             Dimensions
             <svg
@@ -29,7 +29,7 @@ exports[`DataSourceForm component should hide info about default values on form 
             >
               <span
                 class="css-1f43avz-a11yText-A11yText"
-                id="react-select-17-live-region"
+                id="react-select-2-live-region"
               />
               <span
                 aria-atomic="false"
@@ -43,6 +43,7 @@ exports[`DataSourceForm component should hide info about default values on form 
               >
                 <div
                   class="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
+                  data-testid="data-testid MultiSelect container"
                 >
                   <div
                     class="css-1lltqbu-grafana-select-multi-value-container"
@@ -55,7 +56,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                     </div>
                     <button
                       aria-label="Remove"
-                      class="css-h7sknr-grafana-select-multi-value-remove"
+                      class="css-18ebbtc-grafana-select-multi-value-remove"
                       css="[object Object]"
                       tabindex="0"
                       type="button"
@@ -80,7 +81,8 @@ exports[`DataSourceForm component should hide info about default values on form 
                       autocomplete="off"
                       autocorrect="off"
                       class=""
-                      id=":r0:"
+                      data-testid="data-testid MultiSelect container-input"
+                      id="_r_0_"
                       role="combobox"
                       spellcheck="false"
                       style="color: inherit; background: 0px; opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -113,8 +115,8 @@ exports[`DataSourceForm component should hide info about default values on form 
         >
           <label
             class="css-mw5erd"
-            for=":r7:"
-            id=":r8:"
+            for="_r_7_"
+            id="_r_8_"
           >
             Metrics
             <svg
@@ -131,7 +133,7 @@ exports[`DataSourceForm component should hide info about default values on form 
             >
               <span
                 class="css-1f43avz-a11yText-A11yText"
-                id="react-select-18-live-region"
+                id="react-select-3-live-region"
               />
               <span
                 aria-atomic="false"
@@ -145,6 +147,7 @@ exports[`DataSourceForm component should hide info about default values on form 
               >
                 <div
                   class="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
+                  data-testid="data-testid MultiSelect container"
                 >
                   <div
                     class="css-1lltqbu-grafana-select-multi-value-container"
@@ -157,7 +160,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                     </div>
                     <button
                       aria-label="Remove"
-                      class="css-h7sknr-grafana-select-multi-value-remove"
+                      class="css-18ebbtc-grafana-select-multi-value-remove"
                       css="[object Object]"
                       tabindex="0"
                       type="button"
@@ -182,7 +185,8 @@ exports[`DataSourceForm component should hide info about default values on form 
                       autocomplete="off"
                       autocorrect="off"
                       class=""
-                      id=":r7:"
+                      data-testid="data-testid MultiSelect container-input"
+                      id="_r_7_"
                       role="combobox"
                       spellcheck="false"
                       style="color: inherit; background: 0px; opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -218,8 +222,8 @@ exports[`DataSourceForm component should hide info about default values on form 
           >
             <label
               class="css-mw5erd"
-              for=":re:"
-              id=":rf:"
+              for="_r_e_"
+              id="_r_f_"
             >
               Filters
               <svg
@@ -236,7 +240,7 @@ exports[`DataSourceForm component should hide info about default values on form 
               >
                 <button
                   aria-label="Add new Filter"
-                  class="css-1sydsii"
+                  class="css-1bner6n"
                   tabindex="0"
                   type="button"
                 >
@@ -258,8 +262,8 @@ exports[`DataSourceForm component should hide info about default values on form 
           >
             <label
               class="css-mw5erd"
-              for=":rl:"
-              id=":rm:"
+              for="_r_l_"
+              id="_r_m_"
             >
               Sort Bys
               <svg
@@ -276,7 +280,7 @@ exports[`DataSourceForm component should hide info about default values on form 
               >
                 <button
                   aria-label="Remove all"
-                  class="css-1sydsii"
+                  class="css-1bner6n"
                   tabindex="0"
                   type="button"
                 >
@@ -288,7 +292,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                 </button>
                 <button
                   aria-label="Add new Sort By"
-                  class="css-1sydsii"
+                  class="css-1bner6n"
                   tabindex="0"
                   type="button"
                 >
@@ -319,7 +323,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                 >
                   <span
                     class="css-1f43avz-a11yText-A11yText"
-                    id="react-select-19-live-region"
+                    id="react-select-4-live-region"
                   />
                   <span
                     aria-atomic="false"
@@ -333,6 +337,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                   >
                     <div
                       class="css-1q0c0d5-grafana-select-value-container"
+                      data-testid="data-testid Select container"
                     >
                       <div
                         class="css-8nwx1l-singleValue css-0"
@@ -352,7 +357,8 @@ exports[`DataSourceForm component should hide info about default values on form 
                           autocomplete="off"
                           autocorrect="off"
                           class=""
-                          id=":ru:"
+                          data-testid="data-testid Select container-input"
+                          id="_r_u_"
                           role="combobox"
                           spellcheck="false"
                           style="color: inherit; background: 0px; opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -386,7 +392,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                 >
                   <span
                     class="css-1f43avz-a11yText-A11yText"
-                    id="react-select-20-live-region"
+                    id="react-select-5-live-region"
                   />
                   <span
                     aria-atomic="false"
@@ -400,6 +406,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                   >
                     <div
                       class="css-1q0c0d5-grafana-select-value-container"
+                      data-testid="data-testid Select container"
                     >
                       <div
                         class="css-8nwx1l-singleValue css-0"
@@ -419,7 +426,8 @@ exports[`DataSourceForm component should hide info about default values on form 
                           autocomplete="off"
                           autocorrect="off"
                           class=""
-                          id=":r11:"
+                          data-testid="data-testid Select container-input"
+                          id="_r_11_"
                           role="combobox"
                           spellcheck="false"
                           style="color: inherit; background: 0px; opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -453,7 +461,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                 >
                   <span
                     class="css-1f43avz-a11yText-A11yText"
-                    id="react-select-21-live-region"
+                    id="react-select-6-live-region"
                   />
                   <span
                     aria-atomic="false"
@@ -467,6 +475,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                   >
                     <div
                       class="css-1q0c0d5-grafana-select-value-container"
+                      data-testid="data-testid Select container"
                     >
                       <div
                         class="css-8nwx1l-singleValue css-0"
@@ -486,7 +495,8 @@ exports[`DataSourceForm component should hide info about default values on form 
                           autocomplete="off"
                           autocorrect="off"
                           class=""
-                          id=":r14:"
+                          data-testid="data-testid Select container-input"
+                          id="_r_14_"
                           role="combobox"
                           spellcheck="false"
                           style="color: inherit; background: 0px; opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -521,7 +531,7 @@ exports[`DataSourceForm component should hide info about default values on form 
               >
                 <button
                   aria-label="Remove Sort By"
-                  class="css-1sydsii"
+                  class="css-1bner6n"
                   tabindex="0"
                   type="button"
                 >
@@ -584,7 +594,7 @@ exports[`DataSourceForm component should hide info about default values on form 
             >
               <button
                 aria-disabled="false"
-                class="css-17kf1b1-button"
+                class="css-jlgya5-button"
                 type="reset"
               >
                 <span
@@ -606,8 +616,8 @@ exports[`DataSourceForm component should hide info about default values on form 
       >
         <label
           class="css-mw5erd"
-          for=":r0:"
-          id=":r1:"
+          for="_r_0_"
+          id="_r_1_"
         >
           Dimensions
           <svg
@@ -624,7 +634,7 @@ exports[`DataSourceForm component should hide info about default values on form 
           >
             <span
               class="css-1f43avz-a11yText-A11yText"
-              id="react-select-17-live-region"
+              id="react-select-2-live-region"
             />
             <span
               aria-atomic="false"
@@ -638,6 +648,7 @@ exports[`DataSourceForm component should hide info about default values on form 
             >
               <div
                 class="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
+                data-testid="data-testid MultiSelect container"
               >
                 <div
                   class="css-1lltqbu-grafana-select-multi-value-container"
@@ -650,7 +661,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                   </div>
                   <button
                     aria-label="Remove"
-                    class="css-h7sknr-grafana-select-multi-value-remove"
+                    class="css-18ebbtc-grafana-select-multi-value-remove"
                     css="[object Object]"
                     tabindex="0"
                     type="button"
@@ -675,7 +686,8 @@ exports[`DataSourceForm component should hide info about default values on form 
                     autocomplete="off"
                     autocorrect="off"
                     class=""
-                    id=":r0:"
+                    data-testid="data-testid MultiSelect container-input"
+                    id="_r_0_"
                     role="combobox"
                     spellcheck="false"
                     style="color: inherit; background: 0px; opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -708,8 +720,8 @@ exports[`DataSourceForm component should hide info about default values on form 
       >
         <label
           class="css-mw5erd"
-          for=":r7:"
-          id=":r8:"
+          for="_r_7_"
+          id="_r_8_"
         >
           Metrics
           <svg
@@ -726,7 +738,7 @@ exports[`DataSourceForm component should hide info about default values on form 
           >
             <span
               class="css-1f43avz-a11yText-A11yText"
-              id="react-select-18-live-region"
+              id="react-select-3-live-region"
             />
             <span
               aria-atomic="false"
@@ -740,6 +752,7 @@ exports[`DataSourceForm component should hide info about default values on form 
             >
               <div
                 class="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
+                data-testid="data-testid MultiSelect container"
               >
                 <div
                   class="css-1lltqbu-grafana-select-multi-value-container"
@@ -752,7 +765,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                   </div>
                   <button
                     aria-label="Remove"
-                    class="css-h7sknr-grafana-select-multi-value-remove"
+                    class="css-18ebbtc-grafana-select-multi-value-remove"
                     css="[object Object]"
                     tabindex="0"
                     type="button"
@@ -777,7 +790,8 @@ exports[`DataSourceForm component should hide info about default values on form 
                     autocomplete="off"
                     autocorrect="off"
                     class=""
-                    id=":r7:"
+                    data-testid="data-testid MultiSelect container-input"
+                    id="_r_7_"
                     role="combobox"
                     spellcheck="false"
                     style="color: inherit; background: 0px; opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -813,8 +827,8 @@ exports[`DataSourceForm component should hide info about default values on form 
         >
           <label
             class="css-mw5erd"
-            for=":re:"
-            id=":rf:"
+            for="_r_e_"
+            id="_r_f_"
           >
             Filters
             <svg
@@ -831,7 +845,7 @@ exports[`DataSourceForm component should hide info about default values on form 
             >
               <button
                 aria-label="Add new Filter"
-                class="css-1sydsii"
+                class="css-1bner6n"
                 tabindex="0"
                 type="button"
               >
@@ -853,8 +867,8 @@ exports[`DataSourceForm component should hide info about default values on form 
         >
           <label
             class="css-mw5erd"
-            for=":rl:"
-            id=":rm:"
+            for="_r_l_"
+            id="_r_m_"
           >
             Sort Bys
             <svg
@@ -871,7 +885,7 @@ exports[`DataSourceForm component should hide info about default values on form 
             >
               <button
                 aria-label="Remove all"
-                class="css-1sydsii"
+                class="css-1bner6n"
                 tabindex="0"
                 type="button"
               >
@@ -883,7 +897,7 @@ exports[`DataSourceForm component should hide info about default values on form 
               </button>
               <button
                 aria-label="Add new Sort By"
-                class="css-1sydsii"
+                class="css-1bner6n"
                 tabindex="0"
                 type="button"
               >
@@ -914,7 +928,7 @@ exports[`DataSourceForm component should hide info about default values on form 
               >
                 <span
                   class="css-1f43avz-a11yText-A11yText"
-                  id="react-select-19-live-region"
+                  id="react-select-4-live-region"
                 />
                 <span
                   aria-atomic="false"
@@ -928,6 +942,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                 >
                   <div
                     class="css-1q0c0d5-grafana-select-value-container"
+                    data-testid="data-testid Select container"
                   >
                     <div
                       class="css-8nwx1l-singleValue css-0"
@@ -947,7 +962,8 @@ exports[`DataSourceForm component should hide info about default values on form 
                         autocomplete="off"
                         autocorrect="off"
                         class=""
-                        id=":ru:"
+                        data-testid="data-testid Select container-input"
+                        id="_r_u_"
                         role="combobox"
                         spellcheck="false"
                         style="color: inherit; background: 0px; opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -981,7 +997,7 @@ exports[`DataSourceForm component should hide info about default values on form 
               >
                 <span
                   class="css-1f43avz-a11yText-A11yText"
-                  id="react-select-20-live-region"
+                  id="react-select-5-live-region"
                 />
                 <span
                   aria-atomic="false"
@@ -995,6 +1011,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                 >
                   <div
                     class="css-1q0c0d5-grafana-select-value-container"
+                    data-testid="data-testid Select container"
                   >
                     <div
                       class="css-8nwx1l-singleValue css-0"
@@ -1014,7 +1031,8 @@ exports[`DataSourceForm component should hide info about default values on form 
                         autocomplete="off"
                         autocorrect="off"
                         class=""
-                        id=":r11:"
+                        data-testid="data-testid Select container-input"
+                        id="_r_11_"
                         role="combobox"
                         spellcheck="false"
                         style="color: inherit; background: 0px; opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -1048,7 +1066,7 @@ exports[`DataSourceForm component should hide info about default values on form 
               >
                 <span
                   class="css-1f43avz-a11yText-A11yText"
-                  id="react-select-21-live-region"
+                  id="react-select-6-live-region"
                 />
                 <span
                   aria-atomic="false"
@@ -1062,6 +1080,7 @@ exports[`DataSourceForm component should hide info about default values on form 
                 >
                   <div
                     class="css-1q0c0d5-grafana-select-value-container"
+                    data-testid="data-testid Select container"
                   >
                     <div
                       class="css-8nwx1l-singleValue css-0"
@@ -1081,7 +1100,8 @@ exports[`DataSourceForm component should hide info about default values on form 
                         autocomplete="off"
                         autocorrect="off"
                         class=""
-                        id=":r14:"
+                        data-testid="data-testid Select container-input"
+                        id="_r_14_"
                         role="combobox"
                         spellcheck="false"
                         style="color: inherit; background: 0px; opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -1116,7 +1136,7 @@ exports[`DataSourceForm component should hide info about default values on form 
             >
               <button
                 aria-label="Remove Sort By"
-                class="css-1sydsii"
+                class="css-1bner6n"
                 tabindex="0"
                 type="button"
               >
@@ -1179,7 +1199,7 @@ exports[`DataSourceForm component should hide info about default values on form 
           >
             <button
               aria-disabled="false"
-              class="css-17kf1b1-button"
+              class="css-jlgya5-button"
               type="reset"
             >
               <span
@@ -1247,2285 +1267,8 @@ exports[`DataSourceForm component should hide info about default values on form 
 }
 `;
 
-exports[`DataSourceForm component should render editor with default values and info alert 1`] = `
-<div>
-  <div
-    aria-label="Default values"
-    className="css-1855jqy"
-    role="status"
-  >
-    <div
-      className="css-vquydv"
-      data-testid="data-testid Alert info"
-    >
-      <div
-        className="css-1k97qo2"
-      >
-        <div
-          className="css-g3rxkn"
-        >
-          <svg
-            data-testid="info-circle"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          />
-        </div>
-      </div>
-      <div
-        className="css-1oaekt3"
-      >
-        <div
-          className="css-291r04"
-        >
-          <span
-            className="css-b9x8ok"
-          >
-            Default values
-          </span>
-          <div
-            className="css-91zald"
-          >
-            <div
-              className="css-gjl87o-vertical-group"
-              style={
-                {
-                  "height": "100%",
-                  "width": "100%",
-                }
-              }
-            >
-              <div
-                className="css-gxt817-layoutChildrenWrapper"
-              >
-                Default values have been set for the form since the panel was opened for the first time or data for query was not saved.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="css-1shlhi4"
-        />
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-1uqla6q"
-  >
-    <label
-      className="css-mw5erd"
-      htmlFor=":r0:"
-      id=":r1:"
-    >
-      Dimensions
-      <svg
-        data-testid="info-circle"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    </label>
-    <div
-      className="css-1tu59u4"
-    >
-      <div
-        className="css-j1vt9l-input-wrapper css-4hd1qm"
-        onKeyDown={[Function]}
-      >
-        <span
-          className="css-1f43avz-a11yText-A11yText"
-          id="react-select-2-live-region"
-        />
-        <span
-          aria-atomic="false"
-          aria-live="polite"
-          aria-relevant="additions text"
-          className="css-1f43avz-a11yText-A11yText"
-          role="log"
-        />
-        <div
-          className="css-1i88p6p"
-          onMouseDown={[Function]}
-          onTouchEnd={[Function]}
-        >
-          <div
-            className="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
-          >
-            <div
-              className="css-1lltqbu-grafana-select-multi-value-container"
-              css={{}}
-            >
-              <div
-                className="css-1o4wo1x"
-              >
-                cpcode
-              </div>
-              <button
-                aria-label="Remove"
-                className="css-h7sknr-grafana-select-multi-value-remove"
-                css={{}}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseMove={[Function]}
-                onPointerDown={[Function]}
-                onPointerEnter={[Function]}
-                onTouchEnd={[Function]}
-                size="sm"
-                tabIndex={0}
-                type="button"
-              >
-                <svg
-                  data-testid="times"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </button>
-            </div>
-            <div
-              className="css-1eu65zc"
-              data-value=""
-            >
-              <input
-                aria-activedescendant=""
-                aria-autocomplete="list"
-                aria-expanded={false}
-                aria-haspopup={true}
-                autoCapitalize="none"
-                autoComplete="off"
-                autoCorrect="off"
-                className=""
-                disabled={false}
-                id=":r0:"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                role="combobox"
-                spellCheck="false"
-                style={
-                  {
-                    "background": 0,
-                    "border": 0,
-                    "color": "inherit",
-                    "font": "inherit",
-                    "gridArea": "1 / 2",
-                    "label": "input",
-                    "margin": 0,
-                    "minWidth": "2px",
-                    "opacity": 1,
-                    "outline": 0,
-                    "padding": 0,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={0}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            className="css-1ms3s8l-input-suffix"
-          >
-            <svg
-              data-testid="times"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-            <svg
-              data-testid="angle-down"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-1uqla6q"
-  >
-    <label
-      className="css-mw5erd"
-      htmlFor=":r7:"
-      id=":r8:"
-    >
-      Metrics
-      <svg
-        data-testid="info-circle"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    </label>
-    <div
-      className="css-1tu59u4"
-    >
-      <div
-        className="css-j1vt9l-input-wrapper css-4hd1qm"
-        onKeyDown={[Function]}
-      >
-        <span
-          className="css-1f43avz-a11yText-A11yText"
-          id="react-select-3-live-region"
-        />
-        <span
-          aria-atomic="false"
-          aria-live="polite"
-          aria-relevant="additions text"
-          className="css-1f43avz-a11yText-A11yText"
-          role="log"
-        />
-        <div
-          className="css-1i88p6p"
-          onMouseDown={[Function]}
-          onTouchEnd={[Function]}
-        >
-          <div
-            className="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
-          >
-            <div
-              className="css-1lltqbu-grafana-select-multi-value-container"
-              css={{}}
-            >
-              <div
-                className="css-1o4wo1x"
-              >
-                edgeHitsSum
-              </div>
-              <button
-                aria-label="Remove"
-                className="css-h7sknr-grafana-select-multi-value-remove"
-                css={{}}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseMove={[Function]}
-                onPointerDown={[Function]}
-                onPointerEnter={[Function]}
-                onTouchEnd={[Function]}
-                size="sm"
-                tabIndex={0}
-                type="button"
-              >
-                <svg
-                  data-testid="times"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </button>
-            </div>
-            <div
-              className="css-1eu65zc"
-              data-value=""
-            >
-              <input
-                aria-activedescendant=""
-                aria-autocomplete="list"
-                aria-expanded={false}
-                aria-haspopup={true}
-                autoCapitalize="none"
-                autoComplete="off"
-                autoCorrect="off"
-                className=""
-                disabled={false}
-                id=":r7:"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                role="combobox"
-                spellCheck="false"
-                style={
-                  {
-                    "background": 0,
-                    "border": 0,
-                    "color": "inherit",
-                    "font": "inherit",
-                    "gridArea": "1 / 2",
-                    "label": "input",
-                    "margin": 0,
-                    "minWidth": "2px",
-                    "opacity": 1,
-                    "outline": 0,
-                    "padding": 0,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={0}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            className="css-1ms3s8l-input-suffix"
-          >
-            <svg
-              data-testid="times"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-            <svg
-              data-testid="angle-down"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-15ix71y-InlineFieldRow"
-  >
-    <div
-      className="css-1uqla6q"
-    >
-      <label
-        className="css-mw5erd"
-        htmlFor=":re:"
-        id=":rf:"
-      >
-        Filters
-        <svg
-          data-testid="info-circle"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </label>
-      <div
-        className="css-1tu59u4"
-      >
-        <div
-          className="css-1uedr6a"
-        >
-          <button
-            aria-label="Add new Filter"
-            className="css-1sydsii"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseMove={[Function]}
-            onPointerDown={[Function]}
-            onPointerEnter={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <svg
-              data-testid="plus-circle"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-15ix71y-InlineFieldRow"
-  >
-    <div
-      className="css-1uqla6q"
-    >
-      <label
-        className="css-mw5erd"
-        htmlFor=":rl:"
-        id=":rm:"
-      >
-        Sort Bys
-        <svg
-          data-testid="info-circle"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </label>
-      <div
-        className="css-1tu59u4"
-      >
-        <div
-          className="css-1uedr6a"
-        >
-          <button
-            aria-label="Remove all"
-            className="css-1sydsii"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseMove={[Function]}
-            onPointerDown={[Function]}
-            onPointerEnter={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <svg
-              data-testid="trash-alt"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </button>
-          <button
-            aria-label="Add new Sort By"
-            className="css-1sydsii"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseMove={[Function]}
-            onPointerDown={[Function]}
-            onPointerEnter={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <svg
-              data-testid="plus-circle"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-15ix71y-InlineFieldRow"
-  >
-    <div
-      className="css-15ix71y-InlineFieldRow padding-left-20"
-    >
-      <div
-        className="css-1uqla6q"
-      >
-        <div
-          className="css-1tu59u4"
-        >
-          <div
-            className="css-j1vt9l-input-wrapper css-smf98s"
-            onKeyDown={[Function]}
-          >
-            <span
-              className="css-1f43avz-a11yText-A11yText"
-              id="react-select-4-live-region"
-            />
-            <span
-              aria-atomic="false"
-              aria-live="polite"
-              aria-relevant="additions text"
-              className="css-1f43avz-a11yText-A11yText"
-              role="log"
-            />
-            <div
-              className="css-1i88p6p"
-              onMouseDown={[Function]}
-              onTouchEnd={[Function]}
-            >
-              <div
-                className="css-1q0c0d5-grafana-select-value-container"
-              >
-                <div
-                  className="css-8nwx1l-singleValue css-0"
-                >
-                  Metric
-                </div>
-                <div
-                  className="css-1eu65zc"
-                  data-value=""
-                >
-                  <input
-                    aria-activedescendant=""
-                    aria-autocomplete="list"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    autoCorrect="off"
-                    className=""
-                    disabled={false}
-                    id=":ru:"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    role="combobox"
-                    spellCheck="false"
-                    style={
-                      {
-                        "background": 0,
-                        "border": 0,
-                        "color": "inherit",
-                        "font": "inherit",
-                        "gridArea": "1 / 2",
-                        "label": "input",
-                        "margin": 0,
-                        "minWidth": "2px",
-                        "opacity": 1,
-                        "outline": 0,
-                        "padding": 0,
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={0}
-                    type="text"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div
-                className="css-1ms3s8l-input-suffix"
-              >
-                <svg
-                  data-testid="angle-down"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-1uqla6q"
-      >
-        <div
-          className="css-1tu59u4"
-        >
-          <div
-            className="css-j1vt9l-input-wrapper css-smf98s"
-            onKeyDown={[Function]}
-          >
-            <span
-              className="css-1f43avz-a11yText-A11yText"
-              id="react-select-5-live-region"
-            />
-            <span
-              aria-atomic="false"
-              aria-live="polite"
-              aria-relevant="additions text"
-              className="css-1f43avz-a11yText-A11yText"
-              role="log"
-            />
-            <div
-              className="css-1i88p6p"
-              onMouseDown={[Function]}
-              onTouchEnd={[Function]}
-            >
-              <div
-                className="css-1q0c0d5-grafana-select-value-container"
-              >
-                <div
-                  className="css-8nwx1l-singleValue css-0"
-                >
-                  edgeHitsSum
-                </div>
-                <div
-                  className="css-1eu65zc"
-                  data-value=""
-                >
-                  <input
-                    aria-activedescendant=""
-                    aria-autocomplete="list"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    autoCorrect="off"
-                    className=""
-                    disabled={false}
-                    id=":r11:"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    role="combobox"
-                    spellCheck="false"
-                    style={
-                      {
-                        "background": 0,
-                        "border": 0,
-                        "color": "inherit",
-                        "font": "inherit",
-                        "gridArea": "1 / 2",
-                        "label": "input",
-                        "margin": 0,
-                        "minWidth": "2px",
-                        "opacity": 1,
-                        "outline": 0,
-                        "padding": 0,
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={0}
-                    type="text"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div
-                className="css-1ms3s8l-input-suffix"
-              >
-                <svg
-                  data-testid="angle-down"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-1uqla6q"
-      >
-        <div
-          className="css-1tu59u4"
-        >
-          <div
-            className="css-j1vt9l-input-wrapper css-smf98s"
-            onKeyDown={[Function]}
-          >
-            <span
-              className="css-1f43avz-a11yText-A11yText"
-              id="react-select-6-live-region"
-            />
-            <span
-              aria-atomic="false"
-              aria-live="polite"
-              aria-relevant="additions text"
-              className="css-1f43avz-a11yText-A11yText"
-              role="log"
-            />
-            <div
-              className="css-1i88p6p"
-              onMouseDown={[Function]}
-              onTouchEnd={[Function]}
-            >
-              <div
-                className="css-1q0c0d5-grafana-select-value-container"
-              >
-                <div
-                  className="css-8nwx1l-singleValue css-0"
-                >
-                  Descending
-                </div>
-                <div
-                  className="css-1eu65zc"
-                  data-value=""
-                >
-                  <input
-                    aria-activedescendant=""
-                    aria-autocomplete="list"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    autoCorrect="off"
-                    className=""
-                    disabled={false}
-                    id=":r14:"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    role="combobox"
-                    spellCheck="false"
-                    style={
-                      {
-                        "background": 0,
-                        "border": 0,
-                        "color": "inherit",
-                        "font": "inherit",
-                        "gridArea": "1 / 2",
-                        "label": "input",
-                        "margin": 0,
-                        "minWidth": "2px",
-                        "opacity": 1,
-                        "outline": 0,
-                        "padding": 0,
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={0}
-                    type="text"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div
-                className="css-1ms3s8l-input-suffix"
-              >
-                <svg
-                  data-testid="angle-down"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="css-1uqla6q"
-    >
-      <div
-        className="css-1tu59u4"
-      >
-        <div
-          className="css-1uedr6a"
-        >
-          <button
-            aria-label="Remove Sort By"
-            className="css-1sydsii"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseMove={[Function]}
-            onPointerDown={[Function]}
-            onPointerEnter={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <svg
-              data-testid="minus-circle"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-15ix71y-InlineFieldRow"
-  >
-    <div
-      className="css-1uqla6q"
-    >
-      <div
-        className="css-1tu59u4"
-      >
-        <button
-          aria-disabled={false}
-          className="css-12coqpo-button"
-          onClick={[Function]}
-          type="reset"
-        >
-          <span
-            className="css-1riaxdn"
-          >
-            Clear
-          </span>
-        </button>
-      </div>
-    </div>
-    <div
-      className="css-1uqla6q"
-    >
-      <div
-        className="css-1tu59u4"
-      >
-        <button
-          aria-disabled={false}
-          className="css-3l5qae-button"
-          disabled={false}
-          onClick={[Function]}
-          type="submit"
-        >
-          <span
-            className="css-1riaxdn"
-          >
-            Apply
-          </span>
-        </button>
-      </div>
-    </div>
-    <div
-      className="css-1uqla6q"
-    >
-      <div
-        className="css-1tu59u4"
-      >
-        <button
-          aria-disabled={false}
-          className="css-17kf1b1-button"
-          onClick={[Function]}
-          type="reset"
-        >
-          <span
-            className="css-1riaxdn"
-          >
-            Restore defaults
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
+exports[`DataSourceForm component should render editor with default values and info alert 1`] = `null`;
 
-exports[`DataSourceForm component should render existing edit editor 1`] = `
-<div>
-  <div
-    className="css-1uqla6q"
-  >
-    <label
-      className="css-mw5erd"
-      htmlFor=":r36:"
-      id=":r37:"
-    >
-      Dimensions
-      <svg
-        data-testid="info-circle"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    </label>
-    <div
-      className="css-1tu59u4"
-    >
-      <div
-        className="css-j1vt9l-input-wrapper css-4hd1qm"
-        onKeyDown={[Function]}
-      >
-        <span
-          className="css-1f43avz-a11yText-A11yText"
-          id="react-select-12-live-region"
-        />
-        <span
-          aria-atomic="false"
-          aria-live="polite"
-          aria-relevant="additions text"
-          className="css-1f43avz-a11yText-A11yText"
-          role="log"
-        />
-        <div
-          className="css-1i88p6p"
-          onMouseDown={[Function]}
-          onTouchEnd={[Function]}
-        >
-          <div
-            className="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
-          >
-            <div
-              className="css-1lltqbu-grafana-select-multi-value-container"
-              css={{}}
-            >
-              <div
-                className="css-1o4wo1x"
-              >
-                cpcode
-              </div>
-              <button
-                aria-label="Remove"
-                className="css-h7sknr-grafana-select-multi-value-remove"
-                css={{}}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseMove={[Function]}
-                onPointerDown={[Function]}
-                onPointerEnter={[Function]}
-                onTouchEnd={[Function]}
-                size="sm"
-                tabIndex={0}
-                type="button"
-              >
-                <svg
-                  data-testid="times"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </button>
-            </div>
-            <div
-              className="css-1eu65zc"
-              data-value=""
-            >
-              <input
-                aria-activedescendant=""
-                aria-autocomplete="list"
-                aria-expanded={false}
-                aria-haspopup={true}
-                autoCapitalize="none"
-                autoComplete="off"
-                autoCorrect="off"
-                className=""
-                disabled={false}
-                id=":r36:"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                role="combobox"
-                spellCheck="false"
-                style={
-                  {
-                    "background": 0,
-                    "border": 0,
-                    "color": "inherit",
-                    "font": "inherit",
-                    "gridArea": "1 / 2",
-                    "label": "input",
-                    "margin": 0,
-                    "minWidth": "2px",
-                    "opacity": 1,
-                    "outline": 0,
-                    "padding": 0,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={0}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            className="css-1ms3s8l-input-suffix"
-          >
-            <svg
-              data-testid="times"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-            <svg
-              data-testid="angle-down"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-1uqla6q"
-  >
-    <label
-      className="css-mw5erd"
-      htmlFor=":r3d:"
-      id=":r3e:"
-    >
-      Metrics
-      <svg
-        data-testid="info-circle"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    </label>
-    <div
-      className="css-1tu59u4"
-    >
-      <div
-        className="css-j1vt9l-input-wrapper css-4hd1qm"
-        onKeyDown={[Function]}
-      >
-        <span
-          className="css-1f43avz-a11yText-A11yText"
-          id="react-select-13-live-region"
-        />
-        <span
-          aria-atomic="false"
-          aria-live="polite"
-          aria-relevant="additions text"
-          className="css-1f43avz-a11yText-A11yText"
-          role="log"
-        />
-        <div
-          className="css-1i88p6p"
-          onMouseDown={[Function]}
-          onTouchEnd={[Function]}
-        >
-          <div
-            className="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
-          >
-            <div
-              className="css-1lltqbu-grafana-select-multi-value-container"
-              css={{}}
-            >
-              <div
-                className="css-1o4wo1x"
-              >
-                edgeHitsSum
-              </div>
-              <button
-                aria-label="Remove"
-                className="css-h7sknr-grafana-select-multi-value-remove"
-                css={{}}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseMove={[Function]}
-                onPointerDown={[Function]}
-                onPointerEnter={[Function]}
-                onTouchEnd={[Function]}
-                size="sm"
-                tabIndex={0}
-                type="button"
-              >
-                <svg
-                  data-testid="times"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </button>
-            </div>
-            <div
-              className="css-1eu65zc"
-              data-value=""
-            >
-              <input
-                aria-activedescendant=""
-                aria-autocomplete="list"
-                aria-expanded={false}
-                aria-haspopup={true}
-                autoCapitalize="none"
-                autoComplete="off"
-                autoCorrect="off"
-                className=""
-                disabled={false}
-                id=":r3d:"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                role="combobox"
-                spellCheck="false"
-                style={
-                  {
-                    "background": 0,
-                    "border": 0,
-                    "color": "inherit",
-                    "font": "inherit",
-                    "gridArea": "1 / 2",
-                    "label": "input",
-                    "margin": 0,
-                    "minWidth": "2px",
-                    "opacity": 1,
-                    "outline": 0,
-                    "padding": 0,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={0}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            className="css-1ms3s8l-input-suffix"
-          >
-            <svg
-              data-testid="times"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-            <svg
-              data-testid="angle-down"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-15ix71y-InlineFieldRow"
-  >
-    <div
-      className="css-1uqla6q"
-    >
-      <label
-        className="css-mw5erd"
-        htmlFor=":r3k:"
-        id=":r3l:"
-      >
-        Filters
-        <svg
-          data-testid="info-circle"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </label>
-      <div
-        className="css-1tu59u4"
-      >
-        <div
-          className="css-1uedr6a"
-        >
-          <button
-            aria-label="Add new Filter"
-            className="css-1sydsii"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseMove={[Function]}
-            onPointerDown={[Function]}
-            onPointerEnter={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <svg
-              data-testid="plus-circle"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-15ix71y-InlineFieldRow"
-  >
-    <div
-      className="css-1uqla6q"
-    >
-      <label
-        className="css-mw5erd"
-        htmlFor=":r3r:"
-        id=":r3s:"
-      >
-        Sort Bys
-        <svg
-          data-testid="info-circle"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </label>
-      <div
-        className="css-1tu59u4"
-      >
-        <div
-          className="css-1uedr6a"
-        >
-          <button
-            aria-label="Remove all"
-            className="css-1sydsii"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseMove={[Function]}
-            onPointerDown={[Function]}
-            onPointerEnter={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <svg
-              data-testid="trash-alt"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </button>
-          <button
-            aria-label="Add new Sort By"
-            className="css-1sydsii"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseMove={[Function]}
-            onPointerDown={[Function]}
-            onPointerEnter={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <svg
-              data-testid="plus-circle"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-15ix71y-InlineFieldRow"
-  >
-    <div
-      className="css-15ix71y-InlineFieldRow padding-left-20"
-    >
-      <div
-        className="css-1uqla6q"
-      >
-        <div
-          className="css-1tu59u4"
-        >
-          <div
-            className="css-j1vt9l-input-wrapper css-smf98s"
-            onKeyDown={[Function]}
-          >
-            <span
-              className="css-1f43avz-a11yText-A11yText"
-              id="react-select-14-live-region"
-            />
-            <span
-              aria-atomic="false"
-              aria-live="polite"
-              aria-relevant="additions text"
-              className="css-1f43avz-a11yText-A11yText"
-              role="log"
-            />
-            <div
-              className="css-1i88p6p"
-              onMouseDown={[Function]}
-              onTouchEnd={[Function]}
-            >
-              <div
-                className="css-1q0c0d5-grafana-select-value-container"
-              >
-                <div
-                  className="css-8nwx1l-singleValue css-0"
-                >
-                  Metric
-                </div>
-                <div
-                  className="css-1eu65zc"
-                  data-value=""
-                >
-                  <input
-                    aria-activedescendant=""
-                    aria-autocomplete="list"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    autoCorrect="off"
-                    className=""
-                    disabled={false}
-                    id=":r44:"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    role="combobox"
-                    spellCheck="false"
-                    style={
-                      {
-                        "background": 0,
-                        "border": 0,
-                        "color": "inherit",
-                        "font": "inherit",
-                        "gridArea": "1 / 2",
-                        "label": "input",
-                        "margin": 0,
-                        "minWidth": "2px",
-                        "opacity": 1,
-                        "outline": 0,
-                        "padding": 0,
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={0}
-                    type="text"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div
-                className="css-1ms3s8l-input-suffix"
-              >
-                <svg
-                  data-testid="angle-down"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-1uqla6q"
-      >
-        <div
-          className="css-1tu59u4"
-        >
-          <div
-            className="css-j1vt9l-input-wrapper css-smf98s"
-            onKeyDown={[Function]}
-          >
-            <span
-              className="css-1f43avz-a11yText-A11yText"
-              id="react-select-15-live-region"
-            />
-            <span
-              aria-atomic="false"
-              aria-live="polite"
-              aria-relevant="additions text"
-              className="css-1f43avz-a11yText-A11yText"
-              role="log"
-            />
-            <div
-              className="css-1i88p6p"
-              onMouseDown={[Function]}
-              onTouchEnd={[Function]}
-            >
-              <div
-                className="css-1q0c0d5-grafana-select-value-container"
-              >
-                <div
-                  className="css-8nwx1l-singleValue css-0"
-                >
-                  edgeHitsSum
-                </div>
-                <div
-                  className="css-1eu65zc"
-                  data-value=""
-                >
-                  <input
-                    aria-activedescendant=""
-                    aria-autocomplete="list"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    autoCorrect="off"
-                    className=""
-                    disabled={false}
-                    id=":r47:"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    role="combobox"
-                    spellCheck="false"
-                    style={
-                      {
-                        "background": 0,
-                        "border": 0,
-                        "color": "inherit",
-                        "font": "inherit",
-                        "gridArea": "1 / 2",
-                        "label": "input",
-                        "margin": 0,
-                        "minWidth": "2px",
-                        "opacity": 1,
-                        "outline": 0,
-                        "padding": 0,
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={0}
-                    type="text"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div
-                className="css-1ms3s8l-input-suffix"
-              >
-                <svg
-                  data-testid="angle-down"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-1uqla6q"
-      >
-        <div
-          className="css-1tu59u4"
-        >
-          <div
-            className="css-j1vt9l-input-wrapper css-smf98s"
-            onKeyDown={[Function]}
-          >
-            <span
-              className="css-1f43avz-a11yText-A11yText"
-              id="react-select-16-live-region"
-            />
-            <span
-              aria-atomic="false"
-              aria-live="polite"
-              aria-relevant="additions text"
-              className="css-1f43avz-a11yText-A11yText"
-              role="log"
-            />
-            <div
-              className="css-1i88p6p"
-              onMouseDown={[Function]}
-              onTouchEnd={[Function]}
-            >
-              <div
-                className="css-1q0c0d5-grafana-select-value-container"
-              >
-                <div
-                  className="css-8nwx1l-singleValue css-0"
-                >
-                  Descending
-                </div>
-                <div
-                  className="css-1eu65zc"
-                  data-value=""
-                >
-                  <input
-                    aria-activedescendant=""
-                    aria-autocomplete="list"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    autoCorrect="off"
-                    className=""
-                    disabled={false}
-                    id=":r4a:"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    role="combobox"
-                    spellCheck="false"
-                    style={
-                      {
-                        "background": 0,
-                        "border": 0,
-                        "color": "inherit",
-                        "font": "inherit",
-                        "gridArea": "1 / 2",
-                        "label": "input",
-                        "margin": 0,
-                        "minWidth": "2px",
-                        "opacity": 1,
-                        "outline": 0,
-                        "padding": 0,
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={0}
-                    type="text"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div
-                className="css-1ms3s8l-input-suffix"
-              >
-                <svg
-                  data-testid="angle-down"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="css-1uqla6q"
-    >
-      <div
-        className="css-1tu59u4"
-      >
-        <div
-          className="css-1uedr6a"
-        >
-          <button
-            aria-label="Remove Sort By"
-            className="css-1sydsii"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseMove={[Function]}
-            onPointerDown={[Function]}
-            onPointerEnter={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <svg
-              data-testid="minus-circle"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-15ix71y-InlineFieldRow"
-  >
-    <div
-      className="css-1uqla6q"
-    >
-      <div
-        className="css-1tu59u4"
-      >
-        <button
-          aria-disabled={false}
-          className="css-12coqpo-button"
-          onClick={[Function]}
-          type="reset"
-        >
-          <span
-            className="css-1riaxdn"
-          >
-            Clear
-          </span>
-        </button>
-      </div>
-    </div>
-    <div
-      className="css-1uqla6q"
-    >
-      <div
-        className="css-1tu59u4"
-      >
-        <button
-          aria-disabled={false}
-          className="css-3l5qae-button"
-          disabled={false}
-          onClick={[Function]}
-          type="submit"
-        >
-          <span
-            className="css-1riaxdn"
-          >
-            Apply
-          </span>
-        </button>
-      </div>
-    </div>
-    <div
-      className="css-1uqla6q"
-    >
-      <div
-        className="css-1tu59u4"
-      >
-        <button
-          aria-disabled={false}
-          className="css-17kf1b1-button"
-          onClick={[Function]}
-          type="reset"
-        >
-          <span
-            className="css-1riaxdn"
-          >
-            Restore defaults
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
+exports[`DataSourceForm component should render existing edit editor 1`] = `null`;
 
-exports[`DataSourceForm component should render new empty editor 1`] = `
-<div>
-  <div
-    className="css-1uqla6q"
-  >
-    <label
-      className="css-mw5erd"
-      htmlFor=":r1l:"
-      id=":r1m:"
-    >
-      Dimensions
-      <svg
-        data-testid="info-circle"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    </label>
-    <div
-      className="css-1tu59u4"
-    >
-      <div
-        className="css-j1vt9l-input-wrapper css-4hd1qm"
-        onKeyDown={[Function]}
-      >
-        <span
-          className="css-1f43avz-a11yText-A11yText"
-          id="react-select-7-live-region"
-        />
-        <span
-          aria-atomic="false"
-          aria-live="polite"
-          aria-relevant="additions text"
-          className="css-1f43avz-a11yText-A11yText"
-          role="log"
-        />
-        <div
-          className="css-1i88p6p"
-          onMouseDown={[Function]}
-          onTouchEnd={[Function]}
-        >
-          <div
-            className="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
-          >
-            <div
-              className="css-1n8tjau-placeholder"
-              id="react-select-7-placeholder"
-            >
-              Choose
-            </div>
-            <div
-              className="css-1eu65zc"
-              data-value=""
-            >
-              <input
-                aria-activedescendant=""
-                aria-autocomplete="list"
-                aria-describedby="react-select-7-placeholder"
-                aria-expanded={false}
-                aria-haspopup={true}
-                autoCapitalize="none"
-                autoComplete="off"
-                autoCorrect="off"
-                className=""
-                disabled={false}
-                id=":r1l:"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                role="combobox"
-                spellCheck="false"
-                style={
-                  {
-                    "background": 0,
-                    "border": 0,
-                    "color": "inherit",
-                    "font": "inherit",
-                    "gridArea": "1 / 2",
-                    "label": "input",
-                    "margin": 0,
-                    "minWidth": "2px",
-                    "opacity": 1,
-                    "outline": 0,
-                    "padding": 0,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={0}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            className="css-1ms3s8l-input-suffix"
-          >
-            <svg
-              data-testid="angle-down"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-1uqla6q"
-  >
-    <label
-      className="css-mw5erd"
-      htmlFor=":r1q:"
-      id=":r1r:"
-    >
-      Metrics
-      <svg
-        data-testid="info-circle"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    </label>
-    <div
-      className="css-1tu59u4"
-    >
-      <div
-        className="css-j1vt9l-input-wrapper css-4hd1qm"
-        onKeyDown={[Function]}
-      >
-        <span
-          className="css-1f43avz-a11yText-A11yText"
-          id="react-select-8-live-region"
-        />
-        <span
-          aria-atomic="false"
-          aria-live="polite"
-          aria-relevant="additions text"
-          className="css-1f43avz-a11yText-A11yText"
-          role="log"
-        />
-        <div
-          className="css-1i88p6p"
-          onMouseDown={[Function]}
-          onTouchEnd={[Function]}
-        >
-          <div
-            className="css-k7gduc-grafana-select-value-container-grafana-select-value-container-multi"
-          >
-            <div
-              className="css-1n8tjau-placeholder"
-              id="react-select-8-placeholder"
-            >
-              Choose
-            </div>
-            <div
-              className="css-1eu65zc"
-              data-value=""
-            >
-              <input
-                aria-activedescendant=""
-                aria-autocomplete="list"
-                aria-describedby="react-select-8-placeholder"
-                aria-expanded={false}
-                aria-haspopup={true}
-                autoCapitalize="none"
-                autoComplete="off"
-                autoCorrect="off"
-                className=""
-                disabled={false}
-                id=":r1q:"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                role="combobox"
-                spellCheck="false"
-                style={
-                  {
-                    "background": 0,
-                    "border": 0,
-                    "color": "inherit",
-                    "font": "inherit",
-                    "gridArea": "1 / 2",
-                    "label": "input",
-                    "margin": 0,
-                    "minWidth": "2px",
-                    "opacity": 1,
-                    "outline": 0,
-                    "padding": 0,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={0}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            className="css-1ms3s8l-input-suffix"
-          >
-            <svg
-              data-testid="angle-down"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-15ix71y-InlineFieldRow"
-  >
-    <div
-      className="css-1uqla6q"
-    >
-      <label
-        className="css-mw5erd"
-        htmlFor=":r1v:"
-        id=":r20:"
-      >
-        Filters
-        <svg
-          data-testid="info-circle"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </label>
-      <div
-        className="css-1tu59u4"
-      >
-        <div
-          className="css-1uedr6a"
-        >
-          <button
-            aria-label="Add new Filter"
-            className="css-1sydsii"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseMove={[Function]}
-            onPointerDown={[Function]}
-            onPointerEnter={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <svg
-              data-testid="plus-circle"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-15ix71y-InlineFieldRow"
-  >
-    <div
-      className="css-1uqla6q"
-    >
-      <label
-        className="css-mw5erd"
-        htmlFor=":r26:"
-        id=":r27:"
-      >
-        Sort Bys
-        <svg
-          data-testid="info-circle"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </label>
-      <div
-        className="css-1tu59u4"
-      >
-        <div
-          className="css-1uedr6a"
-        >
-          <button
-            aria-label="Remove all"
-            className="css-1sydsii"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseMove={[Function]}
-            onPointerDown={[Function]}
-            onPointerEnter={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <svg
-              data-testid="trash-alt"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </button>
-          <button
-            aria-label="Add new Sort By"
-            className="css-1sydsii"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseMove={[Function]}
-            onPointerDown={[Function]}
-            onPointerEnter={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <svg
-              data-testid="plus-circle"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-15ix71y-InlineFieldRow"
-  >
-    <div
-      className="css-15ix71y-InlineFieldRow padding-left-20"
-    >
-      <div
-        className="css-1uqla6q"
-      >
-        <div
-          className="css-1tu59u4"
-        >
-          <div
-            className="css-j1vt9l-input-wrapper css-smf98s"
-            onKeyDown={[Function]}
-          >
-            <span
-              className="css-1f43avz-a11yText-A11yText"
-              id="react-select-9-live-region"
-            />
-            <span
-              aria-atomic="false"
-              aria-live="polite"
-              aria-relevant="additions text"
-              className="css-1f43avz-a11yText-A11yText"
-              role="log"
-            />
-            <div
-              className="css-1i88p6p"
-              onMouseDown={[Function]}
-              onTouchEnd={[Function]}
-            >
-              <div
-                className="css-1q0c0d5-grafana-select-value-container"
-              >
-                <div
-                  className="css-8nwx1l-singleValue css-0"
-                >
-                  Metric
-                </div>
-                <div
-                  className="css-1eu65zc"
-                  data-value=""
-                >
-                  <input
-                    aria-activedescendant=""
-                    aria-autocomplete="list"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    autoCorrect="off"
-                    className=""
-                    disabled={false}
-                    id=":r2f:"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    role="combobox"
-                    spellCheck="false"
-                    style={
-                      {
-                        "background": 0,
-                        "border": 0,
-                        "color": "inherit",
-                        "font": "inherit",
-                        "gridArea": "1 / 2",
-                        "label": "input",
-                        "margin": 0,
-                        "minWidth": "2px",
-                        "opacity": 1,
-                        "outline": 0,
-                        "padding": 0,
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={0}
-                    type="text"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div
-                className="css-1ms3s8l-input-suffix"
-              >
-                <svg
-                  data-testid="angle-down"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-1uqla6q"
-      >
-        <div
-          className="css-1tu59u4"
-        >
-          <div
-            className="css-j1vt9l-input-wrapper css-smf98s"
-            onKeyDown={[Function]}
-          >
-            <span
-              className="css-1f43avz-a11yText-A11yText"
-              id="react-select-10-live-region"
-            />
-            <span
-              aria-atomic="false"
-              aria-live="polite"
-              aria-relevant="additions text"
-              className="css-1f43avz-a11yText-A11yText"
-              role="log"
-            />
-            <div
-              className="css-1i88p6p"
-              onMouseDown={[Function]}
-              onTouchEnd={[Function]}
-            >
-              <div
-                className="css-1q0c0d5-grafana-select-value-container"
-              >
-                <div
-                  className="css-8nwx1l-singleValue css-0"
-                >
-                  edgeHitsSum
-                </div>
-                <div
-                  className="css-1eu65zc"
-                  data-value=""
-                >
-                  <input
-                    aria-activedescendant=""
-                    aria-autocomplete="list"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    autoCorrect="off"
-                    className=""
-                    disabled={false}
-                    id=":r2i:"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    role="combobox"
-                    spellCheck="false"
-                    style={
-                      {
-                        "background": 0,
-                        "border": 0,
-                        "color": "inherit",
-                        "font": "inherit",
-                        "gridArea": "1 / 2",
-                        "label": "input",
-                        "margin": 0,
-                        "minWidth": "2px",
-                        "opacity": 1,
-                        "outline": 0,
-                        "padding": 0,
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={0}
-                    type="text"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div
-                className="css-1ms3s8l-input-suffix"
-              >
-                <svg
-                  data-testid="angle-down"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-1uqla6q"
-      >
-        <div
-          className="css-1tu59u4"
-        >
-          <div
-            className="css-j1vt9l-input-wrapper css-smf98s"
-            onKeyDown={[Function]}
-          >
-            <span
-              className="css-1f43avz-a11yText-A11yText"
-              id="react-select-11-live-region"
-            />
-            <span
-              aria-atomic="false"
-              aria-live="polite"
-              aria-relevant="additions text"
-              className="css-1f43avz-a11yText-A11yText"
-              role="log"
-            />
-            <div
-              className="css-1i88p6p"
-              onMouseDown={[Function]}
-              onTouchEnd={[Function]}
-            >
-              <div
-                className="css-1q0c0d5-grafana-select-value-container"
-              >
-                <div
-                  className="css-8nwx1l-singleValue css-0"
-                >
-                  Descending
-                </div>
-                <div
-                  className="css-1eu65zc"
-                  data-value=""
-                >
-                  <input
-                    aria-activedescendant=""
-                    aria-autocomplete="list"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    autoCorrect="off"
-                    className=""
-                    disabled={false}
-                    id=":r2l:"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    role="combobox"
-                    spellCheck="false"
-                    style={
-                      {
-                        "background": 0,
-                        "border": 0,
-                        "color": "inherit",
-                        "font": "inherit",
-                        "gridArea": "1 / 2",
-                        "label": "input",
-                        "margin": 0,
-                        "minWidth": "2px",
-                        "opacity": 1,
-                        "outline": 0,
-                        "padding": 0,
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={0}
-                    type="text"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div
-                className="css-1ms3s8l-input-suffix"
-              >
-                <svg
-                  data-testid="angle-down"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="css-1uqla6q"
-    >
-      <div
-        className="css-1tu59u4"
-      >
-        <div
-          className="css-1uedr6a"
-        >
-          <button
-            aria-label="Remove Sort By"
-            className="css-1sydsii"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseMove={[Function]}
-            onPointerDown={[Function]}
-            onPointerEnter={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <svg
-              data-testid="minus-circle"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="css-15ix71y-InlineFieldRow"
-  >
-    <div
-      className="css-1uqla6q"
-    >
-      <div
-        className="css-1tu59u4"
-      >
-        <button
-          aria-disabled={false}
-          className="css-12coqpo-button"
-          onClick={[Function]}
-          type="reset"
-        >
-          <span
-            className="css-1riaxdn"
-          >
-            Clear
-          </span>
-        </button>
-      </div>
-    </div>
-    <div
-      className="css-1uqla6q"
-    >
-      <div
-        className="css-1tu59u4"
-      >
-        <button
-          aria-disabled={false}
-          className="css-1jgf4gy-button"
-          disabled={true}
-          type="submit"
-        >
-          <span
-            className="css-1riaxdn"
-          >
-            Apply
-          </span>
-        </button>
-      </div>
-    </div>
-    <div
-      className="css-1uqla6q"
-    >
-      <div
-        className="css-1tu59u4"
-      >
-        <button
-          aria-disabled={false}
-          className="css-17kf1b1-button"
-          onClick={[Function]}
-          type="reset"
-        >
-          <span
-            className="css-1riaxdn"
-          >
-            Restore defaults
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
+exports[`DataSourceForm component should render new empty editor 1`] = `null`;

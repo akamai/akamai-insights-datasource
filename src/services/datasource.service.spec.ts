@@ -31,7 +31,7 @@ describe('DatasourceService', () => {
       fetch: () => of({ data: [ 'test ' ] })
     }));
 
-    DatasourceService.discoveryApi(1, '/reporting-reports-executor-api/v2/reports/delivery/traffic')
+    DatasourceService.discoveryApi(service, '/reporting-reports-executor-api/v2/reports/delivery/traffic')
       .subscribe({
         next: data => {
           expect(data).toEqual([ 'test ' ]);
@@ -46,7 +46,7 @@ describe('DatasourceService', () => {
       fetch: () => of({ data: { reports: [] } })
     }));
 
-    DatasourceService.reportsApi(1)
+    DatasourceService.reportsApi(service)
       .subscribe({
         next: data => {
           expect(data).toEqual({ reports: [] } );
@@ -73,7 +73,7 @@ describe('DatasourceService', () => {
         // @ts-ignore
         getBackendSrv.mockImplementation(() => ({
           fetch: (options: BackendSrvRequest) => {
-            if (options.url.includes('discovery')) {
+            if (!options?.data?.body) {
               return of({ data: discoveryTraffic });
             }
 
@@ -130,7 +130,7 @@ describe('DatasourceService', () => {
         // @ts-ignore
         getBackendSrv.mockImplementation(() => ({
           fetch: (options: BackendSrvRequest) => {
-            if (options.url.includes('discovery')) {
+            if (!options?.data?.body) {
               return of({ data: discoveryTraffic });
             }
 
@@ -271,7 +271,7 @@ describe('DatasourceService', () => {
         // @ts-ignore
         getBackendSrv.mockImplementation(() => ({
           fetch: (options: BackendSrvRequest) => {
-            if (options.url.includes('discovery')) {
+            if (!options?.data?.body) {
               return of({ data: discoveryTraffic });
             }
 
@@ -387,4 +387,3 @@ describe('DatasourceService', () => {
     });
   });
 });
-

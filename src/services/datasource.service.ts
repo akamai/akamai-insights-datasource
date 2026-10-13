@@ -67,7 +67,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
     this.variables = new QueryVariableSupport(this) as any;
   }
 
-  static discoveryApi(id: number, targetUrl: string): Observable<DiscoveryApiModel> {
+  static discoveryApi(datasource: DatasourceService, targetUrl: string): Observable<DiscoveryApiModel> {
     if (DatasourceService.cachedDiscoveryAPIMap.has(targetUrl)) {
       return of(DatasourceService.cachedDiscoveryAPIMap.get(targetUrl) as DiscoveryApiModel)
         .pipe(
@@ -75,19 +75,34 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
         );
     }
 
-    return DatasourceService.makeBackendSrvCall<DiscoveryApiModel>({
-      url: `${DatasourceService.getBackendDataSourceUrl(id)}/${DatasourceService.DISCOVERY}`,
+    return DatasourceService.makeBackendSrvCall<DiscoveryApiModel | { data: DiscoveryApiModel }>({
+      url: datasource.buildResourcesDatasourceUrl(DatasourceService.DISCOVERY),
       params: {
         targetUrl
       }
     }).pipe(
+      map(data => {
+        if (Array.isArray(data)) {
+          return data as unknown as DiscoveryApiModel;
+        }
+
+        if ('dimensions' in data) {
+          return data as DiscoveryApiModel;
+        }
+
+        if ('data' in data) {
+          return data.data as DiscoveryApiModel;
+        }
+
+        return data as DiscoveryApiModel;
+      }),
       tap(data => DatasourceService.cachedDiscoveryAPIMap.set(targetUrl, data))
     );
   }
 
-  static reportsApi(id: number): Observable<ReportsApiModel> {
+  static reportsApi(datasource: DatasourceService): Observable<ReportsApiModel> {
     return DatasourceService.makeBackendSrvCall({
-      url: `${DatasourceService.getBackendDataSourceUrl(id)}/${DatasourceService.REPORTS}`
+      url: datasource.buildResourcesDatasourceUrl(DatasourceService.REPORTS)
     });
   }
 
@@ -99,12 +114,8 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
       ) as any as Observable<T>;
   }
 
-  private static getBackendDataSourceUrl(id: number): string {
-    return `/api/datasources/${id}/resources`;
-  }
-
   async testDatasource(): Promise<TestDataSourceResponse> {
-    const source$ = DatasourceService.reportsApi(this.id!)
+    const source$ = DatasourceService.reportsApi(this)
       .pipe(
         map(data => this.createTestDataSourceResponse(data ? TestDataSourceResponseStatus.Success : TestDataSourceResponseStatus.Error)),
         catchError(() => of(this.createTestDataSourceResponse(TestDataSourceResponseStatus.Error)))
@@ -132,7 +143,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
       const fetchObservable = (getBackendSrv()
         .fetch<Record<string, any>>({
           method: 'POST',
-          url: `${DatasourceService.getBackendDataSourceUrl(this.id!)}/${DatasourceService.DATA}`,
+          url: this.buildResourcesDatasourceUrl(DatasourceService.DATA),
           data: {
             body: interpolatedBody,
             from: from.toISOString(),
@@ -146,7 +157,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
 
       return forkJoin([
         fetchObservable,
-        DatasourceService.discoveryApi(this.id as number, reportLink || '') as any as Observable<DiscoveryApiModel>
+        DatasourceService.discoveryApi(this, reportLink || '') as any as Observable<DiscoveryApiModel>
       ]).pipe(
         map(([ fetchResponse, discoveryApiModel ]: [FetchResponse<Record<string, any>>, DiscoveryApiModel]) => ({
           data: [ DatasourceService.convertToDataFrame(fetchResponse.data?.data, discoveryApiModel, refId, dimensions) ]
@@ -161,7 +172,7 @@ export class DatasourceService extends DataSourceWithBackend<MyQuery, MyDataSour
   }
 
   private static convertToDataFrame(data: Record<string, any>[], { dimensions, metrics }: DiscoveryApiModel, refId: string, selectedDimensions?: string[]): DataFrame {
-    const fieldsData = [ ...dimensions, ...metrics ];
+    const fieldsData = [ ...(dimensions ?? []), ...(metrics ?? []) ];
     const keys = uniq((data ?? []).flatMap(row => Object.keys(row)));
 
     const frame = createDataFrame({

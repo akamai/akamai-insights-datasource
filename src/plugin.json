@@ -5,6 +5,7 @@
   "id": "akamai-insights-datasource",
   "metrics": true,
   "backend": true,
+  "alerting": true,
   "executable": "gpx_akamai-insights-datasource-plugin",
   "info": {
     "description": "Akamai insights data",
