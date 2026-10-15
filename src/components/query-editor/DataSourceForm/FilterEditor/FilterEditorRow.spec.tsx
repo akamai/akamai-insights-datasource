@@ -1,9 +1,9 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 import { FilterEditorRow } from './FilterEditorRow';
 import { discoveryTrafficModel } from '../../../../test/mocks/mock-discovery-api-model';
 import { mockDimensionsOptions, mockMetricsOptions } from '../../../../test/mocks/mock-selectable-values';
+import renderer from '../../../../test/renderer';
 import { dimensionOperatorOptions, FilterFormModel, filterTypeOptions, metricOperatorOptions } from '../FormTypes';
 
 describe('FilterEditorRow component', () => {
