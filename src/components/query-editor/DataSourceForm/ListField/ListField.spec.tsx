@@ -1,8 +1,8 @@
 import { Input } from '@grafana/ui';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 import { ListField } from './ListField';
+import renderer from '../../../../test/renderer';
 
 describe('ListField component', () => {
   it('should render list with custom row Editor', () => {

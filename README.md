@@ -136,6 +136,13 @@ See [Troubleshooting](https://grafana.com/docs/grafana/latest/troubleshooting/) 
 
 You can now use the plugin.
 
+The credential host must be the Akamai API hostname issued with your credentials
+(for example `akab-xxxx.luna.akamaiapis.net`, optionally prefixed with `https://`),
+without a path, query, user information, or a port other than 443. All API
+requests use HTTPS to that exact configured host. Report links must be paths
+under `/reporting-api/v2/reports` or `/reporting-reports-executor-api/v2/reports`;
+absolute URLs, query strings, encoded path segments, and redirects are rejected.
+
 ## Use Akamai Insights Datasource Plugin
 1. In Grafana, create a new dashboard and add a visualization.
 2. Select a previously created data source.
@@ -165,5 +172,4 @@ Dashboard examples placed in the 'examples' directory can be imported into Grafa
   ![Import](static/examples-import.jpg)
 * Select instance of Akamai Insights Datasource Plugin
 * Click import
-
 

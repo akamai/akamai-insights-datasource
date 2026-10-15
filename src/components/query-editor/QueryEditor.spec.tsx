@@ -1,10 +1,10 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { of } from 'rxjs';
 
 import { QueryEditor } from './QueryEditor';
 import { DatasourceService } from '../../services/datasource.service';
 import { mockReportsApi } from '../../test/mocks/mock-reports-api';
+import renderer from '../../test/renderer';
 import { MyQuery } from '../../types/types';
 
 const datasource: any = {

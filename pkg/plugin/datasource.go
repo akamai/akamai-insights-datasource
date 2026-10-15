@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/datasource"
@@ -95,7 +96,7 @@ func (td *AkamaiEdgeDnsDatasource) CheckHealth(ctx context.Context, req *backend
 		ClientToken:  req.PluginContext.DataSourceInstanceSettings.DecryptedSecureJSONData["clientToken"],
 	}
 
-	_, err := reportApiQuery(dataSourceSettings)
+	_, err := reportApiQuery(ctx, dataSourceSettings)
 	if err != nil {
 		return &backend.CheckHealthResult{
 			Status:  backend.HealthStatusError,
@@ -153,7 +154,7 @@ func (td *AkamaiEdgeDnsDatasource) QueryData(ctx context.Context, req *backend.Q
 		from := query.TimeRange.From.UTC().Format(time.RFC3339Nano)
 		to := query.TimeRange.To.UTC().Format(time.RFC3339Nano)
 
-		openApiResponse, errorResponse := dataQuery(dataSourceSettings, queryModel.ReportLink, bytes.NewBuffer(marshal), from, to)
+		openApiResponse, errorResponse := dataQuery(ctx, dataSourceSettings, queryModel.ReportLink, bytes.NewBuffer(marshal), from, to)
 		if errorResponse != nil {
 			message := errorResponse.Detail
 			if message == "" {
@@ -166,7 +167,7 @@ func (td *AkamaiEdgeDnsDatasource) QueryData(ctx context.Context, req *backend.Q
 			continue
 		}
 
-		discoveryApiResponse, err := discoveryApiQuery(dataSourceSettings, queryModel.ReportLink)
+		discoveryApiResponse, err := discoveryApiQuery(ctx, dataSourceSettings, queryModel.ReportLink)
 		if err != nil {
 			response.Responses[query.RefID] = backend.ErrDataResponse(backend.StatusInternal, err.Error())
 			continue
@@ -191,7 +192,7 @@ func (td *AkamaiEdgeDnsDatasource) CallResource(ctx context.Context, req *backen
 
 	switch req.Path {
 	case "reports":
-		query, err := reportApiQuery(dataSourceSettings)
+		query, err := reportApiQuery(ctx, dataSourceSettings)
 
 		if err != nil {
 			return err
@@ -214,9 +215,16 @@ func (td *AkamaiEdgeDnsDatasource) CallResource(ctx context.Context, req *backen
 		}
 		var targetUrl = parse.Query().Get("targetUrl")
 
-		query, err := discoveryApiQuery(dataSourceSettings, targetUrl)
+		query, err := discoveryApiQuery(ctx, dataSourceSettings, targetUrl)
 
 		if err != nil {
+			if errors.Is(err, errInvalidReportingRequest) {
+				body, marshalErr := json.Marshal(OpenApiErrorRspDto{Status: http.StatusBadRequest, Title: err.Error()})
+				if marshalErr != nil {
+					return marshalErr
+				}
+				return sender.Send(&backend.CallResourceResponse{Status: http.StatusBadRequest, Body: body})
+			}
 			return err
 		}
 
@@ -251,7 +259,7 @@ func (td *AkamaiEdgeDnsDatasource) CallResource(ctx context.Context, req *backen
 		}
 
 		b := bytes.NewBuffer(marshal)
-		query, errorResponse := dataQuery(dataSourceSettings, targetUrl, b, requestData.From, requestData.To)
+		query, errorResponse := dataQuery(ctx, dataSourceSettings, targetUrl, b, requestData.From, requestData.To)
 
 		if errorResponse != nil {
 			var readableError, _ = json.Marshal(errorResponse)
