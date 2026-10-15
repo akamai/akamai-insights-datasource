@@ -1,8 +1,8 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 import { FilterEditor } from './FilterEditor';
 import { mockDimensionsOptions, mockMetricsOptions } from '../../../../test/mocks/mock-selectable-values';
+import renderer from '../../../../test/renderer';
 import { dimensionOperatorOptions, FilterQueryFormModel, metricOperatorOptions } from '../FormTypes';
 
 describe('FilterEditor component', () => {
