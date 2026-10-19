@@ -1,8 +1,8 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 import { SortByEditorRow } from './SortByEditorRow';
 import { mockDimensionsOptions, mockMetricsOptions } from '../../../../test/mocks/mock-selectable-values';
+import renderer from '../../../../test/renderer';
 import {
   filterTypeOptions,
   SortByFormModel,
